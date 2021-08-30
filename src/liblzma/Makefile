@@ -153,15 +153,15 @@ am__append_7 = check/crc32_small.c
 
 ##am__append_9 = check/crc32_x86.S
 #am__append_10 = check/crc32_fast.c
-#am__append_11 = check/crc64_small.c
-##am__append_12 = \
-##	check/crc64_table.c \
-##	check/crc64_table_le.h \
-##	check/crc64_table_be.h
+am__append_11 = check/crc64_small.c
+#am__append_12 = \
+#	check/crc64_table.c \
+#	check/crc64_table_le.h \
+#	check/crc64_table_be.h
 
-###am__append_13 = check/crc64_x86.S
-##am__append_14 = check/crc64_fast.c
-am__append_15 = check/sha256.c
+##am__append_13 = check/crc64_x86.S
+#am__append_14 = check/crc64_fast.c
+#am__append_15 = check/sha256.c
 am__append_16 = \
 	lz/lz_encoder.c \
 	lz/lz_encoder.h \
@@ -194,9 +194,9 @@ am__append_22 = \
 #	lzma/lzma2_encoder.c \
 #	lzma/lzma2_encoder.h
 
-am__append_24 = \
-	lzma/lzma2_decoder.c \
-	lzma/lzma2_decoder.h
+#am__append_24 = \
+#	lzma/lzma2_decoder.c \
+#	lzma/lzma2_decoder.h
 
 am__append_25 = rangecoder/range_common.h
 am__append_26 = \
@@ -227,14 +227,14 @@ am__append_32 = \
 	simple/simple_encoder.c \
 	simple/simple_encoder.h
 
-#am__append_33 = \
-#	simple/simple_decoder.c \
-#	simple/simple_decoder.h
+am__append_33 = \
+	simple/simple_decoder.c \
+	simple/simple_decoder.h
 
 #am__append_34 = simple/x86.c
-#am__append_35 = simple/powerpc.c
+am__append_35 = simple/powerpc.c
 #am__append_36 = simple/ia64.c
-am__append_37 = simple/arm.c
+#am__append_37 = simple/arm.c
 #am__append_38 = simple/armthumb.c
 #am__append_39 = simple/sparc.c
 #am__append_40 = liblzma.def liblzma.def.in empty.c
@@ -395,11 +395,11 @@ am__objects_6 = liblzma_la-crc32_small.lo
 #am__objects_7 = liblzma_la-crc32_table.lo
 ##am__objects_8 = liblzma_la-crc32_x86.lo
 #am__objects_9 = liblzma_la-crc32_fast.lo
-#am__objects_10 = liblzma_la-crc64_small.lo
-##am__objects_11 = liblzma_la-crc64_table.lo
-###am__objects_12 = liblzma_la-crc64_x86.lo
-##am__objects_13 = liblzma_la-crc64_fast.lo
-am__objects_14 = liblzma_la-sha256.lo
+am__objects_10 = liblzma_la-crc64_small.lo
+#am__objects_11 = liblzma_la-crc64_table.lo
+##am__objects_12 = liblzma_la-crc64_x86.lo
+#am__objects_13 = liblzma_la-crc64_fast.lo
+#am__objects_14 = liblzma_la-sha256.lo
 am__objects_15 = liblzma_la-lz_encoder.lo \
 	liblzma_la-lz_encoder_mf.lo
 am__objects_16 = liblzma_la-lz_decoder.lo
@@ -411,7 +411,7 @@ am__objects_18 = liblzma_la-lzma_encoder.lo \
 #am__objects_19 = liblzma_la-fastpos_table.lo
 am__objects_20 = liblzma_la-lzma_decoder.lo
 #am__objects_21 = liblzma_la-lzma2_encoder.lo
-am__objects_22 = liblzma_la-lzma2_decoder.lo
+#am__objects_22 = liblzma_la-lzma2_decoder.lo
 am__objects_23 =
 am__objects_24 = liblzma_la-price_table.lo
 #am__objects_25 = liblzma_la-delta_common.lo
@@ -419,11 +419,11 @@ am__objects_24 = liblzma_la-price_table.lo
 ##am__objects_27 = liblzma_la-delta_decoder.lo
 am__objects_28 = liblzma_la-simple_coder.lo
 am__objects_29 = liblzma_la-simple_encoder.lo
-#am__objects_30 = liblzma_la-simple_decoder.lo
+am__objects_30 = liblzma_la-simple_decoder.lo
 #am__objects_31 = liblzma_la-x86.lo
-#am__objects_32 = liblzma_la-powerpc.lo
+am__objects_32 = liblzma_la-powerpc.lo
 #am__objects_33 = liblzma_la-ia64.lo
-am__objects_34 = liblzma_la-arm.lo
+#am__objects_34 = liblzma_la-arm.lo
 #am__objects_35 = liblzma_la-armthumb.lo
 #am__objects_36 = liblzma_la-sparc.lo
 #am__objects_37 = liblzma_w32res.lo
@@ -665,9 +665,9 @@ AWK = gawk
 CAPSICUM_LIB = 
 CC = gcc
 CCAS = gcc
-CCASDEPMODE = depmode=gcc3
+CCASDEPMODE = depmode=none
 CCASFLAGS = -g -O2
-CCDEPMODE = depmode=gcc3
+CCDEPMODE = depmode=none
 CFLAGS = -g -O2
 CFLAG_VISIBILITY = -fvisibility=hidden
 CPP = gcc -E
@@ -732,7 +732,7 @@ PACKAGE_URL = https://tukaani.org/xz/
 PACKAGE_VERSION = 5.3.1alpha
 PATH_SEPARATOR = :
 POSIX_SHELL = /bin/sh
-POSUB = 
+POSUB = po
 PREFERABLY_POSIX_SHELL = /bin/sh
 PTHREAD_CC = gcc
 PTHREAD_CFLAGS = -pthread
@@ -743,7 +743,7 @@ SED = /usr/bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = strip
-USE_NLS = no
+USE_NLS = yes
 VERSION = 5.3.1alpha
 XGETTEXT = /usr/bin/xgettext
 XGETTEXT_015 = /usr/bin/xgettext
@@ -927,86 +927,86 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-include ./$(DEPDIR)/liblzma_la-alone_decoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-alone_encoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-arm.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-armthumb.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-auto_decoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-block_buffer_decoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-block_buffer_encoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-block_decoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-block_encoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-block_header_decoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-block_header_encoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-block_util.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-check.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-common.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-crc32_fast.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-crc32_small.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-crc32_table.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-crc32_x86.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-crc64_fast.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-crc64_small.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-crc64_table.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-crc64_x86.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-delta_common.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-delta_decoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-delta_encoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-easy_buffer_encoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-easy_decoder_memusage.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-easy_encoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-easy_encoder_memusage.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-easy_preset.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-erofs_decoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-erofs_encoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-fastpos_table.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-file_info.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-filter_buffer_decoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-filter_buffer_encoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-filter_common.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-filter_decoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-filter_encoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-filter_flags_decoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-filter_flags_encoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-hardware_cputhreads.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-hardware_physmem.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-ia64.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-index.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-index_decoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-index_encoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-index_hash.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-lz_decoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-lz_encoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-lz_encoder_mf.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-lzma2_decoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-lzma2_encoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-lzma_decoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-lzma_encoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-lzma_encoder_optimum_fast.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-lzma_encoder_optimum_normal.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-lzma_encoder_presets.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-outqueue.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-powerpc.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-price_table.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-sha256.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-simple_coder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-simple_decoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-simple_encoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-sparc.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-stream_buffer_decoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-stream_buffer_encoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-stream_decoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-stream_encoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-stream_encoder_mt.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-stream_flags_common.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-stream_flags_decoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-stream_flags_encoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-tuklib_cpucores.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-tuklib_physmem.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-vli_decoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-vli_encoder.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-vli_size.Plo # am--include-marker
-include ./$(DEPDIR)/liblzma_la-x86.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-alone_decoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-alone_encoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-arm.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-armthumb.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-auto_decoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-block_buffer_decoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-block_buffer_encoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-block_decoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-block_encoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-block_header_decoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-block_header_encoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-block_util.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-check.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-common.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-crc32_fast.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-crc32_small.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-crc32_table.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-crc32_x86.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-crc64_fast.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-crc64_small.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-crc64_table.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-crc64_x86.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-delta_common.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-delta_decoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-delta_encoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-easy_buffer_encoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-easy_decoder_memusage.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-easy_encoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-easy_encoder_memusage.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-easy_preset.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-erofs_decoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-erofs_encoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-fastpos_table.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-file_info.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-filter_buffer_decoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-filter_buffer_encoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-filter_common.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-filter_decoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-filter_encoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-filter_flags_decoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-filter_flags_encoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-hardware_cputhreads.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-hardware_physmem.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-ia64.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-index.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-index_decoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-index_encoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-index_hash.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-lz_decoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-lz_encoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-lz_encoder_mf.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-lzma2_decoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-lzma2_encoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-lzma_decoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-lzma_encoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-lzma_encoder_optimum_fast.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-lzma_encoder_optimum_normal.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-lzma_encoder_presets.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-outqueue.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-powerpc.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-price_table.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-sha256.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-simple_coder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-simple_decoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-simple_encoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-sparc.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-stream_buffer_decoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-stream_buffer_encoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-stream_decoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-stream_encoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-stream_encoder_mt.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-stream_flags_common.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-stream_flags_decoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-stream_flags_encoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-tuklib_cpucores.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-tuklib_physmem.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-vli_decoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-vli_encoder.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-vli_size.Plo # am--include-marker
+#include ./$(DEPDIR)/liblzma_la-x86.Plo # am--include-marker
 
 $(am__depfiles_remade):
 	@$(MKDIR_P) $(@D)
@@ -1015,606 +1015,606 @@ $(am__depfiles_remade):
 am--depfiles: $(am__depfiles_remade)
 
 .S.o:
-	$(AM_V_CPPAS)$(CPPASCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
-#	$(AM_V_CPPAS)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) \
-#	$(AM_V_CPPAS_no)$(CPPASCOMPILE) -c -o $@ $<
+#	$(AM_V_CPPAS)$(CPPASCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+#	$(AM_V_CPPAS)source='$<' object='$@' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) 
+	$(AM_V_CPPAS)$(CPPASCOMPILE) -c -o $@ $<
 
 .S.obj:
-	$(AM_V_CPPAS)$(CPPASCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
-#	$(AM_V_CPPAS)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) \
-#	$(AM_V_CPPAS_no)$(CPPASCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+#	$(AM_V_CPPAS)$(CPPASCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+#	$(AM_V_CPPAS)source='$<' object='$@' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) 
+	$(AM_V_CPPAS)$(CPPASCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
 .S.lo:
-	$(AM_V_CPPAS)$(LTCPPASCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
-#	$(AM_V_CPPAS)source='$<' object='$@' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) \
-#	$(AM_V_CPPAS_no)$(LTCPPASCOMPILE) -c -o $@ $<
+#	$(AM_V_CPPAS)$(LTCPPASCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
+#	$(AM_V_CPPAS)source='$<' object='$@' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) 
+	$(AM_V_CPPAS)$(LTCPPASCOMPILE) -c -o $@ $<
 
 liblzma_la-crc32_x86.lo: check/crc32_x86.S
-	$(AM_V_CPPAS)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -MT liblzma_la-crc32_x86.lo -MD -MP -MF $(DEPDIR)/liblzma_la-crc32_x86.Tpo -c -o liblzma_la-crc32_x86.lo `test -f 'check/crc32_x86.S' || echo '$(srcdir)/'`check/crc32_x86.S
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-crc32_x86.Tpo $(DEPDIR)/liblzma_la-crc32_x86.Plo
-#	$(AM_V_CPPAS)source='check/crc32_x86.S' object='liblzma_la-crc32_x86.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) \
-#	$(AM_V_CPPAS_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -c -o liblzma_la-crc32_x86.lo `test -f 'check/crc32_x86.S' || echo '$(srcdir)/'`check/crc32_x86.S
+#	$(AM_V_CPPAS)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -MT liblzma_la-crc32_x86.lo -MD -MP -MF $(DEPDIR)/liblzma_la-crc32_x86.Tpo -c -o liblzma_la-crc32_x86.lo `test -f 'check/crc32_x86.S' || echo '$(srcdir)/'`check/crc32_x86.S
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-crc32_x86.Tpo $(DEPDIR)/liblzma_la-crc32_x86.Plo
+#	$(AM_V_CPPAS)source='check/crc32_x86.S' object='liblzma_la-crc32_x86.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) 
+	$(AM_V_CPPAS)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -c -o liblzma_la-crc32_x86.lo `test -f 'check/crc32_x86.S' || echo '$(srcdir)/'`check/crc32_x86.S
 
 liblzma_la-crc64_x86.lo: check/crc64_x86.S
-	$(AM_V_CPPAS)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -MT liblzma_la-crc64_x86.lo -MD -MP -MF $(DEPDIR)/liblzma_la-crc64_x86.Tpo -c -o liblzma_la-crc64_x86.lo `test -f 'check/crc64_x86.S' || echo '$(srcdir)/'`check/crc64_x86.S
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-crc64_x86.Tpo $(DEPDIR)/liblzma_la-crc64_x86.Plo
-#	$(AM_V_CPPAS)source='check/crc64_x86.S' object='liblzma_la-crc64_x86.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) \
-#	$(AM_V_CPPAS_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -c -o liblzma_la-crc64_x86.lo `test -f 'check/crc64_x86.S' || echo '$(srcdir)/'`check/crc64_x86.S
+#	$(AM_V_CPPAS)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -MT liblzma_la-crc64_x86.lo -MD -MP -MF $(DEPDIR)/liblzma_la-crc64_x86.Tpo -c -o liblzma_la-crc64_x86.lo `test -f 'check/crc64_x86.S' || echo '$(srcdir)/'`check/crc64_x86.S
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-crc64_x86.Tpo $(DEPDIR)/liblzma_la-crc64_x86.Plo
+#	$(AM_V_CPPAS)source='check/crc64_x86.S' object='liblzma_la-crc64_x86.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCASDEPMODE) $(depcomp) 
+	$(AM_V_CPPAS)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CCASFLAGS) $(CCASFLAGS) -c -o liblzma_la-crc64_x86.lo `test -f 'check/crc64_x86.S' || echo '$(srcdir)/'`check/crc64_x86.S
 
 .c.o:
-	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
-#	$(AM_V_CC)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(COMPILE) -c -o $@ $<
+#	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+#	$(AM_V_CC)source='$<' object='$@' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(COMPILE) -c -o $@ $<
 
 .c.obj:
-	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
-#	$(AM_V_CC)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+#	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+#	$(AM_V_CC)source='$<' object='$@' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
 .c.lo:
-	$(AM_V_CC)$(LTCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
-#	$(AM_V_CC)source='$<' object='$@' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LTCOMPILE) -c -o $@ $<
+#	$(AM_V_CC)$(LTCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
+#	$(AM_V_CC)source='$<' object='$@' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LTCOMPILE) -c -o $@ $<
 
 liblzma_la-tuklib_physmem.lo: ../common/tuklib_physmem.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-tuklib_physmem.lo -MD -MP -MF $(DEPDIR)/liblzma_la-tuklib_physmem.Tpo -c -o liblzma_la-tuklib_physmem.lo `test -f '../common/tuklib_physmem.c' || echo '$(srcdir)/'`../common/tuklib_physmem.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-tuklib_physmem.Tpo $(DEPDIR)/liblzma_la-tuklib_physmem.Plo
-#	$(AM_V_CC)source='../common/tuklib_physmem.c' object='liblzma_la-tuklib_physmem.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-tuklib_physmem.lo `test -f '../common/tuklib_physmem.c' || echo '$(srcdir)/'`../common/tuklib_physmem.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-tuklib_physmem.lo -MD -MP -MF $(DEPDIR)/liblzma_la-tuklib_physmem.Tpo -c -o liblzma_la-tuklib_physmem.lo `test -f '../common/tuklib_physmem.c' || echo '$(srcdir)/'`../common/tuklib_physmem.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-tuklib_physmem.Tpo $(DEPDIR)/liblzma_la-tuklib_physmem.Plo
+#	$(AM_V_CC)source='../common/tuklib_physmem.c' object='liblzma_la-tuklib_physmem.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-tuklib_physmem.lo `test -f '../common/tuklib_physmem.c' || echo '$(srcdir)/'`../common/tuklib_physmem.c
 
 liblzma_la-tuklib_cpucores.lo: ../common/tuklib_cpucores.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-tuklib_cpucores.lo -MD -MP -MF $(DEPDIR)/liblzma_la-tuklib_cpucores.Tpo -c -o liblzma_la-tuklib_cpucores.lo `test -f '../common/tuklib_cpucores.c' || echo '$(srcdir)/'`../common/tuklib_cpucores.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-tuklib_cpucores.Tpo $(DEPDIR)/liblzma_la-tuklib_cpucores.Plo
-#	$(AM_V_CC)source='../common/tuklib_cpucores.c' object='liblzma_la-tuklib_cpucores.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-tuklib_cpucores.lo `test -f '../common/tuklib_cpucores.c' || echo '$(srcdir)/'`../common/tuklib_cpucores.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-tuklib_cpucores.lo -MD -MP -MF $(DEPDIR)/liblzma_la-tuklib_cpucores.Tpo -c -o liblzma_la-tuklib_cpucores.lo `test -f '../common/tuklib_cpucores.c' || echo '$(srcdir)/'`../common/tuklib_cpucores.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-tuklib_cpucores.Tpo $(DEPDIR)/liblzma_la-tuklib_cpucores.Plo
+#	$(AM_V_CC)source='../common/tuklib_cpucores.c' object='liblzma_la-tuklib_cpucores.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-tuklib_cpucores.lo `test -f '../common/tuklib_cpucores.c' || echo '$(srcdir)/'`../common/tuklib_cpucores.c
 
 liblzma_la-common.lo: common/common.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-common.lo -MD -MP -MF $(DEPDIR)/liblzma_la-common.Tpo -c -o liblzma_la-common.lo `test -f 'common/common.c' || echo '$(srcdir)/'`common/common.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-common.Tpo $(DEPDIR)/liblzma_la-common.Plo
-#	$(AM_V_CC)source='common/common.c' object='liblzma_la-common.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-common.lo `test -f 'common/common.c' || echo '$(srcdir)/'`common/common.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-common.lo -MD -MP -MF $(DEPDIR)/liblzma_la-common.Tpo -c -o liblzma_la-common.lo `test -f 'common/common.c' || echo '$(srcdir)/'`common/common.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-common.Tpo $(DEPDIR)/liblzma_la-common.Plo
+#	$(AM_V_CC)source='common/common.c' object='liblzma_la-common.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-common.lo `test -f 'common/common.c' || echo '$(srcdir)/'`common/common.c
 
 liblzma_la-block_util.lo: common/block_util.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-block_util.lo -MD -MP -MF $(DEPDIR)/liblzma_la-block_util.Tpo -c -o liblzma_la-block_util.lo `test -f 'common/block_util.c' || echo '$(srcdir)/'`common/block_util.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-block_util.Tpo $(DEPDIR)/liblzma_la-block_util.Plo
-#	$(AM_V_CC)source='common/block_util.c' object='liblzma_la-block_util.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-block_util.lo `test -f 'common/block_util.c' || echo '$(srcdir)/'`common/block_util.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-block_util.lo -MD -MP -MF $(DEPDIR)/liblzma_la-block_util.Tpo -c -o liblzma_la-block_util.lo `test -f 'common/block_util.c' || echo '$(srcdir)/'`common/block_util.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-block_util.Tpo $(DEPDIR)/liblzma_la-block_util.Plo
+#	$(AM_V_CC)source='common/block_util.c' object='liblzma_la-block_util.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-block_util.lo `test -f 'common/block_util.c' || echo '$(srcdir)/'`common/block_util.c
 
 liblzma_la-easy_preset.lo: common/easy_preset.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-easy_preset.lo -MD -MP -MF $(DEPDIR)/liblzma_la-easy_preset.Tpo -c -o liblzma_la-easy_preset.lo `test -f 'common/easy_preset.c' || echo '$(srcdir)/'`common/easy_preset.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-easy_preset.Tpo $(DEPDIR)/liblzma_la-easy_preset.Plo
-#	$(AM_V_CC)source='common/easy_preset.c' object='liblzma_la-easy_preset.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-easy_preset.lo `test -f 'common/easy_preset.c' || echo '$(srcdir)/'`common/easy_preset.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-easy_preset.lo -MD -MP -MF $(DEPDIR)/liblzma_la-easy_preset.Tpo -c -o liblzma_la-easy_preset.lo `test -f 'common/easy_preset.c' || echo '$(srcdir)/'`common/easy_preset.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-easy_preset.Tpo $(DEPDIR)/liblzma_la-easy_preset.Plo
+#	$(AM_V_CC)source='common/easy_preset.c' object='liblzma_la-easy_preset.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-easy_preset.lo `test -f 'common/easy_preset.c' || echo '$(srcdir)/'`common/easy_preset.c
 
 liblzma_la-filter_common.lo: common/filter_common.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-filter_common.lo -MD -MP -MF $(DEPDIR)/liblzma_la-filter_common.Tpo -c -o liblzma_la-filter_common.lo `test -f 'common/filter_common.c' || echo '$(srcdir)/'`common/filter_common.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-filter_common.Tpo $(DEPDIR)/liblzma_la-filter_common.Plo
-#	$(AM_V_CC)source='common/filter_common.c' object='liblzma_la-filter_common.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-filter_common.lo `test -f 'common/filter_common.c' || echo '$(srcdir)/'`common/filter_common.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-filter_common.lo -MD -MP -MF $(DEPDIR)/liblzma_la-filter_common.Tpo -c -o liblzma_la-filter_common.lo `test -f 'common/filter_common.c' || echo '$(srcdir)/'`common/filter_common.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-filter_common.Tpo $(DEPDIR)/liblzma_la-filter_common.Plo
+#	$(AM_V_CC)source='common/filter_common.c' object='liblzma_la-filter_common.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-filter_common.lo `test -f 'common/filter_common.c' || echo '$(srcdir)/'`common/filter_common.c
 
 liblzma_la-hardware_physmem.lo: common/hardware_physmem.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-hardware_physmem.lo -MD -MP -MF $(DEPDIR)/liblzma_la-hardware_physmem.Tpo -c -o liblzma_la-hardware_physmem.lo `test -f 'common/hardware_physmem.c' || echo '$(srcdir)/'`common/hardware_physmem.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-hardware_physmem.Tpo $(DEPDIR)/liblzma_la-hardware_physmem.Plo
-#	$(AM_V_CC)source='common/hardware_physmem.c' object='liblzma_la-hardware_physmem.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-hardware_physmem.lo `test -f 'common/hardware_physmem.c' || echo '$(srcdir)/'`common/hardware_physmem.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-hardware_physmem.lo -MD -MP -MF $(DEPDIR)/liblzma_la-hardware_physmem.Tpo -c -o liblzma_la-hardware_physmem.lo `test -f 'common/hardware_physmem.c' || echo '$(srcdir)/'`common/hardware_physmem.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-hardware_physmem.Tpo $(DEPDIR)/liblzma_la-hardware_physmem.Plo
+#	$(AM_V_CC)source='common/hardware_physmem.c' object='liblzma_la-hardware_physmem.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-hardware_physmem.lo `test -f 'common/hardware_physmem.c' || echo '$(srcdir)/'`common/hardware_physmem.c
 
 liblzma_la-index.lo: common/index.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-index.lo -MD -MP -MF $(DEPDIR)/liblzma_la-index.Tpo -c -o liblzma_la-index.lo `test -f 'common/index.c' || echo '$(srcdir)/'`common/index.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-index.Tpo $(DEPDIR)/liblzma_la-index.Plo
-#	$(AM_V_CC)source='common/index.c' object='liblzma_la-index.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-index.lo `test -f 'common/index.c' || echo '$(srcdir)/'`common/index.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-index.lo -MD -MP -MF $(DEPDIR)/liblzma_la-index.Tpo -c -o liblzma_la-index.lo `test -f 'common/index.c' || echo '$(srcdir)/'`common/index.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-index.Tpo $(DEPDIR)/liblzma_la-index.Plo
+#	$(AM_V_CC)source='common/index.c' object='liblzma_la-index.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-index.lo `test -f 'common/index.c' || echo '$(srcdir)/'`common/index.c
 
 liblzma_la-stream_flags_common.lo: common/stream_flags_common.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-stream_flags_common.lo -MD -MP -MF $(DEPDIR)/liblzma_la-stream_flags_common.Tpo -c -o liblzma_la-stream_flags_common.lo `test -f 'common/stream_flags_common.c' || echo '$(srcdir)/'`common/stream_flags_common.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-stream_flags_common.Tpo $(DEPDIR)/liblzma_la-stream_flags_common.Plo
-#	$(AM_V_CC)source='common/stream_flags_common.c' object='liblzma_la-stream_flags_common.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-stream_flags_common.lo `test -f 'common/stream_flags_common.c' || echo '$(srcdir)/'`common/stream_flags_common.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-stream_flags_common.lo -MD -MP -MF $(DEPDIR)/liblzma_la-stream_flags_common.Tpo -c -o liblzma_la-stream_flags_common.lo `test -f 'common/stream_flags_common.c' || echo '$(srcdir)/'`common/stream_flags_common.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-stream_flags_common.Tpo $(DEPDIR)/liblzma_la-stream_flags_common.Plo
+#	$(AM_V_CC)source='common/stream_flags_common.c' object='liblzma_la-stream_flags_common.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-stream_flags_common.lo `test -f 'common/stream_flags_common.c' || echo '$(srcdir)/'`common/stream_flags_common.c
 
 liblzma_la-vli_size.lo: common/vli_size.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-vli_size.lo -MD -MP -MF $(DEPDIR)/liblzma_la-vli_size.Tpo -c -o liblzma_la-vli_size.lo `test -f 'common/vli_size.c' || echo '$(srcdir)/'`common/vli_size.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-vli_size.Tpo $(DEPDIR)/liblzma_la-vli_size.Plo
-#	$(AM_V_CC)source='common/vli_size.c' object='liblzma_la-vli_size.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-vli_size.lo `test -f 'common/vli_size.c' || echo '$(srcdir)/'`common/vli_size.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-vli_size.lo -MD -MP -MF $(DEPDIR)/liblzma_la-vli_size.Tpo -c -o liblzma_la-vli_size.lo `test -f 'common/vli_size.c' || echo '$(srcdir)/'`common/vli_size.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-vli_size.Tpo $(DEPDIR)/liblzma_la-vli_size.Plo
+#	$(AM_V_CC)source='common/vli_size.c' object='liblzma_la-vli_size.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-vli_size.lo `test -f 'common/vli_size.c' || echo '$(srcdir)/'`common/vli_size.c
 
 liblzma_la-hardware_cputhreads.lo: common/hardware_cputhreads.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-hardware_cputhreads.lo -MD -MP -MF $(DEPDIR)/liblzma_la-hardware_cputhreads.Tpo -c -o liblzma_la-hardware_cputhreads.lo `test -f 'common/hardware_cputhreads.c' || echo '$(srcdir)/'`common/hardware_cputhreads.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-hardware_cputhreads.Tpo $(DEPDIR)/liblzma_la-hardware_cputhreads.Plo
-#	$(AM_V_CC)source='common/hardware_cputhreads.c' object='liblzma_la-hardware_cputhreads.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-hardware_cputhreads.lo `test -f 'common/hardware_cputhreads.c' || echo '$(srcdir)/'`common/hardware_cputhreads.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-hardware_cputhreads.lo -MD -MP -MF $(DEPDIR)/liblzma_la-hardware_cputhreads.Tpo -c -o liblzma_la-hardware_cputhreads.lo `test -f 'common/hardware_cputhreads.c' || echo '$(srcdir)/'`common/hardware_cputhreads.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-hardware_cputhreads.Tpo $(DEPDIR)/liblzma_la-hardware_cputhreads.Plo
+#	$(AM_V_CC)source='common/hardware_cputhreads.c' object='liblzma_la-hardware_cputhreads.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-hardware_cputhreads.lo `test -f 'common/hardware_cputhreads.c' || echo '$(srcdir)/'`common/hardware_cputhreads.c
 
 liblzma_la-alone_encoder.lo: common/alone_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-alone_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-alone_encoder.Tpo -c -o liblzma_la-alone_encoder.lo `test -f 'common/alone_encoder.c' || echo '$(srcdir)/'`common/alone_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-alone_encoder.Tpo $(DEPDIR)/liblzma_la-alone_encoder.Plo
-#	$(AM_V_CC)source='common/alone_encoder.c' object='liblzma_la-alone_encoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-alone_encoder.lo `test -f 'common/alone_encoder.c' || echo '$(srcdir)/'`common/alone_encoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-alone_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-alone_encoder.Tpo -c -o liblzma_la-alone_encoder.lo `test -f 'common/alone_encoder.c' || echo '$(srcdir)/'`common/alone_encoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-alone_encoder.Tpo $(DEPDIR)/liblzma_la-alone_encoder.Plo
+#	$(AM_V_CC)source='common/alone_encoder.c' object='liblzma_la-alone_encoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-alone_encoder.lo `test -f 'common/alone_encoder.c' || echo '$(srcdir)/'`common/alone_encoder.c
 
 liblzma_la-block_buffer_encoder.lo: common/block_buffer_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-block_buffer_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-block_buffer_encoder.Tpo -c -o liblzma_la-block_buffer_encoder.lo `test -f 'common/block_buffer_encoder.c' || echo '$(srcdir)/'`common/block_buffer_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-block_buffer_encoder.Tpo $(DEPDIR)/liblzma_la-block_buffer_encoder.Plo
-#	$(AM_V_CC)source='common/block_buffer_encoder.c' object='liblzma_la-block_buffer_encoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-block_buffer_encoder.lo `test -f 'common/block_buffer_encoder.c' || echo '$(srcdir)/'`common/block_buffer_encoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-block_buffer_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-block_buffer_encoder.Tpo -c -o liblzma_la-block_buffer_encoder.lo `test -f 'common/block_buffer_encoder.c' || echo '$(srcdir)/'`common/block_buffer_encoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-block_buffer_encoder.Tpo $(DEPDIR)/liblzma_la-block_buffer_encoder.Plo
+#	$(AM_V_CC)source='common/block_buffer_encoder.c' object='liblzma_la-block_buffer_encoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-block_buffer_encoder.lo `test -f 'common/block_buffer_encoder.c' || echo '$(srcdir)/'`common/block_buffer_encoder.c
 
 liblzma_la-block_encoder.lo: common/block_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-block_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-block_encoder.Tpo -c -o liblzma_la-block_encoder.lo `test -f 'common/block_encoder.c' || echo '$(srcdir)/'`common/block_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-block_encoder.Tpo $(DEPDIR)/liblzma_la-block_encoder.Plo
-#	$(AM_V_CC)source='common/block_encoder.c' object='liblzma_la-block_encoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-block_encoder.lo `test -f 'common/block_encoder.c' || echo '$(srcdir)/'`common/block_encoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-block_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-block_encoder.Tpo -c -o liblzma_la-block_encoder.lo `test -f 'common/block_encoder.c' || echo '$(srcdir)/'`common/block_encoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-block_encoder.Tpo $(DEPDIR)/liblzma_la-block_encoder.Plo
+#	$(AM_V_CC)source='common/block_encoder.c' object='liblzma_la-block_encoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-block_encoder.lo `test -f 'common/block_encoder.c' || echo '$(srcdir)/'`common/block_encoder.c
 
 liblzma_la-block_header_encoder.lo: common/block_header_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-block_header_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-block_header_encoder.Tpo -c -o liblzma_la-block_header_encoder.lo `test -f 'common/block_header_encoder.c' || echo '$(srcdir)/'`common/block_header_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-block_header_encoder.Tpo $(DEPDIR)/liblzma_la-block_header_encoder.Plo
-#	$(AM_V_CC)source='common/block_header_encoder.c' object='liblzma_la-block_header_encoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-block_header_encoder.lo `test -f 'common/block_header_encoder.c' || echo '$(srcdir)/'`common/block_header_encoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-block_header_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-block_header_encoder.Tpo -c -o liblzma_la-block_header_encoder.lo `test -f 'common/block_header_encoder.c' || echo '$(srcdir)/'`common/block_header_encoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-block_header_encoder.Tpo $(DEPDIR)/liblzma_la-block_header_encoder.Plo
+#	$(AM_V_CC)source='common/block_header_encoder.c' object='liblzma_la-block_header_encoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-block_header_encoder.lo `test -f 'common/block_header_encoder.c' || echo '$(srcdir)/'`common/block_header_encoder.c
 
 liblzma_la-easy_buffer_encoder.lo: common/easy_buffer_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-easy_buffer_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-easy_buffer_encoder.Tpo -c -o liblzma_la-easy_buffer_encoder.lo `test -f 'common/easy_buffer_encoder.c' || echo '$(srcdir)/'`common/easy_buffer_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-easy_buffer_encoder.Tpo $(DEPDIR)/liblzma_la-easy_buffer_encoder.Plo
-#	$(AM_V_CC)source='common/easy_buffer_encoder.c' object='liblzma_la-easy_buffer_encoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-easy_buffer_encoder.lo `test -f 'common/easy_buffer_encoder.c' || echo '$(srcdir)/'`common/easy_buffer_encoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-easy_buffer_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-easy_buffer_encoder.Tpo -c -o liblzma_la-easy_buffer_encoder.lo `test -f 'common/easy_buffer_encoder.c' || echo '$(srcdir)/'`common/easy_buffer_encoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-easy_buffer_encoder.Tpo $(DEPDIR)/liblzma_la-easy_buffer_encoder.Plo
+#	$(AM_V_CC)source='common/easy_buffer_encoder.c' object='liblzma_la-easy_buffer_encoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-easy_buffer_encoder.lo `test -f 'common/easy_buffer_encoder.c' || echo '$(srcdir)/'`common/easy_buffer_encoder.c
 
 liblzma_la-easy_encoder.lo: common/easy_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-easy_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-easy_encoder.Tpo -c -o liblzma_la-easy_encoder.lo `test -f 'common/easy_encoder.c' || echo '$(srcdir)/'`common/easy_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-easy_encoder.Tpo $(DEPDIR)/liblzma_la-easy_encoder.Plo
-#	$(AM_V_CC)source='common/easy_encoder.c' object='liblzma_la-easy_encoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-easy_encoder.lo `test -f 'common/easy_encoder.c' || echo '$(srcdir)/'`common/easy_encoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-easy_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-easy_encoder.Tpo -c -o liblzma_la-easy_encoder.lo `test -f 'common/easy_encoder.c' || echo '$(srcdir)/'`common/easy_encoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-easy_encoder.Tpo $(DEPDIR)/liblzma_la-easy_encoder.Plo
+#	$(AM_V_CC)source='common/easy_encoder.c' object='liblzma_la-easy_encoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-easy_encoder.lo `test -f 'common/easy_encoder.c' || echo '$(srcdir)/'`common/easy_encoder.c
 
 liblzma_la-easy_encoder_memusage.lo: common/easy_encoder_memusage.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-easy_encoder_memusage.lo -MD -MP -MF $(DEPDIR)/liblzma_la-easy_encoder_memusage.Tpo -c -o liblzma_la-easy_encoder_memusage.lo `test -f 'common/easy_encoder_memusage.c' || echo '$(srcdir)/'`common/easy_encoder_memusage.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-easy_encoder_memusage.Tpo $(DEPDIR)/liblzma_la-easy_encoder_memusage.Plo
-#	$(AM_V_CC)source='common/easy_encoder_memusage.c' object='liblzma_la-easy_encoder_memusage.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-easy_encoder_memusage.lo `test -f 'common/easy_encoder_memusage.c' || echo '$(srcdir)/'`common/easy_encoder_memusage.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-easy_encoder_memusage.lo -MD -MP -MF $(DEPDIR)/liblzma_la-easy_encoder_memusage.Tpo -c -o liblzma_la-easy_encoder_memusage.lo `test -f 'common/easy_encoder_memusage.c' || echo '$(srcdir)/'`common/easy_encoder_memusage.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-easy_encoder_memusage.Tpo $(DEPDIR)/liblzma_la-easy_encoder_memusage.Plo
+#	$(AM_V_CC)source='common/easy_encoder_memusage.c' object='liblzma_la-easy_encoder_memusage.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-easy_encoder_memusage.lo `test -f 'common/easy_encoder_memusage.c' || echo '$(srcdir)/'`common/easy_encoder_memusage.c
 
 liblzma_la-erofs_encoder.lo: common/erofs_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-erofs_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-erofs_encoder.Tpo -c -o liblzma_la-erofs_encoder.lo `test -f 'common/erofs_encoder.c' || echo '$(srcdir)/'`common/erofs_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-erofs_encoder.Tpo $(DEPDIR)/liblzma_la-erofs_encoder.Plo
-#	$(AM_V_CC)source='common/erofs_encoder.c' object='liblzma_la-erofs_encoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-erofs_encoder.lo `test -f 'common/erofs_encoder.c' || echo '$(srcdir)/'`common/erofs_encoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-erofs_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-erofs_encoder.Tpo -c -o liblzma_la-erofs_encoder.lo `test -f 'common/erofs_encoder.c' || echo '$(srcdir)/'`common/erofs_encoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-erofs_encoder.Tpo $(DEPDIR)/liblzma_la-erofs_encoder.Plo
+#	$(AM_V_CC)source='common/erofs_encoder.c' object='liblzma_la-erofs_encoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-erofs_encoder.lo `test -f 'common/erofs_encoder.c' || echo '$(srcdir)/'`common/erofs_encoder.c
 
 liblzma_la-filter_buffer_encoder.lo: common/filter_buffer_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-filter_buffer_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-filter_buffer_encoder.Tpo -c -o liblzma_la-filter_buffer_encoder.lo `test -f 'common/filter_buffer_encoder.c' || echo '$(srcdir)/'`common/filter_buffer_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-filter_buffer_encoder.Tpo $(DEPDIR)/liblzma_la-filter_buffer_encoder.Plo
-#	$(AM_V_CC)source='common/filter_buffer_encoder.c' object='liblzma_la-filter_buffer_encoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-filter_buffer_encoder.lo `test -f 'common/filter_buffer_encoder.c' || echo '$(srcdir)/'`common/filter_buffer_encoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-filter_buffer_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-filter_buffer_encoder.Tpo -c -o liblzma_la-filter_buffer_encoder.lo `test -f 'common/filter_buffer_encoder.c' || echo '$(srcdir)/'`common/filter_buffer_encoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-filter_buffer_encoder.Tpo $(DEPDIR)/liblzma_la-filter_buffer_encoder.Plo
+#	$(AM_V_CC)source='common/filter_buffer_encoder.c' object='liblzma_la-filter_buffer_encoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-filter_buffer_encoder.lo `test -f 'common/filter_buffer_encoder.c' || echo '$(srcdir)/'`common/filter_buffer_encoder.c
 
 liblzma_la-filter_encoder.lo: common/filter_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-filter_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-filter_encoder.Tpo -c -o liblzma_la-filter_encoder.lo `test -f 'common/filter_encoder.c' || echo '$(srcdir)/'`common/filter_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-filter_encoder.Tpo $(DEPDIR)/liblzma_la-filter_encoder.Plo
-#	$(AM_V_CC)source='common/filter_encoder.c' object='liblzma_la-filter_encoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-filter_encoder.lo `test -f 'common/filter_encoder.c' || echo '$(srcdir)/'`common/filter_encoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-filter_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-filter_encoder.Tpo -c -o liblzma_la-filter_encoder.lo `test -f 'common/filter_encoder.c' || echo '$(srcdir)/'`common/filter_encoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-filter_encoder.Tpo $(DEPDIR)/liblzma_la-filter_encoder.Plo
+#	$(AM_V_CC)source='common/filter_encoder.c' object='liblzma_la-filter_encoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-filter_encoder.lo `test -f 'common/filter_encoder.c' || echo '$(srcdir)/'`common/filter_encoder.c
 
 liblzma_la-filter_flags_encoder.lo: common/filter_flags_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-filter_flags_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-filter_flags_encoder.Tpo -c -o liblzma_la-filter_flags_encoder.lo `test -f 'common/filter_flags_encoder.c' || echo '$(srcdir)/'`common/filter_flags_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-filter_flags_encoder.Tpo $(DEPDIR)/liblzma_la-filter_flags_encoder.Plo
-#	$(AM_V_CC)source='common/filter_flags_encoder.c' object='liblzma_la-filter_flags_encoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-filter_flags_encoder.lo `test -f 'common/filter_flags_encoder.c' || echo '$(srcdir)/'`common/filter_flags_encoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-filter_flags_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-filter_flags_encoder.Tpo -c -o liblzma_la-filter_flags_encoder.lo `test -f 'common/filter_flags_encoder.c' || echo '$(srcdir)/'`common/filter_flags_encoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-filter_flags_encoder.Tpo $(DEPDIR)/liblzma_la-filter_flags_encoder.Plo
+#	$(AM_V_CC)source='common/filter_flags_encoder.c' object='liblzma_la-filter_flags_encoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-filter_flags_encoder.lo `test -f 'common/filter_flags_encoder.c' || echo '$(srcdir)/'`common/filter_flags_encoder.c
 
 liblzma_la-index_encoder.lo: common/index_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-index_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-index_encoder.Tpo -c -o liblzma_la-index_encoder.lo `test -f 'common/index_encoder.c' || echo '$(srcdir)/'`common/index_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-index_encoder.Tpo $(DEPDIR)/liblzma_la-index_encoder.Plo
-#	$(AM_V_CC)source='common/index_encoder.c' object='liblzma_la-index_encoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-index_encoder.lo `test -f 'common/index_encoder.c' || echo '$(srcdir)/'`common/index_encoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-index_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-index_encoder.Tpo -c -o liblzma_la-index_encoder.lo `test -f 'common/index_encoder.c' || echo '$(srcdir)/'`common/index_encoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-index_encoder.Tpo $(DEPDIR)/liblzma_la-index_encoder.Plo
+#	$(AM_V_CC)source='common/index_encoder.c' object='liblzma_la-index_encoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-index_encoder.lo `test -f 'common/index_encoder.c' || echo '$(srcdir)/'`common/index_encoder.c
 
 liblzma_la-stream_buffer_encoder.lo: common/stream_buffer_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-stream_buffer_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-stream_buffer_encoder.Tpo -c -o liblzma_la-stream_buffer_encoder.lo `test -f 'common/stream_buffer_encoder.c' || echo '$(srcdir)/'`common/stream_buffer_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-stream_buffer_encoder.Tpo $(DEPDIR)/liblzma_la-stream_buffer_encoder.Plo
-#	$(AM_V_CC)source='common/stream_buffer_encoder.c' object='liblzma_la-stream_buffer_encoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-stream_buffer_encoder.lo `test -f 'common/stream_buffer_encoder.c' || echo '$(srcdir)/'`common/stream_buffer_encoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-stream_buffer_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-stream_buffer_encoder.Tpo -c -o liblzma_la-stream_buffer_encoder.lo `test -f 'common/stream_buffer_encoder.c' || echo '$(srcdir)/'`common/stream_buffer_encoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-stream_buffer_encoder.Tpo $(DEPDIR)/liblzma_la-stream_buffer_encoder.Plo
+#	$(AM_V_CC)source='common/stream_buffer_encoder.c' object='liblzma_la-stream_buffer_encoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-stream_buffer_encoder.lo `test -f 'common/stream_buffer_encoder.c' || echo '$(srcdir)/'`common/stream_buffer_encoder.c
 
 liblzma_la-stream_encoder.lo: common/stream_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-stream_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-stream_encoder.Tpo -c -o liblzma_la-stream_encoder.lo `test -f 'common/stream_encoder.c' || echo '$(srcdir)/'`common/stream_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-stream_encoder.Tpo $(DEPDIR)/liblzma_la-stream_encoder.Plo
-#	$(AM_V_CC)source='common/stream_encoder.c' object='liblzma_la-stream_encoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-stream_encoder.lo `test -f 'common/stream_encoder.c' || echo '$(srcdir)/'`common/stream_encoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-stream_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-stream_encoder.Tpo -c -o liblzma_la-stream_encoder.lo `test -f 'common/stream_encoder.c' || echo '$(srcdir)/'`common/stream_encoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-stream_encoder.Tpo $(DEPDIR)/liblzma_la-stream_encoder.Plo
+#	$(AM_V_CC)source='common/stream_encoder.c' object='liblzma_la-stream_encoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-stream_encoder.lo `test -f 'common/stream_encoder.c' || echo '$(srcdir)/'`common/stream_encoder.c
 
 liblzma_la-stream_flags_encoder.lo: common/stream_flags_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-stream_flags_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-stream_flags_encoder.Tpo -c -o liblzma_la-stream_flags_encoder.lo `test -f 'common/stream_flags_encoder.c' || echo '$(srcdir)/'`common/stream_flags_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-stream_flags_encoder.Tpo $(DEPDIR)/liblzma_la-stream_flags_encoder.Plo
-#	$(AM_V_CC)source='common/stream_flags_encoder.c' object='liblzma_la-stream_flags_encoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-stream_flags_encoder.lo `test -f 'common/stream_flags_encoder.c' || echo '$(srcdir)/'`common/stream_flags_encoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-stream_flags_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-stream_flags_encoder.Tpo -c -o liblzma_la-stream_flags_encoder.lo `test -f 'common/stream_flags_encoder.c' || echo '$(srcdir)/'`common/stream_flags_encoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-stream_flags_encoder.Tpo $(DEPDIR)/liblzma_la-stream_flags_encoder.Plo
+#	$(AM_V_CC)source='common/stream_flags_encoder.c' object='liblzma_la-stream_flags_encoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-stream_flags_encoder.lo `test -f 'common/stream_flags_encoder.c' || echo '$(srcdir)/'`common/stream_flags_encoder.c
 
 liblzma_la-vli_encoder.lo: common/vli_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-vli_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-vli_encoder.Tpo -c -o liblzma_la-vli_encoder.lo `test -f 'common/vli_encoder.c' || echo '$(srcdir)/'`common/vli_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-vli_encoder.Tpo $(DEPDIR)/liblzma_la-vli_encoder.Plo
-#	$(AM_V_CC)source='common/vli_encoder.c' object='liblzma_la-vli_encoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-vli_encoder.lo `test -f 'common/vli_encoder.c' || echo '$(srcdir)/'`common/vli_encoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-vli_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-vli_encoder.Tpo -c -o liblzma_la-vli_encoder.lo `test -f 'common/vli_encoder.c' || echo '$(srcdir)/'`common/vli_encoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-vli_encoder.Tpo $(DEPDIR)/liblzma_la-vli_encoder.Plo
+#	$(AM_V_CC)source='common/vli_encoder.c' object='liblzma_la-vli_encoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-vli_encoder.lo `test -f 'common/vli_encoder.c' || echo '$(srcdir)/'`common/vli_encoder.c
 
 liblzma_la-outqueue.lo: common/outqueue.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-outqueue.lo -MD -MP -MF $(DEPDIR)/liblzma_la-outqueue.Tpo -c -o liblzma_la-outqueue.lo `test -f 'common/outqueue.c' || echo '$(srcdir)/'`common/outqueue.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-outqueue.Tpo $(DEPDIR)/liblzma_la-outqueue.Plo
-#	$(AM_V_CC)source='common/outqueue.c' object='liblzma_la-outqueue.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-outqueue.lo `test -f 'common/outqueue.c' || echo '$(srcdir)/'`common/outqueue.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-outqueue.lo -MD -MP -MF $(DEPDIR)/liblzma_la-outqueue.Tpo -c -o liblzma_la-outqueue.lo `test -f 'common/outqueue.c' || echo '$(srcdir)/'`common/outqueue.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-outqueue.Tpo $(DEPDIR)/liblzma_la-outqueue.Plo
+#	$(AM_V_CC)source='common/outqueue.c' object='liblzma_la-outqueue.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-outqueue.lo `test -f 'common/outqueue.c' || echo '$(srcdir)/'`common/outqueue.c
 
 liblzma_la-stream_encoder_mt.lo: common/stream_encoder_mt.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-stream_encoder_mt.lo -MD -MP -MF $(DEPDIR)/liblzma_la-stream_encoder_mt.Tpo -c -o liblzma_la-stream_encoder_mt.lo `test -f 'common/stream_encoder_mt.c' || echo '$(srcdir)/'`common/stream_encoder_mt.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-stream_encoder_mt.Tpo $(DEPDIR)/liblzma_la-stream_encoder_mt.Plo
-#	$(AM_V_CC)source='common/stream_encoder_mt.c' object='liblzma_la-stream_encoder_mt.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-stream_encoder_mt.lo `test -f 'common/stream_encoder_mt.c' || echo '$(srcdir)/'`common/stream_encoder_mt.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-stream_encoder_mt.lo -MD -MP -MF $(DEPDIR)/liblzma_la-stream_encoder_mt.Tpo -c -o liblzma_la-stream_encoder_mt.lo `test -f 'common/stream_encoder_mt.c' || echo '$(srcdir)/'`common/stream_encoder_mt.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-stream_encoder_mt.Tpo $(DEPDIR)/liblzma_la-stream_encoder_mt.Plo
+#	$(AM_V_CC)source='common/stream_encoder_mt.c' object='liblzma_la-stream_encoder_mt.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-stream_encoder_mt.lo `test -f 'common/stream_encoder_mt.c' || echo '$(srcdir)/'`common/stream_encoder_mt.c
 
 liblzma_la-alone_decoder.lo: common/alone_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-alone_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-alone_decoder.Tpo -c -o liblzma_la-alone_decoder.lo `test -f 'common/alone_decoder.c' || echo '$(srcdir)/'`common/alone_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-alone_decoder.Tpo $(DEPDIR)/liblzma_la-alone_decoder.Plo
-#	$(AM_V_CC)source='common/alone_decoder.c' object='liblzma_la-alone_decoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-alone_decoder.lo `test -f 'common/alone_decoder.c' || echo '$(srcdir)/'`common/alone_decoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-alone_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-alone_decoder.Tpo -c -o liblzma_la-alone_decoder.lo `test -f 'common/alone_decoder.c' || echo '$(srcdir)/'`common/alone_decoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-alone_decoder.Tpo $(DEPDIR)/liblzma_la-alone_decoder.Plo
+#	$(AM_V_CC)source='common/alone_decoder.c' object='liblzma_la-alone_decoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-alone_decoder.lo `test -f 'common/alone_decoder.c' || echo '$(srcdir)/'`common/alone_decoder.c
 
 liblzma_la-auto_decoder.lo: common/auto_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-auto_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-auto_decoder.Tpo -c -o liblzma_la-auto_decoder.lo `test -f 'common/auto_decoder.c' || echo '$(srcdir)/'`common/auto_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-auto_decoder.Tpo $(DEPDIR)/liblzma_la-auto_decoder.Plo
-#	$(AM_V_CC)source='common/auto_decoder.c' object='liblzma_la-auto_decoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-auto_decoder.lo `test -f 'common/auto_decoder.c' || echo '$(srcdir)/'`common/auto_decoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-auto_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-auto_decoder.Tpo -c -o liblzma_la-auto_decoder.lo `test -f 'common/auto_decoder.c' || echo '$(srcdir)/'`common/auto_decoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-auto_decoder.Tpo $(DEPDIR)/liblzma_la-auto_decoder.Plo
+#	$(AM_V_CC)source='common/auto_decoder.c' object='liblzma_la-auto_decoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-auto_decoder.lo `test -f 'common/auto_decoder.c' || echo '$(srcdir)/'`common/auto_decoder.c
 
 liblzma_la-block_buffer_decoder.lo: common/block_buffer_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-block_buffer_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-block_buffer_decoder.Tpo -c -o liblzma_la-block_buffer_decoder.lo `test -f 'common/block_buffer_decoder.c' || echo '$(srcdir)/'`common/block_buffer_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-block_buffer_decoder.Tpo $(DEPDIR)/liblzma_la-block_buffer_decoder.Plo
-#	$(AM_V_CC)source='common/block_buffer_decoder.c' object='liblzma_la-block_buffer_decoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-block_buffer_decoder.lo `test -f 'common/block_buffer_decoder.c' || echo '$(srcdir)/'`common/block_buffer_decoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-block_buffer_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-block_buffer_decoder.Tpo -c -o liblzma_la-block_buffer_decoder.lo `test -f 'common/block_buffer_decoder.c' || echo '$(srcdir)/'`common/block_buffer_decoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-block_buffer_decoder.Tpo $(DEPDIR)/liblzma_la-block_buffer_decoder.Plo
+#	$(AM_V_CC)source='common/block_buffer_decoder.c' object='liblzma_la-block_buffer_decoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-block_buffer_decoder.lo `test -f 'common/block_buffer_decoder.c' || echo '$(srcdir)/'`common/block_buffer_decoder.c
 
 liblzma_la-block_decoder.lo: common/block_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-block_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-block_decoder.Tpo -c -o liblzma_la-block_decoder.lo `test -f 'common/block_decoder.c' || echo '$(srcdir)/'`common/block_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-block_decoder.Tpo $(DEPDIR)/liblzma_la-block_decoder.Plo
-#	$(AM_V_CC)source='common/block_decoder.c' object='liblzma_la-block_decoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-block_decoder.lo `test -f 'common/block_decoder.c' || echo '$(srcdir)/'`common/block_decoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-block_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-block_decoder.Tpo -c -o liblzma_la-block_decoder.lo `test -f 'common/block_decoder.c' || echo '$(srcdir)/'`common/block_decoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-block_decoder.Tpo $(DEPDIR)/liblzma_la-block_decoder.Plo
+#	$(AM_V_CC)source='common/block_decoder.c' object='liblzma_la-block_decoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-block_decoder.lo `test -f 'common/block_decoder.c' || echo '$(srcdir)/'`common/block_decoder.c
 
 liblzma_la-block_header_decoder.lo: common/block_header_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-block_header_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-block_header_decoder.Tpo -c -o liblzma_la-block_header_decoder.lo `test -f 'common/block_header_decoder.c' || echo '$(srcdir)/'`common/block_header_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-block_header_decoder.Tpo $(DEPDIR)/liblzma_la-block_header_decoder.Plo
-#	$(AM_V_CC)source='common/block_header_decoder.c' object='liblzma_la-block_header_decoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-block_header_decoder.lo `test -f 'common/block_header_decoder.c' || echo '$(srcdir)/'`common/block_header_decoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-block_header_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-block_header_decoder.Tpo -c -o liblzma_la-block_header_decoder.lo `test -f 'common/block_header_decoder.c' || echo '$(srcdir)/'`common/block_header_decoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-block_header_decoder.Tpo $(DEPDIR)/liblzma_la-block_header_decoder.Plo
+#	$(AM_V_CC)source='common/block_header_decoder.c' object='liblzma_la-block_header_decoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-block_header_decoder.lo `test -f 'common/block_header_decoder.c' || echo '$(srcdir)/'`common/block_header_decoder.c
 
 liblzma_la-easy_decoder_memusage.lo: common/easy_decoder_memusage.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-easy_decoder_memusage.lo -MD -MP -MF $(DEPDIR)/liblzma_la-easy_decoder_memusage.Tpo -c -o liblzma_la-easy_decoder_memusage.lo `test -f 'common/easy_decoder_memusage.c' || echo '$(srcdir)/'`common/easy_decoder_memusage.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-easy_decoder_memusage.Tpo $(DEPDIR)/liblzma_la-easy_decoder_memusage.Plo
-#	$(AM_V_CC)source='common/easy_decoder_memusage.c' object='liblzma_la-easy_decoder_memusage.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-easy_decoder_memusage.lo `test -f 'common/easy_decoder_memusage.c' || echo '$(srcdir)/'`common/easy_decoder_memusage.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-easy_decoder_memusage.lo -MD -MP -MF $(DEPDIR)/liblzma_la-easy_decoder_memusage.Tpo -c -o liblzma_la-easy_decoder_memusage.lo `test -f 'common/easy_decoder_memusage.c' || echo '$(srcdir)/'`common/easy_decoder_memusage.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-easy_decoder_memusage.Tpo $(DEPDIR)/liblzma_la-easy_decoder_memusage.Plo
+#	$(AM_V_CC)source='common/easy_decoder_memusage.c' object='liblzma_la-easy_decoder_memusage.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-easy_decoder_memusage.lo `test -f 'common/easy_decoder_memusage.c' || echo '$(srcdir)/'`common/easy_decoder_memusage.c
 
 liblzma_la-erofs_decoder.lo: common/erofs_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-erofs_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-erofs_decoder.Tpo -c -o liblzma_la-erofs_decoder.lo `test -f 'common/erofs_decoder.c' || echo '$(srcdir)/'`common/erofs_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-erofs_decoder.Tpo $(DEPDIR)/liblzma_la-erofs_decoder.Plo
-#	$(AM_V_CC)source='common/erofs_decoder.c' object='liblzma_la-erofs_decoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-erofs_decoder.lo `test -f 'common/erofs_decoder.c' || echo '$(srcdir)/'`common/erofs_decoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-erofs_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-erofs_decoder.Tpo -c -o liblzma_la-erofs_decoder.lo `test -f 'common/erofs_decoder.c' || echo '$(srcdir)/'`common/erofs_decoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-erofs_decoder.Tpo $(DEPDIR)/liblzma_la-erofs_decoder.Plo
+#	$(AM_V_CC)source='common/erofs_decoder.c' object='liblzma_la-erofs_decoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-erofs_decoder.lo `test -f 'common/erofs_decoder.c' || echo '$(srcdir)/'`common/erofs_decoder.c
 
 liblzma_la-file_info.lo: common/file_info.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-file_info.lo -MD -MP -MF $(DEPDIR)/liblzma_la-file_info.Tpo -c -o liblzma_la-file_info.lo `test -f 'common/file_info.c' || echo '$(srcdir)/'`common/file_info.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-file_info.Tpo $(DEPDIR)/liblzma_la-file_info.Plo
-#	$(AM_V_CC)source='common/file_info.c' object='liblzma_la-file_info.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-file_info.lo `test -f 'common/file_info.c' || echo '$(srcdir)/'`common/file_info.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-file_info.lo -MD -MP -MF $(DEPDIR)/liblzma_la-file_info.Tpo -c -o liblzma_la-file_info.lo `test -f 'common/file_info.c' || echo '$(srcdir)/'`common/file_info.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-file_info.Tpo $(DEPDIR)/liblzma_la-file_info.Plo
+#	$(AM_V_CC)source='common/file_info.c' object='liblzma_la-file_info.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-file_info.lo `test -f 'common/file_info.c' || echo '$(srcdir)/'`common/file_info.c
 
 liblzma_la-filter_buffer_decoder.lo: common/filter_buffer_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-filter_buffer_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-filter_buffer_decoder.Tpo -c -o liblzma_la-filter_buffer_decoder.lo `test -f 'common/filter_buffer_decoder.c' || echo '$(srcdir)/'`common/filter_buffer_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-filter_buffer_decoder.Tpo $(DEPDIR)/liblzma_la-filter_buffer_decoder.Plo
-#	$(AM_V_CC)source='common/filter_buffer_decoder.c' object='liblzma_la-filter_buffer_decoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-filter_buffer_decoder.lo `test -f 'common/filter_buffer_decoder.c' || echo '$(srcdir)/'`common/filter_buffer_decoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-filter_buffer_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-filter_buffer_decoder.Tpo -c -o liblzma_la-filter_buffer_decoder.lo `test -f 'common/filter_buffer_decoder.c' || echo '$(srcdir)/'`common/filter_buffer_decoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-filter_buffer_decoder.Tpo $(DEPDIR)/liblzma_la-filter_buffer_decoder.Plo
+#	$(AM_V_CC)source='common/filter_buffer_decoder.c' object='liblzma_la-filter_buffer_decoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-filter_buffer_decoder.lo `test -f 'common/filter_buffer_decoder.c' || echo '$(srcdir)/'`common/filter_buffer_decoder.c
 
 liblzma_la-filter_decoder.lo: common/filter_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-filter_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-filter_decoder.Tpo -c -o liblzma_la-filter_decoder.lo `test -f 'common/filter_decoder.c' || echo '$(srcdir)/'`common/filter_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-filter_decoder.Tpo $(DEPDIR)/liblzma_la-filter_decoder.Plo
-#	$(AM_V_CC)source='common/filter_decoder.c' object='liblzma_la-filter_decoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-filter_decoder.lo `test -f 'common/filter_decoder.c' || echo '$(srcdir)/'`common/filter_decoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-filter_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-filter_decoder.Tpo -c -o liblzma_la-filter_decoder.lo `test -f 'common/filter_decoder.c' || echo '$(srcdir)/'`common/filter_decoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-filter_decoder.Tpo $(DEPDIR)/liblzma_la-filter_decoder.Plo
+#	$(AM_V_CC)source='common/filter_decoder.c' object='liblzma_la-filter_decoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-filter_decoder.lo `test -f 'common/filter_decoder.c' || echo '$(srcdir)/'`common/filter_decoder.c
 
 liblzma_la-filter_flags_decoder.lo: common/filter_flags_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-filter_flags_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-filter_flags_decoder.Tpo -c -o liblzma_la-filter_flags_decoder.lo `test -f 'common/filter_flags_decoder.c' || echo '$(srcdir)/'`common/filter_flags_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-filter_flags_decoder.Tpo $(DEPDIR)/liblzma_la-filter_flags_decoder.Plo
-#	$(AM_V_CC)source='common/filter_flags_decoder.c' object='liblzma_la-filter_flags_decoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-filter_flags_decoder.lo `test -f 'common/filter_flags_decoder.c' || echo '$(srcdir)/'`common/filter_flags_decoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-filter_flags_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-filter_flags_decoder.Tpo -c -o liblzma_la-filter_flags_decoder.lo `test -f 'common/filter_flags_decoder.c' || echo '$(srcdir)/'`common/filter_flags_decoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-filter_flags_decoder.Tpo $(DEPDIR)/liblzma_la-filter_flags_decoder.Plo
+#	$(AM_V_CC)source='common/filter_flags_decoder.c' object='liblzma_la-filter_flags_decoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-filter_flags_decoder.lo `test -f 'common/filter_flags_decoder.c' || echo '$(srcdir)/'`common/filter_flags_decoder.c
 
 liblzma_la-index_decoder.lo: common/index_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-index_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-index_decoder.Tpo -c -o liblzma_la-index_decoder.lo `test -f 'common/index_decoder.c' || echo '$(srcdir)/'`common/index_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-index_decoder.Tpo $(DEPDIR)/liblzma_la-index_decoder.Plo
-#	$(AM_V_CC)source='common/index_decoder.c' object='liblzma_la-index_decoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-index_decoder.lo `test -f 'common/index_decoder.c' || echo '$(srcdir)/'`common/index_decoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-index_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-index_decoder.Tpo -c -o liblzma_la-index_decoder.lo `test -f 'common/index_decoder.c' || echo '$(srcdir)/'`common/index_decoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-index_decoder.Tpo $(DEPDIR)/liblzma_la-index_decoder.Plo
+#	$(AM_V_CC)source='common/index_decoder.c' object='liblzma_la-index_decoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-index_decoder.lo `test -f 'common/index_decoder.c' || echo '$(srcdir)/'`common/index_decoder.c
 
 liblzma_la-index_hash.lo: common/index_hash.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-index_hash.lo -MD -MP -MF $(DEPDIR)/liblzma_la-index_hash.Tpo -c -o liblzma_la-index_hash.lo `test -f 'common/index_hash.c' || echo '$(srcdir)/'`common/index_hash.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-index_hash.Tpo $(DEPDIR)/liblzma_la-index_hash.Plo
-#	$(AM_V_CC)source='common/index_hash.c' object='liblzma_la-index_hash.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-index_hash.lo `test -f 'common/index_hash.c' || echo '$(srcdir)/'`common/index_hash.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-index_hash.lo -MD -MP -MF $(DEPDIR)/liblzma_la-index_hash.Tpo -c -o liblzma_la-index_hash.lo `test -f 'common/index_hash.c' || echo '$(srcdir)/'`common/index_hash.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-index_hash.Tpo $(DEPDIR)/liblzma_la-index_hash.Plo
+#	$(AM_V_CC)source='common/index_hash.c' object='liblzma_la-index_hash.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-index_hash.lo `test -f 'common/index_hash.c' || echo '$(srcdir)/'`common/index_hash.c
 
 liblzma_la-stream_buffer_decoder.lo: common/stream_buffer_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-stream_buffer_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-stream_buffer_decoder.Tpo -c -o liblzma_la-stream_buffer_decoder.lo `test -f 'common/stream_buffer_decoder.c' || echo '$(srcdir)/'`common/stream_buffer_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-stream_buffer_decoder.Tpo $(DEPDIR)/liblzma_la-stream_buffer_decoder.Plo
-#	$(AM_V_CC)source='common/stream_buffer_decoder.c' object='liblzma_la-stream_buffer_decoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-stream_buffer_decoder.lo `test -f 'common/stream_buffer_decoder.c' || echo '$(srcdir)/'`common/stream_buffer_decoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-stream_buffer_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-stream_buffer_decoder.Tpo -c -o liblzma_la-stream_buffer_decoder.lo `test -f 'common/stream_buffer_decoder.c' || echo '$(srcdir)/'`common/stream_buffer_decoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-stream_buffer_decoder.Tpo $(DEPDIR)/liblzma_la-stream_buffer_decoder.Plo
+#	$(AM_V_CC)source='common/stream_buffer_decoder.c' object='liblzma_la-stream_buffer_decoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-stream_buffer_decoder.lo `test -f 'common/stream_buffer_decoder.c' || echo '$(srcdir)/'`common/stream_buffer_decoder.c
 
 liblzma_la-stream_decoder.lo: common/stream_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-stream_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-stream_decoder.Tpo -c -o liblzma_la-stream_decoder.lo `test -f 'common/stream_decoder.c' || echo '$(srcdir)/'`common/stream_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-stream_decoder.Tpo $(DEPDIR)/liblzma_la-stream_decoder.Plo
-#	$(AM_V_CC)source='common/stream_decoder.c' object='liblzma_la-stream_decoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-stream_decoder.lo `test -f 'common/stream_decoder.c' || echo '$(srcdir)/'`common/stream_decoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-stream_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-stream_decoder.Tpo -c -o liblzma_la-stream_decoder.lo `test -f 'common/stream_decoder.c' || echo '$(srcdir)/'`common/stream_decoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-stream_decoder.Tpo $(DEPDIR)/liblzma_la-stream_decoder.Plo
+#	$(AM_V_CC)source='common/stream_decoder.c' object='liblzma_la-stream_decoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-stream_decoder.lo `test -f 'common/stream_decoder.c' || echo '$(srcdir)/'`common/stream_decoder.c
 
 liblzma_la-stream_flags_decoder.lo: common/stream_flags_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-stream_flags_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-stream_flags_decoder.Tpo -c -o liblzma_la-stream_flags_decoder.lo `test -f 'common/stream_flags_decoder.c' || echo '$(srcdir)/'`common/stream_flags_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-stream_flags_decoder.Tpo $(DEPDIR)/liblzma_la-stream_flags_decoder.Plo
-#	$(AM_V_CC)source='common/stream_flags_decoder.c' object='liblzma_la-stream_flags_decoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-stream_flags_decoder.lo `test -f 'common/stream_flags_decoder.c' || echo '$(srcdir)/'`common/stream_flags_decoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-stream_flags_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-stream_flags_decoder.Tpo -c -o liblzma_la-stream_flags_decoder.lo `test -f 'common/stream_flags_decoder.c' || echo '$(srcdir)/'`common/stream_flags_decoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-stream_flags_decoder.Tpo $(DEPDIR)/liblzma_la-stream_flags_decoder.Plo
+#	$(AM_V_CC)source='common/stream_flags_decoder.c' object='liblzma_la-stream_flags_decoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-stream_flags_decoder.lo `test -f 'common/stream_flags_decoder.c' || echo '$(srcdir)/'`common/stream_flags_decoder.c
 
 liblzma_la-vli_decoder.lo: common/vli_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-vli_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-vli_decoder.Tpo -c -o liblzma_la-vli_decoder.lo `test -f 'common/vli_decoder.c' || echo '$(srcdir)/'`common/vli_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-vli_decoder.Tpo $(DEPDIR)/liblzma_la-vli_decoder.Plo
-#	$(AM_V_CC)source='common/vli_decoder.c' object='liblzma_la-vli_decoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-vli_decoder.lo `test -f 'common/vli_decoder.c' || echo '$(srcdir)/'`common/vli_decoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-vli_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-vli_decoder.Tpo -c -o liblzma_la-vli_decoder.lo `test -f 'common/vli_decoder.c' || echo '$(srcdir)/'`common/vli_decoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-vli_decoder.Tpo $(DEPDIR)/liblzma_la-vli_decoder.Plo
+#	$(AM_V_CC)source='common/vli_decoder.c' object='liblzma_la-vli_decoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-vli_decoder.lo `test -f 'common/vli_decoder.c' || echo '$(srcdir)/'`common/vli_decoder.c
 
 liblzma_la-check.lo: check/check.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-check.lo -MD -MP -MF $(DEPDIR)/liblzma_la-check.Tpo -c -o liblzma_la-check.lo `test -f 'check/check.c' || echo '$(srcdir)/'`check/check.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-check.Tpo $(DEPDIR)/liblzma_la-check.Plo
-#	$(AM_V_CC)source='check/check.c' object='liblzma_la-check.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-check.lo `test -f 'check/check.c' || echo '$(srcdir)/'`check/check.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-check.lo -MD -MP -MF $(DEPDIR)/liblzma_la-check.Tpo -c -o liblzma_la-check.lo `test -f 'check/check.c' || echo '$(srcdir)/'`check/check.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-check.Tpo $(DEPDIR)/liblzma_la-check.Plo
+#	$(AM_V_CC)source='check/check.c' object='liblzma_la-check.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-check.lo `test -f 'check/check.c' || echo '$(srcdir)/'`check/check.c
 
 liblzma_la-crc32_small.lo: check/crc32_small.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-crc32_small.lo -MD -MP -MF $(DEPDIR)/liblzma_la-crc32_small.Tpo -c -o liblzma_la-crc32_small.lo `test -f 'check/crc32_small.c' || echo '$(srcdir)/'`check/crc32_small.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-crc32_small.Tpo $(DEPDIR)/liblzma_la-crc32_small.Plo
-#	$(AM_V_CC)source='check/crc32_small.c' object='liblzma_la-crc32_small.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-crc32_small.lo `test -f 'check/crc32_small.c' || echo '$(srcdir)/'`check/crc32_small.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-crc32_small.lo -MD -MP -MF $(DEPDIR)/liblzma_la-crc32_small.Tpo -c -o liblzma_la-crc32_small.lo `test -f 'check/crc32_small.c' || echo '$(srcdir)/'`check/crc32_small.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-crc32_small.Tpo $(DEPDIR)/liblzma_la-crc32_small.Plo
+#	$(AM_V_CC)source='check/crc32_small.c' object='liblzma_la-crc32_small.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-crc32_small.lo `test -f 'check/crc32_small.c' || echo '$(srcdir)/'`check/crc32_small.c
 
 liblzma_la-crc32_table.lo: check/crc32_table.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-crc32_table.lo -MD -MP -MF $(DEPDIR)/liblzma_la-crc32_table.Tpo -c -o liblzma_la-crc32_table.lo `test -f 'check/crc32_table.c' || echo '$(srcdir)/'`check/crc32_table.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-crc32_table.Tpo $(DEPDIR)/liblzma_la-crc32_table.Plo
-#	$(AM_V_CC)source='check/crc32_table.c' object='liblzma_la-crc32_table.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-crc32_table.lo `test -f 'check/crc32_table.c' || echo '$(srcdir)/'`check/crc32_table.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-crc32_table.lo -MD -MP -MF $(DEPDIR)/liblzma_la-crc32_table.Tpo -c -o liblzma_la-crc32_table.lo `test -f 'check/crc32_table.c' || echo '$(srcdir)/'`check/crc32_table.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-crc32_table.Tpo $(DEPDIR)/liblzma_la-crc32_table.Plo
+#	$(AM_V_CC)source='check/crc32_table.c' object='liblzma_la-crc32_table.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-crc32_table.lo `test -f 'check/crc32_table.c' || echo '$(srcdir)/'`check/crc32_table.c
 
 liblzma_la-crc32_fast.lo: check/crc32_fast.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-crc32_fast.lo -MD -MP -MF $(DEPDIR)/liblzma_la-crc32_fast.Tpo -c -o liblzma_la-crc32_fast.lo `test -f 'check/crc32_fast.c' || echo '$(srcdir)/'`check/crc32_fast.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-crc32_fast.Tpo $(DEPDIR)/liblzma_la-crc32_fast.Plo
-#	$(AM_V_CC)source='check/crc32_fast.c' object='liblzma_la-crc32_fast.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-crc32_fast.lo `test -f 'check/crc32_fast.c' || echo '$(srcdir)/'`check/crc32_fast.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-crc32_fast.lo -MD -MP -MF $(DEPDIR)/liblzma_la-crc32_fast.Tpo -c -o liblzma_la-crc32_fast.lo `test -f 'check/crc32_fast.c' || echo '$(srcdir)/'`check/crc32_fast.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-crc32_fast.Tpo $(DEPDIR)/liblzma_la-crc32_fast.Plo
+#	$(AM_V_CC)source='check/crc32_fast.c' object='liblzma_la-crc32_fast.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-crc32_fast.lo `test -f 'check/crc32_fast.c' || echo '$(srcdir)/'`check/crc32_fast.c
 
 liblzma_la-crc64_small.lo: check/crc64_small.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-crc64_small.lo -MD -MP -MF $(DEPDIR)/liblzma_la-crc64_small.Tpo -c -o liblzma_la-crc64_small.lo `test -f 'check/crc64_small.c' || echo '$(srcdir)/'`check/crc64_small.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-crc64_small.Tpo $(DEPDIR)/liblzma_la-crc64_small.Plo
-#	$(AM_V_CC)source='check/crc64_small.c' object='liblzma_la-crc64_small.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-crc64_small.lo `test -f 'check/crc64_small.c' || echo '$(srcdir)/'`check/crc64_small.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-crc64_small.lo -MD -MP -MF $(DEPDIR)/liblzma_la-crc64_small.Tpo -c -o liblzma_la-crc64_small.lo `test -f 'check/crc64_small.c' || echo '$(srcdir)/'`check/crc64_small.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-crc64_small.Tpo $(DEPDIR)/liblzma_la-crc64_small.Plo
+#	$(AM_V_CC)source='check/crc64_small.c' object='liblzma_la-crc64_small.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-crc64_small.lo `test -f 'check/crc64_small.c' || echo '$(srcdir)/'`check/crc64_small.c
 
 liblzma_la-crc64_table.lo: check/crc64_table.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-crc64_table.lo -MD -MP -MF $(DEPDIR)/liblzma_la-crc64_table.Tpo -c -o liblzma_la-crc64_table.lo `test -f 'check/crc64_table.c' || echo '$(srcdir)/'`check/crc64_table.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-crc64_table.Tpo $(DEPDIR)/liblzma_la-crc64_table.Plo
-#	$(AM_V_CC)source='check/crc64_table.c' object='liblzma_la-crc64_table.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-crc64_table.lo `test -f 'check/crc64_table.c' || echo '$(srcdir)/'`check/crc64_table.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-crc64_table.lo -MD -MP -MF $(DEPDIR)/liblzma_la-crc64_table.Tpo -c -o liblzma_la-crc64_table.lo `test -f 'check/crc64_table.c' || echo '$(srcdir)/'`check/crc64_table.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-crc64_table.Tpo $(DEPDIR)/liblzma_la-crc64_table.Plo
+#	$(AM_V_CC)source='check/crc64_table.c' object='liblzma_la-crc64_table.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-crc64_table.lo `test -f 'check/crc64_table.c' || echo '$(srcdir)/'`check/crc64_table.c
 
 liblzma_la-crc64_fast.lo: check/crc64_fast.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-crc64_fast.lo -MD -MP -MF $(DEPDIR)/liblzma_la-crc64_fast.Tpo -c -o liblzma_la-crc64_fast.lo `test -f 'check/crc64_fast.c' || echo '$(srcdir)/'`check/crc64_fast.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-crc64_fast.Tpo $(DEPDIR)/liblzma_la-crc64_fast.Plo
-#	$(AM_V_CC)source='check/crc64_fast.c' object='liblzma_la-crc64_fast.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-crc64_fast.lo `test -f 'check/crc64_fast.c' || echo '$(srcdir)/'`check/crc64_fast.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-crc64_fast.lo -MD -MP -MF $(DEPDIR)/liblzma_la-crc64_fast.Tpo -c -o liblzma_la-crc64_fast.lo `test -f 'check/crc64_fast.c' || echo '$(srcdir)/'`check/crc64_fast.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-crc64_fast.Tpo $(DEPDIR)/liblzma_la-crc64_fast.Plo
+#	$(AM_V_CC)source='check/crc64_fast.c' object='liblzma_la-crc64_fast.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-crc64_fast.lo `test -f 'check/crc64_fast.c' || echo '$(srcdir)/'`check/crc64_fast.c
 
 liblzma_la-sha256.lo: check/sha256.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-sha256.lo -MD -MP -MF $(DEPDIR)/liblzma_la-sha256.Tpo -c -o liblzma_la-sha256.lo `test -f 'check/sha256.c' || echo '$(srcdir)/'`check/sha256.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-sha256.Tpo $(DEPDIR)/liblzma_la-sha256.Plo
-#	$(AM_V_CC)source='check/sha256.c' object='liblzma_la-sha256.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-sha256.lo `test -f 'check/sha256.c' || echo '$(srcdir)/'`check/sha256.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-sha256.lo -MD -MP -MF $(DEPDIR)/liblzma_la-sha256.Tpo -c -o liblzma_la-sha256.lo `test -f 'check/sha256.c' || echo '$(srcdir)/'`check/sha256.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-sha256.Tpo $(DEPDIR)/liblzma_la-sha256.Plo
+#	$(AM_V_CC)source='check/sha256.c' object='liblzma_la-sha256.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-sha256.lo `test -f 'check/sha256.c' || echo '$(srcdir)/'`check/sha256.c
 
 liblzma_la-lz_encoder.lo: lz/lz_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-lz_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-lz_encoder.Tpo -c -o liblzma_la-lz_encoder.lo `test -f 'lz/lz_encoder.c' || echo '$(srcdir)/'`lz/lz_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-lz_encoder.Tpo $(DEPDIR)/liblzma_la-lz_encoder.Plo
-#	$(AM_V_CC)source='lz/lz_encoder.c' object='liblzma_la-lz_encoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-lz_encoder.lo `test -f 'lz/lz_encoder.c' || echo '$(srcdir)/'`lz/lz_encoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-lz_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-lz_encoder.Tpo -c -o liblzma_la-lz_encoder.lo `test -f 'lz/lz_encoder.c' || echo '$(srcdir)/'`lz/lz_encoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-lz_encoder.Tpo $(DEPDIR)/liblzma_la-lz_encoder.Plo
+#	$(AM_V_CC)source='lz/lz_encoder.c' object='liblzma_la-lz_encoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-lz_encoder.lo `test -f 'lz/lz_encoder.c' || echo '$(srcdir)/'`lz/lz_encoder.c
 
 liblzma_la-lz_encoder_mf.lo: lz/lz_encoder_mf.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-lz_encoder_mf.lo -MD -MP -MF $(DEPDIR)/liblzma_la-lz_encoder_mf.Tpo -c -o liblzma_la-lz_encoder_mf.lo `test -f 'lz/lz_encoder_mf.c' || echo '$(srcdir)/'`lz/lz_encoder_mf.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-lz_encoder_mf.Tpo $(DEPDIR)/liblzma_la-lz_encoder_mf.Plo
-#	$(AM_V_CC)source='lz/lz_encoder_mf.c' object='liblzma_la-lz_encoder_mf.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-lz_encoder_mf.lo `test -f 'lz/lz_encoder_mf.c' || echo '$(srcdir)/'`lz/lz_encoder_mf.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-lz_encoder_mf.lo -MD -MP -MF $(DEPDIR)/liblzma_la-lz_encoder_mf.Tpo -c -o liblzma_la-lz_encoder_mf.lo `test -f 'lz/lz_encoder_mf.c' || echo '$(srcdir)/'`lz/lz_encoder_mf.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-lz_encoder_mf.Tpo $(DEPDIR)/liblzma_la-lz_encoder_mf.Plo
+#	$(AM_V_CC)source='lz/lz_encoder_mf.c' object='liblzma_la-lz_encoder_mf.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-lz_encoder_mf.lo `test -f 'lz/lz_encoder_mf.c' || echo '$(srcdir)/'`lz/lz_encoder_mf.c
 
 liblzma_la-lz_decoder.lo: lz/lz_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-lz_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-lz_decoder.Tpo -c -o liblzma_la-lz_decoder.lo `test -f 'lz/lz_decoder.c' || echo '$(srcdir)/'`lz/lz_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-lz_decoder.Tpo $(DEPDIR)/liblzma_la-lz_decoder.Plo
-#	$(AM_V_CC)source='lz/lz_decoder.c' object='liblzma_la-lz_decoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-lz_decoder.lo `test -f 'lz/lz_decoder.c' || echo '$(srcdir)/'`lz/lz_decoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-lz_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-lz_decoder.Tpo -c -o liblzma_la-lz_decoder.lo `test -f 'lz/lz_decoder.c' || echo '$(srcdir)/'`lz/lz_decoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-lz_decoder.Tpo $(DEPDIR)/liblzma_la-lz_decoder.Plo
+#	$(AM_V_CC)source='lz/lz_decoder.c' object='liblzma_la-lz_decoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-lz_decoder.lo `test -f 'lz/lz_decoder.c' || echo '$(srcdir)/'`lz/lz_decoder.c
 
 liblzma_la-lzma_encoder_presets.lo: lzma/lzma_encoder_presets.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-lzma_encoder_presets.lo -MD -MP -MF $(DEPDIR)/liblzma_la-lzma_encoder_presets.Tpo -c -o liblzma_la-lzma_encoder_presets.lo `test -f 'lzma/lzma_encoder_presets.c' || echo '$(srcdir)/'`lzma/lzma_encoder_presets.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-lzma_encoder_presets.Tpo $(DEPDIR)/liblzma_la-lzma_encoder_presets.Plo
-#	$(AM_V_CC)source='lzma/lzma_encoder_presets.c' object='liblzma_la-lzma_encoder_presets.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-lzma_encoder_presets.lo `test -f 'lzma/lzma_encoder_presets.c' || echo '$(srcdir)/'`lzma/lzma_encoder_presets.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-lzma_encoder_presets.lo -MD -MP -MF $(DEPDIR)/liblzma_la-lzma_encoder_presets.Tpo -c -o liblzma_la-lzma_encoder_presets.lo `test -f 'lzma/lzma_encoder_presets.c' || echo '$(srcdir)/'`lzma/lzma_encoder_presets.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-lzma_encoder_presets.Tpo $(DEPDIR)/liblzma_la-lzma_encoder_presets.Plo
+#	$(AM_V_CC)source='lzma/lzma_encoder_presets.c' object='liblzma_la-lzma_encoder_presets.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-lzma_encoder_presets.lo `test -f 'lzma/lzma_encoder_presets.c' || echo '$(srcdir)/'`lzma/lzma_encoder_presets.c
 
 liblzma_la-lzma_encoder.lo: lzma/lzma_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-lzma_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-lzma_encoder.Tpo -c -o liblzma_la-lzma_encoder.lo `test -f 'lzma/lzma_encoder.c' || echo '$(srcdir)/'`lzma/lzma_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-lzma_encoder.Tpo $(DEPDIR)/liblzma_la-lzma_encoder.Plo
-#	$(AM_V_CC)source='lzma/lzma_encoder.c' object='liblzma_la-lzma_encoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-lzma_encoder.lo `test -f 'lzma/lzma_encoder.c' || echo '$(srcdir)/'`lzma/lzma_encoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-lzma_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-lzma_encoder.Tpo -c -o liblzma_la-lzma_encoder.lo `test -f 'lzma/lzma_encoder.c' || echo '$(srcdir)/'`lzma/lzma_encoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-lzma_encoder.Tpo $(DEPDIR)/liblzma_la-lzma_encoder.Plo
+#	$(AM_V_CC)source='lzma/lzma_encoder.c' object='liblzma_la-lzma_encoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-lzma_encoder.lo `test -f 'lzma/lzma_encoder.c' || echo '$(srcdir)/'`lzma/lzma_encoder.c
 
 liblzma_la-lzma_encoder_optimum_fast.lo: lzma/lzma_encoder_optimum_fast.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-lzma_encoder_optimum_fast.lo -MD -MP -MF $(DEPDIR)/liblzma_la-lzma_encoder_optimum_fast.Tpo -c -o liblzma_la-lzma_encoder_optimum_fast.lo `test -f 'lzma/lzma_encoder_optimum_fast.c' || echo '$(srcdir)/'`lzma/lzma_encoder_optimum_fast.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-lzma_encoder_optimum_fast.Tpo $(DEPDIR)/liblzma_la-lzma_encoder_optimum_fast.Plo
-#	$(AM_V_CC)source='lzma/lzma_encoder_optimum_fast.c' object='liblzma_la-lzma_encoder_optimum_fast.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-lzma_encoder_optimum_fast.lo `test -f 'lzma/lzma_encoder_optimum_fast.c' || echo '$(srcdir)/'`lzma/lzma_encoder_optimum_fast.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-lzma_encoder_optimum_fast.lo -MD -MP -MF $(DEPDIR)/liblzma_la-lzma_encoder_optimum_fast.Tpo -c -o liblzma_la-lzma_encoder_optimum_fast.lo `test -f 'lzma/lzma_encoder_optimum_fast.c' || echo '$(srcdir)/'`lzma/lzma_encoder_optimum_fast.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-lzma_encoder_optimum_fast.Tpo $(DEPDIR)/liblzma_la-lzma_encoder_optimum_fast.Plo
+#	$(AM_V_CC)source='lzma/lzma_encoder_optimum_fast.c' object='liblzma_la-lzma_encoder_optimum_fast.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-lzma_encoder_optimum_fast.lo `test -f 'lzma/lzma_encoder_optimum_fast.c' || echo '$(srcdir)/'`lzma/lzma_encoder_optimum_fast.c
 
 liblzma_la-lzma_encoder_optimum_normal.lo: lzma/lzma_encoder_optimum_normal.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-lzma_encoder_optimum_normal.lo -MD -MP -MF $(DEPDIR)/liblzma_la-lzma_encoder_optimum_normal.Tpo -c -o liblzma_la-lzma_encoder_optimum_normal.lo `test -f 'lzma/lzma_encoder_optimum_normal.c' || echo '$(srcdir)/'`lzma/lzma_encoder_optimum_normal.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-lzma_encoder_optimum_normal.Tpo $(DEPDIR)/liblzma_la-lzma_encoder_optimum_normal.Plo
-#	$(AM_V_CC)source='lzma/lzma_encoder_optimum_normal.c' object='liblzma_la-lzma_encoder_optimum_normal.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-lzma_encoder_optimum_normal.lo `test -f 'lzma/lzma_encoder_optimum_normal.c' || echo '$(srcdir)/'`lzma/lzma_encoder_optimum_normal.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-lzma_encoder_optimum_normal.lo -MD -MP -MF $(DEPDIR)/liblzma_la-lzma_encoder_optimum_normal.Tpo -c -o liblzma_la-lzma_encoder_optimum_normal.lo `test -f 'lzma/lzma_encoder_optimum_normal.c' || echo '$(srcdir)/'`lzma/lzma_encoder_optimum_normal.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-lzma_encoder_optimum_normal.Tpo $(DEPDIR)/liblzma_la-lzma_encoder_optimum_normal.Plo
+#	$(AM_V_CC)source='lzma/lzma_encoder_optimum_normal.c' object='liblzma_la-lzma_encoder_optimum_normal.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-lzma_encoder_optimum_normal.lo `test -f 'lzma/lzma_encoder_optimum_normal.c' || echo '$(srcdir)/'`lzma/lzma_encoder_optimum_normal.c
 
 liblzma_la-fastpos_table.lo: lzma/fastpos_table.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-fastpos_table.lo -MD -MP -MF $(DEPDIR)/liblzma_la-fastpos_table.Tpo -c -o liblzma_la-fastpos_table.lo `test -f 'lzma/fastpos_table.c' || echo '$(srcdir)/'`lzma/fastpos_table.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-fastpos_table.Tpo $(DEPDIR)/liblzma_la-fastpos_table.Plo
-#	$(AM_V_CC)source='lzma/fastpos_table.c' object='liblzma_la-fastpos_table.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-fastpos_table.lo `test -f 'lzma/fastpos_table.c' || echo '$(srcdir)/'`lzma/fastpos_table.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-fastpos_table.lo -MD -MP -MF $(DEPDIR)/liblzma_la-fastpos_table.Tpo -c -o liblzma_la-fastpos_table.lo `test -f 'lzma/fastpos_table.c' || echo '$(srcdir)/'`lzma/fastpos_table.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-fastpos_table.Tpo $(DEPDIR)/liblzma_la-fastpos_table.Plo
+#	$(AM_V_CC)source='lzma/fastpos_table.c' object='liblzma_la-fastpos_table.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-fastpos_table.lo `test -f 'lzma/fastpos_table.c' || echo '$(srcdir)/'`lzma/fastpos_table.c
 
 liblzma_la-lzma_decoder.lo: lzma/lzma_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-lzma_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-lzma_decoder.Tpo -c -o liblzma_la-lzma_decoder.lo `test -f 'lzma/lzma_decoder.c' || echo '$(srcdir)/'`lzma/lzma_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-lzma_decoder.Tpo $(DEPDIR)/liblzma_la-lzma_decoder.Plo
-#	$(AM_V_CC)source='lzma/lzma_decoder.c' object='liblzma_la-lzma_decoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-lzma_decoder.lo `test -f 'lzma/lzma_decoder.c' || echo '$(srcdir)/'`lzma/lzma_decoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-lzma_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-lzma_decoder.Tpo -c -o liblzma_la-lzma_decoder.lo `test -f 'lzma/lzma_decoder.c' || echo '$(srcdir)/'`lzma/lzma_decoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-lzma_decoder.Tpo $(DEPDIR)/liblzma_la-lzma_decoder.Plo
+#	$(AM_V_CC)source='lzma/lzma_decoder.c' object='liblzma_la-lzma_decoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-lzma_decoder.lo `test -f 'lzma/lzma_decoder.c' || echo '$(srcdir)/'`lzma/lzma_decoder.c
 
 liblzma_la-lzma2_encoder.lo: lzma/lzma2_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-lzma2_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-lzma2_encoder.Tpo -c -o liblzma_la-lzma2_encoder.lo `test -f 'lzma/lzma2_encoder.c' || echo '$(srcdir)/'`lzma/lzma2_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-lzma2_encoder.Tpo $(DEPDIR)/liblzma_la-lzma2_encoder.Plo
-#	$(AM_V_CC)source='lzma/lzma2_encoder.c' object='liblzma_la-lzma2_encoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-lzma2_encoder.lo `test -f 'lzma/lzma2_encoder.c' || echo '$(srcdir)/'`lzma/lzma2_encoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-lzma2_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-lzma2_encoder.Tpo -c -o liblzma_la-lzma2_encoder.lo `test -f 'lzma/lzma2_encoder.c' || echo '$(srcdir)/'`lzma/lzma2_encoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-lzma2_encoder.Tpo $(DEPDIR)/liblzma_la-lzma2_encoder.Plo
+#	$(AM_V_CC)source='lzma/lzma2_encoder.c' object='liblzma_la-lzma2_encoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-lzma2_encoder.lo `test -f 'lzma/lzma2_encoder.c' || echo '$(srcdir)/'`lzma/lzma2_encoder.c
 
 liblzma_la-lzma2_decoder.lo: lzma/lzma2_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-lzma2_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-lzma2_decoder.Tpo -c -o liblzma_la-lzma2_decoder.lo `test -f 'lzma/lzma2_decoder.c' || echo '$(srcdir)/'`lzma/lzma2_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-lzma2_decoder.Tpo $(DEPDIR)/liblzma_la-lzma2_decoder.Plo
-#	$(AM_V_CC)source='lzma/lzma2_decoder.c' object='liblzma_la-lzma2_decoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-lzma2_decoder.lo `test -f 'lzma/lzma2_decoder.c' || echo '$(srcdir)/'`lzma/lzma2_decoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-lzma2_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-lzma2_decoder.Tpo -c -o liblzma_la-lzma2_decoder.lo `test -f 'lzma/lzma2_decoder.c' || echo '$(srcdir)/'`lzma/lzma2_decoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-lzma2_decoder.Tpo $(DEPDIR)/liblzma_la-lzma2_decoder.Plo
+#	$(AM_V_CC)source='lzma/lzma2_decoder.c' object='liblzma_la-lzma2_decoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-lzma2_decoder.lo `test -f 'lzma/lzma2_decoder.c' || echo '$(srcdir)/'`lzma/lzma2_decoder.c
 
 liblzma_la-price_table.lo: rangecoder/price_table.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-price_table.lo -MD -MP -MF $(DEPDIR)/liblzma_la-price_table.Tpo -c -o liblzma_la-price_table.lo `test -f 'rangecoder/price_table.c' || echo '$(srcdir)/'`rangecoder/price_table.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-price_table.Tpo $(DEPDIR)/liblzma_la-price_table.Plo
-#	$(AM_V_CC)source='rangecoder/price_table.c' object='liblzma_la-price_table.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-price_table.lo `test -f 'rangecoder/price_table.c' || echo '$(srcdir)/'`rangecoder/price_table.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-price_table.lo -MD -MP -MF $(DEPDIR)/liblzma_la-price_table.Tpo -c -o liblzma_la-price_table.lo `test -f 'rangecoder/price_table.c' || echo '$(srcdir)/'`rangecoder/price_table.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-price_table.Tpo $(DEPDIR)/liblzma_la-price_table.Plo
+#	$(AM_V_CC)source='rangecoder/price_table.c' object='liblzma_la-price_table.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-price_table.lo `test -f 'rangecoder/price_table.c' || echo '$(srcdir)/'`rangecoder/price_table.c
 
 liblzma_la-delta_common.lo: delta/delta_common.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-delta_common.lo -MD -MP -MF $(DEPDIR)/liblzma_la-delta_common.Tpo -c -o liblzma_la-delta_common.lo `test -f 'delta/delta_common.c' || echo '$(srcdir)/'`delta/delta_common.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-delta_common.Tpo $(DEPDIR)/liblzma_la-delta_common.Plo
-#	$(AM_V_CC)source='delta/delta_common.c' object='liblzma_la-delta_common.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-delta_common.lo `test -f 'delta/delta_common.c' || echo '$(srcdir)/'`delta/delta_common.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-delta_common.lo -MD -MP -MF $(DEPDIR)/liblzma_la-delta_common.Tpo -c -o liblzma_la-delta_common.lo `test -f 'delta/delta_common.c' || echo '$(srcdir)/'`delta/delta_common.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-delta_common.Tpo $(DEPDIR)/liblzma_la-delta_common.Plo
+#	$(AM_V_CC)source='delta/delta_common.c' object='liblzma_la-delta_common.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-delta_common.lo `test -f 'delta/delta_common.c' || echo '$(srcdir)/'`delta/delta_common.c
 
 liblzma_la-delta_encoder.lo: delta/delta_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-delta_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-delta_encoder.Tpo -c -o liblzma_la-delta_encoder.lo `test -f 'delta/delta_encoder.c' || echo '$(srcdir)/'`delta/delta_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-delta_encoder.Tpo $(DEPDIR)/liblzma_la-delta_encoder.Plo
-#	$(AM_V_CC)source='delta/delta_encoder.c' object='liblzma_la-delta_encoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-delta_encoder.lo `test -f 'delta/delta_encoder.c' || echo '$(srcdir)/'`delta/delta_encoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-delta_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-delta_encoder.Tpo -c -o liblzma_la-delta_encoder.lo `test -f 'delta/delta_encoder.c' || echo '$(srcdir)/'`delta/delta_encoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-delta_encoder.Tpo $(DEPDIR)/liblzma_la-delta_encoder.Plo
+#	$(AM_V_CC)source='delta/delta_encoder.c' object='liblzma_la-delta_encoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-delta_encoder.lo `test -f 'delta/delta_encoder.c' || echo '$(srcdir)/'`delta/delta_encoder.c
 
 liblzma_la-delta_decoder.lo: delta/delta_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-delta_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-delta_decoder.Tpo -c -o liblzma_la-delta_decoder.lo `test -f 'delta/delta_decoder.c' || echo '$(srcdir)/'`delta/delta_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-delta_decoder.Tpo $(DEPDIR)/liblzma_la-delta_decoder.Plo
-#	$(AM_V_CC)source='delta/delta_decoder.c' object='liblzma_la-delta_decoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-delta_decoder.lo `test -f 'delta/delta_decoder.c' || echo '$(srcdir)/'`delta/delta_decoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-delta_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-delta_decoder.Tpo -c -o liblzma_la-delta_decoder.lo `test -f 'delta/delta_decoder.c' || echo '$(srcdir)/'`delta/delta_decoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-delta_decoder.Tpo $(DEPDIR)/liblzma_la-delta_decoder.Plo
+#	$(AM_V_CC)source='delta/delta_decoder.c' object='liblzma_la-delta_decoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-delta_decoder.lo `test -f 'delta/delta_decoder.c' || echo '$(srcdir)/'`delta/delta_decoder.c
 
 liblzma_la-simple_coder.lo: simple/simple_coder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-simple_coder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-simple_coder.Tpo -c -o liblzma_la-simple_coder.lo `test -f 'simple/simple_coder.c' || echo '$(srcdir)/'`simple/simple_coder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-simple_coder.Tpo $(DEPDIR)/liblzma_la-simple_coder.Plo
-#	$(AM_V_CC)source='simple/simple_coder.c' object='liblzma_la-simple_coder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-simple_coder.lo `test -f 'simple/simple_coder.c' || echo '$(srcdir)/'`simple/simple_coder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-simple_coder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-simple_coder.Tpo -c -o liblzma_la-simple_coder.lo `test -f 'simple/simple_coder.c' || echo '$(srcdir)/'`simple/simple_coder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-simple_coder.Tpo $(DEPDIR)/liblzma_la-simple_coder.Plo
+#	$(AM_V_CC)source='simple/simple_coder.c' object='liblzma_la-simple_coder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-simple_coder.lo `test -f 'simple/simple_coder.c' || echo '$(srcdir)/'`simple/simple_coder.c
 
 liblzma_la-simple_encoder.lo: simple/simple_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-simple_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-simple_encoder.Tpo -c -o liblzma_la-simple_encoder.lo `test -f 'simple/simple_encoder.c' || echo '$(srcdir)/'`simple/simple_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-simple_encoder.Tpo $(DEPDIR)/liblzma_la-simple_encoder.Plo
-#	$(AM_V_CC)source='simple/simple_encoder.c' object='liblzma_la-simple_encoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-simple_encoder.lo `test -f 'simple/simple_encoder.c' || echo '$(srcdir)/'`simple/simple_encoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-simple_encoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-simple_encoder.Tpo -c -o liblzma_la-simple_encoder.lo `test -f 'simple/simple_encoder.c' || echo '$(srcdir)/'`simple/simple_encoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-simple_encoder.Tpo $(DEPDIR)/liblzma_la-simple_encoder.Plo
+#	$(AM_V_CC)source='simple/simple_encoder.c' object='liblzma_la-simple_encoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-simple_encoder.lo `test -f 'simple/simple_encoder.c' || echo '$(srcdir)/'`simple/simple_encoder.c
 
 liblzma_la-simple_decoder.lo: simple/simple_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-simple_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-simple_decoder.Tpo -c -o liblzma_la-simple_decoder.lo `test -f 'simple/simple_decoder.c' || echo '$(srcdir)/'`simple/simple_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-simple_decoder.Tpo $(DEPDIR)/liblzma_la-simple_decoder.Plo
-#	$(AM_V_CC)source='simple/simple_decoder.c' object='liblzma_la-simple_decoder.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-simple_decoder.lo `test -f 'simple/simple_decoder.c' || echo '$(srcdir)/'`simple/simple_decoder.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-simple_decoder.lo -MD -MP -MF $(DEPDIR)/liblzma_la-simple_decoder.Tpo -c -o liblzma_la-simple_decoder.lo `test -f 'simple/simple_decoder.c' || echo '$(srcdir)/'`simple/simple_decoder.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-simple_decoder.Tpo $(DEPDIR)/liblzma_la-simple_decoder.Plo
+#	$(AM_V_CC)source='simple/simple_decoder.c' object='liblzma_la-simple_decoder.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-simple_decoder.lo `test -f 'simple/simple_decoder.c' || echo '$(srcdir)/'`simple/simple_decoder.c
 
 liblzma_la-x86.lo: simple/x86.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-x86.lo -MD -MP -MF $(DEPDIR)/liblzma_la-x86.Tpo -c -o liblzma_la-x86.lo `test -f 'simple/x86.c' || echo '$(srcdir)/'`simple/x86.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-x86.Tpo $(DEPDIR)/liblzma_la-x86.Plo
-#	$(AM_V_CC)source='simple/x86.c' object='liblzma_la-x86.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-x86.lo `test -f 'simple/x86.c' || echo '$(srcdir)/'`simple/x86.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-x86.lo -MD -MP -MF $(DEPDIR)/liblzma_la-x86.Tpo -c -o liblzma_la-x86.lo `test -f 'simple/x86.c' || echo '$(srcdir)/'`simple/x86.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-x86.Tpo $(DEPDIR)/liblzma_la-x86.Plo
+#	$(AM_V_CC)source='simple/x86.c' object='liblzma_la-x86.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-x86.lo `test -f 'simple/x86.c' || echo '$(srcdir)/'`simple/x86.c
 
 liblzma_la-powerpc.lo: simple/powerpc.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-powerpc.lo -MD -MP -MF $(DEPDIR)/liblzma_la-powerpc.Tpo -c -o liblzma_la-powerpc.lo `test -f 'simple/powerpc.c' || echo '$(srcdir)/'`simple/powerpc.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-powerpc.Tpo $(DEPDIR)/liblzma_la-powerpc.Plo
-#	$(AM_V_CC)source='simple/powerpc.c' object='liblzma_la-powerpc.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-powerpc.lo `test -f 'simple/powerpc.c' || echo '$(srcdir)/'`simple/powerpc.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-powerpc.lo -MD -MP -MF $(DEPDIR)/liblzma_la-powerpc.Tpo -c -o liblzma_la-powerpc.lo `test -f 'simple/powerpc.c' || echo '$(srcdir)/'`simple/powerpc.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-powerpc.Tpo $(DEPDIR)/liblzma_la-powerpc.Plo
+#	$(AM_V_CC)source='simple/powerpc.c' object='liblzma_la-powerpc.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-powerpc.lo `test -f 'simple/powerpc.c' || echo '$(srcdir)/'`simple/powerpc.c
 
 liblzma_la-ia64.lo: simple/ia64.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-ia64.lo -MD -MP -MF $(DEPDIR)/liblzma_la-ia64.Tpo -c -o liblzma_la-ia64.lo `test -f 'simple/ia64.c' || echo '$(srcdir)/'`simple/ia64.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-ia64.Tpo $(DEPDIR)/liblzma_la-ia64.Plo
-#	$(AM_V_CC)source='simple/ia64.c' object='liblzma_la-ia64.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-ia64.lo `test -f 'simple/ia64.c' || echo '$(srcdir)/'`simple/ia64.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-ia64.lo -MD -MP -MF $(DEPDIR)/liblzma_la-ia64.Tpo -c -o liblzma_la-ia64.lo `test -f 'simple/ia64.c' || echo '$(srcdir)/'`simple/ia64.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-ia64.Tpo $(DEPDIR)/liblzma_la-ia64.Plo
+#	$(AM_V_CC)source='simple/ia64.c' object='liblzma_la-ia64.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-ia64.lo `test -f 'simple/ia64.c' || echo '$(srcdir)/'`simple/ia64.c
 
 liblzma_la-arm.lo: simple/arm.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-arm.lo -MD -MP -MF $(DEPDIR)/liblzma_la-arm.Tpo -c -o liblzma_la-arm.lo `test -f 'simple/arm.c' || echo '$(srcdir)/'`simple/arm.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-arm.Tpo $(DEPDIR)/liblzma_la-arm.Plo
-#	$(AM_V_CC)source='simple/arm.c' object='liblzma_la-arm.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-arm.lo `test -f 'simple/arm.c' || echo '$(srcdir)/'`simple/arm.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-arm.lo -MD -MP -MF $(DEPDIR)/liblzma_la-arm.Tpo -c -o liblzma_la-arm.lo `test -f 'simple/arm.c' || echo '$(srcdir)/'`simple/arm.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-arm.Tpo $(DEPDIR)/liblzma_la-arm.Plo
+#	$(AM_V_CC)source='simple/arm.c' object='liblzma_la-arm.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-arm.lo `test -f 'simple/arm.c' || echo '$(srcdir)/'`simple/arm.c
 
 liblzma_la-armthumb.lo: simple/armthumb.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-armthumb.lo -MD -MP -MF $(DEPDIR)/liblzma_la-armthumb.Tpo -c -o liblzma_la-armthumb.lo `test -f 'simple/armthumb.c' || echo '$(srcdir)/'`simple/armthumb.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-armthumb.Tpo $(DEPDIR)/liblzma_la-armthumb.Plo
-#	$(AM_V_CC)source='simple/armthumb.c' object='liblzma_la-armthumb.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-armthumb.lo `test -f 'simple/armthumb.c' || echo '$(srcdir)/'`simple/armthumb.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-armthumb.lo -MD -MP -MF $(DEPDIR)/liblzma_la-armthumb.Tpo -c -o liblzma_la-armthumb.lo `test -f 'simple/armthumb.c' || echo '$(srcdir)/'`simple/armthumb.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-armthumb.Tpo $(DEPDIR)/liblzma_la-armthumb.Plo
+#	$(AM_V_CC)source='simple/armthumb.c' object='liblzma_la-armthumb.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-armthumb.lo `test -f 'simple/armthumb.c' || echo '$(srcdir)/'`simple/armthumb.c
 
 liblzma_la-sparc.lo: simple/sparc.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-sparc.lo -MD -MP -MF $(DEPDIR)/liblzma_la-sparc.Tpo -c -o liblzma_la-sparc.lo `test -f 'simple/sparc.c' || echo '$(srcdir)/'`simple/sparc.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-sparc.Tpo $(DEPDIR)/liblzma_la-sparc.Plo
-#	$(AM_V_CC)source='simple/sparc.c' object='liblzma_la-sparc.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-sparc.lo `test -f 'simple/sparc.c' || echo '$(srcdir)/'`simple/sparc.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT liblzma_la-sparc.lo -MD -MP -MF $(DEPDIR)/liblzma_la-sparc.Tpo -c -o liblzma_la-sparc.lo `test -f 'simple/sparc.c' || echo '$(srcdir)/'`simple/sparc.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/liblzma_la-sparc.Tpo $(DEPDIR)/liblzma_la-sparc.Plo
+#	$(AM_V_CC)source='simple/sparc.c' object='liblzma_la-sparc.lo' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(liblzma_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o liblzma_la-sparc.lo `test -f 'simple/sparc.c' || echo '$(srcdir)/'`simple/sparc.c
 
 mostlyclean-libtool:
 	-rm -f *.lo
