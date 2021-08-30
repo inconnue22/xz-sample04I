@@ -270,7 +270,7 @@ am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
 distcleancheck_listfiles = find . -type f -print
 ACLOCAL = ${SHELL} /github/xz/build-aux/missing aclocal-1.16
 AMTAR = $${TAR-tar}
-AM_CFLAGS =  -pthread -fvisibility=hidden -Wall -Wextra -Wvla -Wformat=2 -Winit-self -Wmissing-include-dirs -Wstrict-aliasing -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wlogical-op -Waggregate-return -Wstrict-prototypes -Wold-style-definition -Wmissing-prototypes -Wmissing-declarations -Wmissing-noreturn -Wredundant-decls
+AM_CFLAGS =  -fvisibility=hidden -Wall -Wextra -Wvla -Wformat=2 -Winit-self -Wmissing-include-dirs -Wstrict-aliasing -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wlogical-op -Waggregate-return -Wstrict-prototypes -Wold-style-definition -Wmissing-prototypes -Wmissing-declarations -Wmissing-noreturn -Wredundant-decls
 AM_DEFAULT_VERBOSITY = 1
 AR = ar
 AS = as
@@ -318,7 +318,7 @@ LDFLAGS =
 LIBICONV = -liconv
 LIBINTL = 
 LIBOBJS = 
-LIBS =  -lpthread
+LIBS = 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_EXEEXT = $(EXEEXT)
@@ -348,18 +348,18 @@ PACKAGE_URL = https://tukaani.org/xz/
 PACKAGE_VERSION = 5.3.1alpha
 PATH_SEPARATOR = :
 POSIX_SHELL = /bin/sh
-POSUB = 
+POSUB = po
 PREFERABLY_POSIX_SHELL = /bin/sh
-PTHREAD_CC = gcc
-PTHREAD_CFLAGS = -pthread
-PTHREAD_LIBS = -lpthread
+PTHREAD_CC = 
+PTHREAD_CFLAGS = 
+PTHREAD_LIBS = 
 RANLIB = ranlib
 RC = 
 SED = /usr/bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = strip
-USE_NLS = no
+USE_NLS = yes
 VERSION = 5.3.1alpha
 XGETTEXT = /usr/bin/xgettext
 XGETTEXT_015 = /usr/bin/xgettext
@@ -424,32 +424,32 @@ xz = xz
 GZIP_ENV = -9n
 DIST_SUBDIRS = lib src po tests debug
 SUBDIRS = $(am__append_1) src po tests
-dist_doc_DATA = \
-	AUTHORS \
-	COPYING \
-	COPYING.GPLv2 \
-	NEWS \
-	README \
-	THANKS \
-	TODO \
-	doc/faq.txt \
-	doc/history.txt \
-	doc/xz-file-format.txt \
-	doc/lzma-file-format.txt
+#dist_doc_DATA = \
+#	AUTHORS \
+#	COPYING \
+#	COPYING.GPLv2 \
+#	NEWS \
+#	README \
+#	THANKS \
+#	TODO \
+#	doc/faq.txt \
+#	doc/history.txt \
+#	doc/xz-file-format.txt \
+#	doc/lzma-file-format.txt
 
-examplesdir = $(docdir)/examples
-dist_examples_DATA = \
-	doc/examples/00_README.txt \
-	doc/examples/01_compress_easy.c \
-	doc/examples/02_decompress.c \
-	doc/examples/03_compress_custom.c \
-	doc/examples/04_compress_easy_mt.c \
-	doc/examples/Makefile
+#examplesdir = $(docdir)/examples
+#dist_examples_DATA = \
+#	doc/examples/00_README.txt \
+#	doc/examples/01_compress_easy.c \
+#	doc/examples/02_decompress.c \
+#	doc/examples/03_compress_custom.c \
+#	doc/examples/04_compress_easy_mt.c \
+#	doc/examples/Makefile
 
-examplesolddir = $(docdir)/examples_old
-dist_examplesold_DATA = \
-	doc/examples_old/xz_pipe_comp.c \
-	doc/examples_old/xz_pipe_decomp.c
+#examplesolddir = $(docdir)/examples_old
+#dist_examplesold_DATA = \
+#	doc/examples_old/xz_pipe_comp.c \
+#	doc/examples_old/xz_pipe_decomp.c
 
 EXTRA_DIST = \
 	po4a \
