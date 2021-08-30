@@ -227,9 +227,9 @@ am__append_32 = \
 	simple/simple_encoder.c \
 	simple/simple_encoder.h
 
-#am__append_33 = \
-#	simple/simple_decoder.c \
-#	simple/simple_decoder.h
+am__append_33 = \
+	simple/simple_decoder.c \
+	simple/simple_decoder.h
 
 am__append_34 = simple/x86.c
 am__append_35 = simple/powerpc.c
@@ -419,7 +419,7 @@ am__objects_26 = liblzma_la-delta_encoder.lo
 #am__objects_27 = liblzma_la-delta_decoder.lo
 am__objects_28 = liblzma_la-simple_coder.lo
 am__objects_29 = liblzma_la-simple_encoder.lo
-#am__objects_30 = liblzma_la-simple_decoder.lo
+am__objects_30 = liblzma_la-simple_decoder.lo
 am__objects_31 = liblzma_la-x86.lo
 am__objects_32 = liblzma_la-powerpc.lo
 am__objects_33 = liblzma_la-ia64.lo
@@ -732,7 +732,7 @@ PACKAGE_URL = https://tukaani.org/xz/
 PACKAGE_VERSION = 5.3.1alpha
 PATH_SEPARATOR = :
 POSIX_SHELL = /bin/sh
-POSUB = 
+POSUB = po
 PREFERABLY_POSIX_SHELL = /bin/sh
 PTHREAD_CC = gcc
 PTHREAD_CFLAGS = -pthread
@@ -743,7 +743,7 @@ SED = /usr/bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = strip
-USE_NLS = no
+USE_NLS = yes
 VERSION = 5.3.1alpha
 XGETTEXT = /usr/bin/xgettext
 XGETTEXT_015 = /usr/bin/xgettext
