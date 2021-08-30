@@ -153,14 +153,14 @@ am__append_8 = \
 
 #am__append_9 = check/crc32_x86.S
 am__append_10 = check/crc32_fast.c
-#am__append_11 = check/crc64_small.c
-am__append_12 = \
-	check/crc64_table.c \
-	check/crc64_table_le.h \
-	check/crc64_table_be.h
+##am__append_11 = check/crc64_small.c
+#am__append_12 = \
+#	check/crc64_table.c \
+#	check/crc64_table_le.h \
+#	check/crc64_table_be.h
 
-#am__append_13 = check/crc64_x86.S
-am__append_14 = check/crc64_fast.c
+##am__append_13 = check/crc64_x86.S
+#am__append_14 = check/crc64_fast.c
 am__append_15 = check/sha256.c
 am__append_16 = \
 	lz/lz_encoder.c \
@@ -223,17 +223,17 @@ am__append_31 = \
 	simple/simple_coder.h \
 	simple/simple_private.h
 
-am__append_32 = \
-	simple/simple_encoder.c \
-	simple/simple_encoder.h
+#am__append_32 = \
+#	simple/simple_encoder.c \
+#	simple/simple_encoder.h
 
 am__append_33 = \
 	simple/simple_decoder.c \
 	simple/simple_decoder.h
 
-am__append_34 = simple/x86.c
-am__append_35 = simple/powerpc.c
-#am__append_36 = simple/ia64.c
+#am__append_34 = simple/x86.c
+#am__append_35 = simple/powerpc.c
+am__append_36 = simple/ia64.c
 #am__append_37 = simple/arm.c
 #am__append_38 = simple/armthumb.c
 #am__append_39 = simple/sparc.c
@@ -395,10 +395,10 @@ am__objects_5 = liblzma_la-alone_decoder.lo \
 am__objects_7 = liblzma_la-crc32_table.lo
 #am__objects_8 = liblzma_la-crc32_x86.lo
 am__objects_9 = liblzma_la-crc32_fast.lo
-#am__objects_10 = liblzma_la-crc64_small.lo
-am__objects_11 = liblzma_la-crc64_table.lo
-#am__objects_12 = liblzma_la-crc64_x86.lo
-am__objects_13 = liblzma_la-crc64_fast.lo
+##am__objects_10 = liblzma_la-crc64_small.lo
+#am__objects_11 = liblzma_la-crc64_table.lo
+##am__objects_12 = liblzma_la-crc64_x86.lo
+#am__objects_13 = liblzma_la-crc64_fast.lo
 am__objects_14 = liblzma_la-sha256.lo
 am__objects_15 = liblzma_la-lz_encoder.lo \
 	liblzma_la-lz_encoder_mf.lo
@@ -418,11 +418,11 @@ am__objects_24 = liblzma_la-price_table.lo
 ##am__objects_26 = liblzma_la-delta_encoder.lo
 ##am__objects_27 = liblzma_la-delta_decoder.lo
 am__objects_28 = liblzma_la-simple_coder.lo
-am__objects_29 = liblzma_la-simple_encoder.lo
+#am__objects_29 = liblzma_la-simple_encoder.lo
 am__objects_30 = liblzma_la-simple_decoder.lo
-am__objects_31 = liblzma_la-x86.lo
-am__objects_32 = liblzma_la-powerpc.lo
-#am__objects_33 = liblzma_la-ia64.lo
+#am__objects_31 = liblzma_la-x86.lo
+#am__objects_32 = liblzma_la-powerpc.lo
+am__objects_33 = liblzma_la-ia64.lo
 #am__objects_34 = liblzma_la-arm.lo
 #am__objects_35 = liblzma_la-armthumb.lo
 #am__objects_36 = liblzma_la-sparc.lo
@@ -732,7 +732,7 @@ PACKAGE_URL = https://tukaani.org/xz/
 PACKAGE_VERSION = 5.3.1alpha
 PATH_SEPARATOR = :
 POSIX_SHELL = /bin/sh
-POSUB = 
+POSUB = po
 PREFERABLY_POSIX_SHELL = /bin/sh
 PTHREAD_CC = 
 PTHREAD_CFLAGS = 
@@ -743,7 +743,7 @@ SED = /usr/bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = strip
-USE_NLS = no
+USE_NLS = yes
 VERSION = 5.3.1alpha
 XGETTEXT = /usr/bin/xgettext
 XGETTEXT_015 = /usr/bin/xgettext
