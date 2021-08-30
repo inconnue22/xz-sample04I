@@ -44,11 +44,12 @@ lzmainfo-tuklib_exit.o: ../common/tuklib_exit.c \
  /usr/include/bits/types/cookie_io_functions_t.h \
  /usr/include/bits/stdio_lim.h /usr/include/bits/stdio.h \
  ../common/tuklib_gettext.h /usr/include/locale.h \
- /usr/include/bits/locale.h ../common/tuklib_progname.h \
- /usr/include/errno.h /usr/include/bits/errno.h \
- /usr/include/linux/errno.h /usr/include/asm/errno.h \
- /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
- /usr/include/bits/types/error_t.h ../common/tuklib_exit.h
+ /usr/include/bits/locale.h /usr/include/libintl.h \
+ ../common/tuklib_progname.h /usr/include/errno.h \
+ /usr/include/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/asm/errno.h /usr/include/asm-generic/errno.h \
+ /usr/include/asm-generic/errno-base.h /usr/include/bits/types/error_t.h \
+ ../common/tuklib_exit.h
 /usr/include/stdc-predef.h:
 ../common/tuklib_common.h:
 ../common/tuklib_config.h:
@@ -131,6 +132,7 @@ lzmainfo-tuklib_exit.o: ../common/tuklib_exit.c \
 ../common/tuklib_gettext.h:
 /usr/include/locale.h:
 /usr/include/bits/locale.h:
+/usr/include/libintl.h:
 ../common/tuklib_progname.h:
 /usr/include/errno.h:
 /usr/include/bits/errno.h:
