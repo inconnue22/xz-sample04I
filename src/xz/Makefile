@@ -254,7 +254,7 @@ DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = ${SHELL} /github/xz/build-aux/missing aclocal-1.16
 AMTAR = $${TAR-tar}
 AM_CFLAGS =  -pthread -fvisibility=hidden -Wall -Wextra -Wvla -Wformat=2 -Winit-self -Wmissing-include-dirs -Wstrict-aliasing -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wlogical-op -Waggregate-return -Wstrict-prototypes -Wold-style-definition -Wmissing-prototypes -Wmissing-declarations -Wmissing-noreturn -Wredundant-decls
-AM_DEFAULT_VERBOSITY = 1
+AM_DEFAULT_VERBOSITY = 0
 AR = ar
 AS = as
 AUTOCONF = ${SHELL} /github/xz/build-aux/missing autoconf
@@ -264,9 +264,9 @@ AWK = gawk
 CAPSICUM_LIB = 
 CC = gcc
 CCAS = gcc
-CCASDEPMODE = depmode=none
+CCASDEPMODE = depmode=gcc3
 CCASFLAGS = -g -O2
-CCDEPMODE = depmode=none
+CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
 CFLAG_VISIBILITY = -fvisibility=hidden
 CPP = gcc -E
@@ -514,23 +514,23 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-#include ./$(DEPDIR)/xz-args.Po # am--include-marker
-#include ./$(DEPDIR)/xz-coder.Po # am--include-marker
-#include ./$(DEPDIR)/xz-file_io.Po # am--include-marker
-#include ./$(DEPDIR)/xz-hardware.Po # am--include-marker
-#include ./$(DEPDIR)/xz-list.Po # am--include-marker
-#include ./$(DEPDIR)/xz-main.Po # am--include-marker
-#include ./$(DEPDIR)/xz-message.Po # am--include-marker
-#include ./$(DEPDIR)/xz-mytime.Po # am--include-marker
-#include ./$(DEPDIR)/xz-options.Po # am--include-marker
-#include ./$(DEPDIR)/xz-signals.Po # am--include-marker
-#include ./$(DEPDIR)/xz-suffix.Po # am--include-marker
-#include ./$(DEPDIR)/xz-tuklib_exit.Po # am--include-marker
-#include ./$(DEPDIR)/xz-tuklib_mbstr_fw.Po # am--include-marker
-#include ./$(DEPDIR)/xz-tuklib_mbstr_width.Po # am--include-marker
-#include ./$(DEPDIR)/xz-tuklib_open_stdxxx.Po # am--include-marker
-#include ./$(DEPDIR)/xz-tuklib_progname.Po # am--include-marker
-#include ./$(DEPDIR)/xz-util.Po # am--include-marker
+include ./$(DEPDIR)/xz-args.Po # am--include-marker
+include ./$(DEPDIR)/xz-coder.Po # am--include-marker
+include ./$(DEPDIR)/xz-file_io.Po # am--include-marker
+include ./$(DEPDIR)/xz-hardware.Po # am--include-marker
+include ./$(DEPDIR)/xz-list.Po # am--include-marker
+include ./$(DEPDIR)/xz-main.Po # am--include-marker
+include ./$(DEPDIR)/xz-message.Po # am--include-marker
+include ./$(DEPDIR)/xz-mytime.Po # am--include-marker
+include ./$(DEPDIR)/xz-options.Po # am--include-marker
+include ./$(DEPDIR)/xz-signals.Po # am--include-marker
+include ./$(DEPDIR)/xz-suffix.Po # am--include-marker
+include ./$(DEPDIR)/xz-tuklib_exit.Po # am--include-marker
+include ./$(DEPDIR)/xz-tuklib_mbstr_fw.Po # am--include-marker
+include ./$(DEPDIR)/xz-tuklib_mbstr_width.Po # am--include-marker
+include ./$(DEPDIR)/xz-tuklib_open_stdxxx.Po # am--include-marker
+include ./$(DEPDIR)/xz-tuklib_progname.Po # am--include-marker
+include ./$(DEPDIR)/xz-util.Po # am--include-marker
 
 $(am__depfiles_remade):
 	@$(MKDIR_P) $(@D)
@@ -539,263 +539,263 @@ $(am__depfiles_remade):
 am--depfiles: $(am__depfiles_remade)
 
 .c.o:
-#	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
-#	$(AM_V_CC)source='$<' object='$@' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(COMPILE) -c -o $@ $<
+	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+#	$(AM_V_CC)source='$<' object='$@' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(COMPILE) -c -o $@ $<
 
 .c.obj:
-#	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
-#	$(AM_V_CC)source='$<' object='$@' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+#	$(AM_V_CC)source='$<' object='$@' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
 .c.lo:
-#	$(AM_V_CC)$(LTCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
-#	$(AM_V_CC)source='$<' object='$@' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(LTCOMPILE) -c -o $@ $<
+	$(AM_V_CC)$(LTCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
+#	$(AM_V_CC)source='$<' object='$@' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(LTCOMPILE) -c -o $@ $<
 
 xz-args.o: args.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-args.o -MD -MP -MF $(DEPDIR)/xz-args.Tpo -c -o xz-args.o `test -f 'args.c' || echo '$(srcdir)/'`args.c
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-args.Tpo $(DEPDIR)/xz-args.Po
-#	$(AM_V_CC)source='args.c' object='xz-args.o' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-args.o `test -f 'args.c' || echo '$(srcdir)/'`args.c
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-args.o -MD -MP -MF $(DEPDIR)/xz-args.Tpo -c -o xz-args.o `test -f 'args.c' || echo '$(srcdir)/'`args.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-args.Tpo $(DEPDIR)/xz-args.Po
+#	$(AM_V_CC)source='args.c' object='xz-args.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-args.o `test -f 'args.c' || echo '$(srcdir)/'`args.c
 
 xz-args.obj: args.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-args.obj -MD -MP -MF $(DEPDIR)/xz-args.Tpo -c -o xz-args.obj `if test -f 'args.c'; then $(CYGPATH_W) 'args.c'; else $(CYGPATH_W) '$(srcdir)/args.c'; fi`
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-args.Tpo $(DEPDIR)/xz-args.Po
-#	$(AM_V_CC)source='args.c' object='xz-args.obj' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-args.obj `if test -f 'args.c'; then $(CYGPATH_W) 'args.c'; else $(CYGPATH_W) '$(srcdir)/args.c'; fi`
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-args.obj -MD -MP -MF $(DEPDIR)/xz-args.Tpo -c -o xz-args.obj `if test -f 'args.c'; then $(CYGPATH_W) 'args.c'; else $(CYGPATH_W) '$(srcdir)/args.c'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-args.Tpo $(DEPDIR)/xz-args.Po
+#	$(AM_V_CC)source='args.c' object='xz-args.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-args.obj `if test -f 'args.c'; then $(CYGPATH_W) 'args.c'; else $(CYGPATH_W) '$(srcdir)/args.c'; fi`
 
 xz-coder.o: coder.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-coder.o -MD -MP -MF $(DEPDIR)/xz-coder.Tpo -c -o xz-coder.o `test -f 'coder.c' || echo '$(srcdir)/'`coder.c
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-coder.Tpo $(DEPDIR)/xz-coder.Po
-#	$(AM_V_CC)source='coder.c' object='xz-coder.o' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-coder.o `test -f 'coder.c' || echo '$(srcdir)/'`coder.c
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-coder.o -MD -MP -MF $(DEPDIR)/xz-coder.Tpo -c -o xz-coder.o `test -f 'coder.c' || echo '$(srcdir)/'`coder.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-coder.Tpo $(DEPDIR)/xz-coder.Po
+#	$(AM_V_CC)source='coder.c' object='xz-coder.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-coder.o `test -f 'coder.c' || echo '$(srcdir)/'`coder.c
 
 xz-coder.obj: coder.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-coder.obj -MD -MP -MF $(DEPDIR)/xz-coder.Tpo -c -o xz-coder.obj `if test -f 'coder.c'; then $(CYGPATH_W) 'coder.c'; else $(CYGPATH_W) '$(srcdir)/coder.c'; fi`
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-coder.Tpo $(DEPDIR)/xz-coder.Po
-#	$(AM_V_CC)source='coder.c' object='xz-coder.obj' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-coder.obj `if test -f 'coder.c'; then $(CYGPATH_W) 'coder.c'; else $(CYGPATH_W) '$(srcdir)/coder.c'; fi`
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-coder.obj -MD -MP -MF $(DEPDIR)/xz-coder.Tpo -c -o xz-coder.obj `if test -f 'coder.c'; then $(CYGPATH_W) 'coder.c'; else $(CYGPATH_W) '$(srcdir)/coder.c'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-coder.Tpo $(DEPDIR)/xz-coder.Po
+#	$(AM_V_CC)source='coder.c' object='xz-coder.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-coder.obj `if test -f 'coder.c'; then $(CYGPATH_W) 'coder.c'; else $(CYGPATH_W) '$(srcdir)/coder.c'; fi`
 
 xz-file_io.o: file_io.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-file_io.o -MD -MP -MF $(DEPDIR)/xz-file_io.Tpo -c -o xz-file_io.o `test -f 'file_io.c' || echo '$(srcdir)/'`file_io.c
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-file_io.Tpo $(DEPDIR)/xz-file_io.Po
-#	$(AM_V_CC)source='file_io.c' object='xz-file_io.o' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-file_io.o `test -f 'file_io.c' || echo '$(srcdir)/'`file_io.c
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-file_io.o -MD -MP -MF $(DEPDIR)/xz-file_io.Tpo -c -o xz-file_io.o `test -f 'file_io.c' || echo '$(srcdir)/'`file_io.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-file_io.Tpo $(DEPDIR)/xz-file_io.Po
+#	$(AM_V_CC)source='file_io.c' object='xz-file_io.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-file_io.o `test -f 'file_io.c' || echo '$(srcdir)/'`file_io.c
 
 xz-file_io.obj: file_io.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-file_io.obj -MD -MP -MF $(DEPDIR)/xz-file_io.Tpo -c -o xz-file_io.obj `if test -f 'file_io.c'; then $(CYGPATH_W) 'file_io.c'; else $(CYGPATH_W) '$(srcdir)/file_io.c'; fi`
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-file_io.Tpo $(DEPDIR)/xz-file_io.Po
-#	$(AM_V_CC)source='file_io.c' object='xz-file_io.obj' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-file_io.obj `if test -f 'file_io.c'; then $(CYGPATH_W) 'file_io.c'; else $(CYGPATH_W) '$(srcdir)/file_io.c'; fi`
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-file_io.obj -MD -MP -MF $(DEPDIR)/xz-file_io.Tpo -c -o xz-file_io.obj `if test -f 'file_io.c'; then $(CYGPATH_W) 'file_io.c'; else $(CYGPATH_W) '$(srcdir)/file_io.c'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-file_io.Tpo $(DEPDIR)/xz-file_io.Po
+#	$(AM_V_CC)source='file_io.c' object='xz-file_io.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-file_io.obj `if test -f 'file_io.c'; then $(CYGPATH_W) 'file_io.c'; else $(CYGPATH_W) '$(srcdir)/file_io.c'; fi`
 
 xz-hardware.o: hardware.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-hardware.o -MD -MP -MF $(DEPDIR)/xz-hardware.Tpo -c -o xz-hardware.o `test -f 'hardware.c' || echo '$(srcdir)/'`hardware.c
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-hardware.Tpo $(DEPDIR)/xz-hardware.Po
-#	$(AM_V_CC)source='hardware.c' object='xz-hardware.o' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-hardware.o `test -f 'hardware.c' || echo '$(srcdir)/'`hardware.c
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-hardware.o -MD -MP -MF $(DEPDIR)/xz-hardware.Tpo -c -o xz-hardware.o `test -f 'hardware.c' || echo '$(srcdir)/'`hardware.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-hardware.Tpo $(DEPDIR)/xz-hardware.Po
+#	$(AM_V_CC)source='hardware.c' object='xz-hardware.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-hardware.o `test -f 'hardware.c' || echo '$(srcdir)/'`hardware.c
 
 xz-hardware.obj: hardware.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-hardware.obj -MD -MP -MF $(DEPDIR)/xz-hardware.Tpo -c -o xz-hardware.obj `if test -f 'hardware.c'; then $(CYGPATH_W) 'hardware.c'; else $(CYGPATH_W) '$(srcdir)/hardware.c'; fi`
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-hardware.Tpo $(DEPDIR)/xz-hardware.Po
-#	$(AM_V_CC)source='hardware.c' object='xz-hardware.obj' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-hardware.obj `if test -f 'hardware.c'; then $(CYGPATH_W) 'hardware.c'; else $(CYGPATH_W) '$(srcdir)/hardware.c'; fi`
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-hardware.obj -MD -MP -MF $(DEPDIR)/xz-hardware.Tpo -c -o xz-hardware.obj `if test -f 'hardware.c'; then $(CYGPATH_W) 'hardware.c'; else $(CYGPATH_W) '$(srcdir)/hardware.c'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-hardware.Tpo $(DEPDIR)/xz-hardware.Po
+#	$(AM_V_CC)source='hardware.c' object='xz-hardware.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-hardware.obj `if test -f 'hardware.c'; then $(CYGPATH_W) 'hardware.c'; else $(CYGPATH_W) '$(srcdir)/hardware.c'; fi`
 
 xz-main.o: main.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-main.o -MD -MP -MF $(DEPDIR)/xz-main.Tpo -c -o xz-main.o `test -f 'main.c' || echo '$(srcdir)/'`main.c
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-main.Tpo $(DEPDIR)/xz-main.Po
-#	$(AM_V_CC)source='main.c' object='xz-main.o' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-main.o `test -f 'main.c' || echo '$(srcdir)/'`main.c
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-main.o -MD -MP -MF $(DEPDIR)/xz-main.Tpo -c -o xz-main.o `test -f 'main.c' || echo '$(srcdir)/'`main.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-main.Tpo $(DEPDIR)/xz-main.Po
+#	$(AM_V_CC)source='main.c' object='xz-main.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-main.o `test -f 'main.c' || echo '$(srcdir)/'`main.c
 
 xz-main.obj: main.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-main.obj -MD -MP -MF $(DEPDIR)/xz-main.Tpo -c -o xz-main.obj `if test -f 'main.c'; then $(CYGPATH_W) 'main.c'; else $(CYGPATH_W) '$(srcdir)/main.c'; fi`
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-main.Tpo $(DEPDIR)/xz-main.Po
-#	$(AM_V_CC)source='main.c' object='xz-main.obj' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-main.obj `if test -f 'main.c'; then $(CYGPATH_W) 'main.c'; else $(CYGPATH_W) '$(srcdir)/main.c'; fi`
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-main.obj -MD -MP -MF $(DEPDIR)/xz-main.Tpo -c -o xz-main.obj `if test -f 'main.c'; then $(CYGPATH_W) 'main.c'; else $(CYGPATH_W) '$(srcdir)/main.c'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-main.Tpo $(DEPDIR)/xz-main.Po
+#	$(AM_V_CC)source='main.c' object='xz-main.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-main.obj `if test -f 'main.c'; then $(CYGPATH_W) 'main.c'; else $(CYGPATH_W) '$(srcdir)/main.c'; fi`
 
 xz-message.o: message.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-message.o -MD -MP -MF $(DEPDIR)/xz-message.Tpo -c -o xz-message.o `test -f 'message.c' || echo '$(srcdir)/'`message.c
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-message.Tpo $(DEPDIR)/xz-message.Po
-#	$(AM_V_CC)source='message.c' object='xz-message.o' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-message.o `test -f 'message.c' || echo '$(srcdir)/'`message.c
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-message.o -MD -MP -MF $(DEPDIR)/xz-message.Tpo -c -o xz-message.o `test -f 'message.c' || echo '$(srcdir)/'`message.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-message.Tpo $(DEPDIR)/xz-message.Po
+#	$(AM_V_CC)source='message.c' object='xz-message.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-message.o `test -f 'message.c' || echo '$(srcdir)/'`message.c
 
 xz-message.obj: message.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-message.obj -MD -MP -MF $(DEPDIR)/xz-message.Tpo -c -o xz-message.obj `if test -f 'message.c'; then $(CYGPATH_W) 'message.c'; else $(CYGPATH_W) '$(srcdir)/message.c'; fi`
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-message.Tpo $(DEPDIR)/xz-message.Po
-#	$(AM_V_CC)source='message.c' object='xz-message.obj' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-message.obj `if test -f 'message.c'; then $(CYGPATH_W) 'message.c'; else $(CYGPATH_W) '$(srcdir)/message.c'; fi`
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-message.obj -MD -MP -MF $(DEPDIR)/xz-message.Tpo -c -o xz-message.obj `if test -f 'message.c'; then $(CYGPATH_W) 'message.c'; else $(CYGPATH_W) '$(srcdir)/message.c'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-message.Tpo $(DEPDIR)/xz-message.Po
+#	$(AM_V_CC)source='message.c' object='xz-message.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-message.obj `if test -f 'message.c'; then $(CYGPATH_W) 'message.c'; else $(CYGPATH_W) '$(srcdir)/message.c'; fi`
 
 xz-mytime.o: mytime.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-mytime.o -MD -MP -MF $(DEPDIR)/xz-mytime.Tpo -c -o xz-mytime.o `test -f 'mytime.c' || echo '$(srcdir)/'`mytime.c
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-mytime.Tpo $(DEPDIR)/xz-mytime.Po
-#	$(AM_V_CC)source='mytime.c' object='xz-mytime.o' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-mytime.o `test -f 'mytime.c' || echo '$(srcdir)/'`mytime.c
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-mytime.o -MD -MP -MF $(DEPDIR)/xz-mytime.Tpo -c -o xz-mytime.o `test -f 'mytime.c' || echo '$(srcdir)/'`mytime.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-mytime.Tpo $(DEPDIR)/xz-mytime.Po
+#	$(AM_V_CC)source='mytime.c' object='xz-mytime.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-mytime.o `test -f 'mytime.c' || echo '$(srcdir)/'`mytime.c
 
 xz-mytime.obj: mytime.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-mytime.obj -MD -MP -MF $(DEPDIR)/xz-mytime.Tpo -c -o xz-mytime.obj `if test -f 'mytime.c'; then $(CYGPATH_W) 'mytime.c'; else $(CYGPATH_W) '$(srcdir)/mytime.c'; fi`
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-mytime.Tpo $(DEPDIR)/xz-mytime.Po
-#	$(AM_V_CC)source='mytime.c' object='xz-mytime.obj' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-mytime.obj `if test -f 'mytime.c'; then $(CYGPATH_W) 'mytime.c'; else $(CYGPATH_W) '$(srcdir)/mytime.c'; fi`
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-mytime.obj -MD -MP -MF $(DEPDIR)/xz-mytime.Tpo -c -o xz-mytime.obj `if test -f 'mytime.c'; then $(CYGPATH_W) 'mytime.c'; else $(CYGPATH_W) '$(srcdir)/mytime.c'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-mytime.Tpo $(DEPDIR)/xz-mytime.Po
+#	$(AM_V_CC)source='mytime.c' object='xz-mytime.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-mytime.obj `if test -f 'mytime.c'; then $(CYGPATH_W) 'mytime.c'; else $(CYGPATH_W) '$(srcdir)/mytime.c'; fi`
 
 xz-options.o: options.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-options.o -MD -MP -MF $(DEPDIR)/xz-options.Tpo -c -o xz-options.o `test -f 'options.c' || echo '$(srcdir)/'`options.c
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-options.Tpo $(DEPDIR)/xz-options.Po
-#	$(AM_V_CC)source='options.c' object='xz-options.o' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-options.o `test -f 'options.c' || echo '$(srcdir)/'`options.c
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-options.o -MD -MP -MF $(DEPDIR)/xz-options.Tpo -c -o xz-options.o `test -f 'options.c' || echo '$(srcdir)/'`options.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-options.Tpo $(DEPDIR)/xz-options.Po
+#	$(AM_V_CC)source='options.c' object='xz-options.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-options.o `test -f 'options.c' || echo '$(srcdir)/'`options.c
 
 xz-options.obj: options.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-options.obj -MD -MP -MF $(DEPDIR)/xz-options.Tpo -c -o xz-options.obj `if test -f 'options.c'; then $(CYGPATH_W) 'options.c'; else $(CYGPATH_W) '$(srcdir)/options.c'; fi`
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-options.Tpo $(DEPDIR)/xz-options.Po
-#	$(AM_V_CC)source='options.c' object='xz-options.obj' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-options.obj `if test -f 'options.c'; then $(CYGPATH_W) 'options.c'; else $(CYGPATH_W) '$(srcdir)/options.c'; fi`
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-options.obj -MD -MP -MF $(DEPDIR)/xz-options.Tpo -c -o xz-options.obj `if test -f 'options.c'; then $(CYGPATH_W) 'options.c'; else $(CYGPATH_W) '$(srcdir)/options.c'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-options.Tpo $(DEPDIR)/xz-options.Po
+#	$(AM_V_CC)source='options.c' object='xz-options.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-options.obj `if test -f 'options.c'; then $(CYGPATH_W) 'options.c'; else $(CYGPATH_W) '$(srcdir)/options.c'; fi`
 
 xz-signals.o: signals.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-signals.o -MD -MP -MF $(DEPDIR)/xz-signals.Tpo -c -o xz-signals.o `test -f 'signals.c' || echo '$(srcdir)/'`signals.c
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-signals.Tpo $(DEPDIR)/xz-signals.Po
-#	$(AM_V_CC)source='signals.c' object='xz-signals.o' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-signals.o `test -f 'signals.c' || echo '$(srcdir)/'`signals.c
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-signals.o -MD -MP -MF $(DEPDIR)/xz-signals.Tpo -c -o xz-signals.o `test -f 'signals.c' || echo '$(srcdir)/'`signals.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-signals.Tpo $(DEPDIR)/xz-signals.Po
+#	$(AM_V_CC)source='signals.c' object='xz-signals.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-signals.o `test -f 'signals.c' || echo '$(srcdir)/'`signals.c
 
 xz-signals.obj: signals.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-signals.obj -MD -MP -MF $(DEPDIR)/xz-signals.Tpo -c -o xz-signals.obj `if test -f 'signals.c'; then $(CYGPATH_W) 'signals.c'; else $(CYGPATH_W) '$(srcdir)/signals.c'; fi`
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-signals.Tpo $(DEPDIR)/xz-signals.Po
-#	$(AM_V_CC)source='signals.c' object='xz-signals.obj' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-signals.obj `if test -f 'signals.c'; then $(CYGPATH_W) 'signals.c'; else $(CYGPATH_W) '$(srcdir)/signals.c'; fi`
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-signals.obj -MD -MP -MF $(DEPDIR)/xz-signals.Tpo -c -o xz-signals.obj `if test -f 'signals.c'; then $(CYGPATH_W) 'signals.c'; else $(CYGPATH_W) '$(srcdir)/signals.c'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-signals.Tpo $(DEPDIR)/xz-signals.Po
+#	$(AM_V_CC)source='signals.c' object='xz-signals.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-signals.obj `if test -f 'signals.c'; then $(CYGPATH_W) 'signals.c'; else $(CYGPATH_W) '$(srcdir)/signals.c'; fi`
 
 xz-suffix.o: suffix.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-suffix.o -MD -MP -MF $(DEPDIR)/xz-suffix.Tpo -c -o xz-suffix.o `test -f 'suffix.c' || echo '$(srcdir)/'`suffix.c
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-suffix.Tpo $(DEPDIR)/xz-suffix.Po
-#	$(AM_V_CC)source='suffix.c' object='xz-suffix.o' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-suffix.o `test -f 'suffix.c' || echo '$(srcdir)/'`suffix.c
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-suffix.o -MD -MP -MF $(DEPDIR)/xz-suffix.Tpo -c -o xz-suffix.o `test -f 'suffix.c' || echo '$(srcdir)/'`suffix.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-suffix.Tpo $(DEPDIR)/xz-suffix.Po
+#	$(AM_V_CC)source='suffix.c' object='xz-suffix.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-suffix.o `test -f 'suffix.c' || echo '$(srcdir)/'`suffix.c
 
 xz-suffix.obj: suffix.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-suffix.obj -MD -MP -MF $(DEPDIR)/xz-suffix.Tpo -c -o xz-suffix.obj `if test -f 'suffix.c'; then $(CYGPATH_W) 'suffix.c'; else $(CYGPATH_W) '$(srcdir)/suffix.c'; fi`
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-suffix.Tpo $(DEPDIR)/xz-suffix.Po
-#	$(AM_V_CC)source='suffix.c' object='xz-suffix.obj' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-suffix.obj `if test -f 'suffix.c'; then $(CYGPATH_W) 'suffix.c'; else $(CYGPATH_W) '$(srcdir)/suffix.c'; fi`
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-suffix.obj -MD -MP -MF $(DEPDIR)/xz-suffix.Tpo -c -o xz-suffix.obj `if test -f 'suffix.c'; then $(CYGPATH_W) 'suffix.c'; else $(CYGPATH_W) '$(srcdir)/suffix.c'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-suffix.Tpo $(DEPDIR)/xz-suffix.Po
+#	$(AM_V_CC)source='suffix.c' object='xz-suffix.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-suffix.obj `if test -f 'suffix.c'; then $(CYGPATH_W) 'suffix.c'; else $(CYGPATH_W) '$(srcdir)/suffix.c'; fi`
 
 xz-util.o: util.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-util.o -MD -MP -MF $(DEPDIR)/xz-util.Tpo -c -o xz-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-util.Tpo $(DEPDIR)/xz-util.Po
-#	$(AM_V_CC)source='util.c' object='xz-util.o' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-util.o -MD -MP -MF $(DEPDIR)/xz-util.Tpo -c -o xz-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-util.Tpo $(DEPDIR)/xz-util.Po
+#	$(AM_V_CC)source='util.c' object='xz-util.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
 
 xz-util.obj: util.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-util.obj -MD -MP -MF $(DEPDIR)/xz-util.Tpo -c -o xz-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-util.Tpo $(DEPDIR)/xz-util.Po
-#	$(AM_V_CC)source='util.c' object='xz-util.obj' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-util.obj -MD -MP -MF $(DEPDIR)/xz-util.Tpo -c -o xz-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-util.Tpo $(DEPDIR)/xz-util.Po
+#	$(AM_V_CC)source='util.c' object='xz-util.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
 
 xz-tuklib_open_stdxxx.o: ../common/tuklib_open_stdxxx.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-tuklib_open_stdxxx.o -MD -MP -MF $(DEPDIR)/xz-tuklib_open_stdxxx.Tpo -c -o xz-tuklib_open_stdxxx.o `test -f '../common/tuklib_open_stdxxx.c' || echo '$(srcdir)/'`../common/tuklib_open_stdxxx.c
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-tuklib_open_stdxxx.Tpo $(DEPDIR)/xz-tuklib_open_stdxxx.Po
-#	$(AM_V_CC)source='../common/tuklib_open_stdxxx.c' object='xz-tuklib_open_stdxxx.o' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-tuklib_open_stdxxx.o `test -f '../common/tuklib_open_stdxxx.c' || echo '$(srcdir)/'`../common/tuklib_open_stdxxx.c
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-tuklib_open_stdxxx.o -MD -MP -MF $(DEPDIR)/xz-tuklib_open_stdxxx.Tpo -c -o xz-tuklib_open_stdxxx.o `test -f '../common/tuklib_open_stdxxx.c' || echo '$(srcdir)/'`../common/tuklib_open_stdxxx.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-tuklib_open_stdxxx.Tpo $(DEPDIR)/xz-tuklib_open_stdxxx.Po
+#	$(AM_V_CC)source='../common/tuklib_open_stdxxx.c' object='xz-tuklib_open_stdxxx.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-tuklib_open_stdxxx.o `test -f '../common/tuklib_open_stdxxx.c' || echo '$(srcdir)/'`../common/tuklib_open_stdxxx.c
 
 xz-tuklib_open_stdxxx.obj: ../common/tuklib_open_stdxxx.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-tuklib_open_stdxxx.obj -MD -MP -MF $(DEPDIR)/xz-tuklib_open_stdxxx.Tpo -c -o xz-tuklib_open_stdxxx.obj `if test -f '../common/tuklib_open_stdxxx.c'; then $(CYGPATH_W) '../common/tuklib_open_stdxxx.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_open_stdxxx.c'; fi`
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-tuklib_open_stdxxx.Tpo $(DEPDIR)/xz-tuklib_open_stdxxx.Po
-#	$(AM_V_CC)source='../common/tuklib_open_stdxxx.c' object='xz-tuklib_open_stdxxx.obj' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-tuklib_open_stdxxx.obj `if test -f '../common/tuklib_open_stdxxx.c'; then $(CYGPATH_W) '../common/tuklib_open_stdxxx.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_open_stdxxx.c'; fi`
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-tuklib_open_stdxxx.obj -MD -MP -MF $(DEPDIR)/xz-tuklib_open_stdxxx.Tpo -c -o xz-tuklib_open_stdxxx.obj `if test -f '../common/tuklib_open_stdxxx.c'; then $(CYGPATH_W) '../common/tuklib_open_stdxxx.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_open_stdxxx.c'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-tuklib_open_stdxxx.Tpo $(DEPDIR)/xz-tuklib_open_stdxxx.Po
+#	$(AM_V_CC)source='../common/tuklib_open_stdxxx.c' object='xz-tuklib_open_stdxxx.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-tuklib_open_stdxxx.obj `if test -f '../common/tuklib_open_stdxxx.c'; then $(CYGPATH_W) '../common/tuklib_open_stdxxx.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_open_stdxxx.c'; fi`
 
 xz-tuklib_progname.o: ../common/tuklib_progname.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-tuklib_progname.o -MD -MP -MF $(DEPDIR)/xz-tuklib_progname.Tpo -c -o xz-tuklib_progname.o `test -f '../common/tuklib_progname.c' || echo '$(srcdir)/'`../common/tuklib_progname.c
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-tuklib_progname.Tpo $(DEPDIR)/xz-tuklib_progname.Po
-#	$(AM_V_CC)source='../common/tuklib_progname.c' object='xz-tuklib_progname.o' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-tuklib_progname.o `test -f '../common/tuklib_progname.c' || echo '$(srcdir)/'`../common/tuklib_progname.c
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-tuklib_progname.o -MD -MP -MF $(DEPDIR)/xz-tuklib_progname.Tpo -c -o xz-tuklib_progname.o `test -f '../common/tuklib_progname.c' || echo '$(srcdir)/'`../common/tuklib_progname.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-tuklib_progname.Tpo $(DEPDIR)/xz-tuklib_progname.Po
+#	$(AM_V_CC)source='../common/tuklib_progname.c' object='xz-tuklib_progname.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-tuklib_progname.o `test -f '../common/tuklib_progname.c' || echo '$(srcdir)/'`../common/tuklib_progname.c
 
 xz-tuklib_progname.obj: ../common/tuklib_progname.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-tuklib_progname.obj -MD -MP -MF $(DEPDIR)/xz-tuklib_progname.Tpo -c -o xz-tuklib_progname.obj `if test -f '../common/tuklib_progname.c'; then $(CYGPATH_W) '../common/tuklib_progname.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_progname.c'; fi`
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-tuklib_progname.Tpo $(DEPDIR)/xz-tuklib_progname.Po
-#	$(AM_V_CC)source='../common/tuklib_progname.c' object='xz-tuklib_progname.obj' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-tuklib_progname.obj `if test -f '../common/tuklib_progname.c'; then $(CYGPATH_W) '../common/tuklib_progname.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_progname.c'; fi`
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-tuklib_progname.obj -MD -MP -MF $(DEPDIR)/xz-tuklib_progname.Tpo -c -o xz-tuklib_progname.obj `if test -f '../common/tuklib_progname.c'; then $(CYGPATH_W) '../common/tuklib_progname.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_progname.c'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-tuklib_progname.Tpo $(DEPDIR)/xz-tuklib_progname.Po
+#	$(AM_V_CC)source='../common/tuklib_progname.c' object='xz-tuklib_progname.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-tuklib_progname.obj `if test -f '../common/tuklib_progname.c'; then $(CYGPATH_W) '../common/tuklib_progname.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_progname.c'; fi`
 
 xz-tuklib_exit.o: ../common/tuklib_exit.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-tuklib_exit.o -MD -MP -MF $(DEPDIR)/xz-tuklib_exit.Tpo -c -o xz-tuklib_exit.o `test -f '../common/tuklib_exit.c' || echo '$(srcdir)/'`../common/tuklib_exit.c
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-tuklib_exit.Tpo $(DEPDIR)/xz-tuklib_exit.Po
-#	$(AM_V_CC)source='../common/tuklib_exit.c' object='xz-tuklib_exit.o' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-tuklib_exit.o `test -f '../common/tuklib_exit.c' || echo '$(srcdir)/'`../common/tuklib_exit.c
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-tuklib_exit.o -MD -MP -MF $(DEPDIR)/xz-tuklib_exit.Tpo -c -o xz-tuklib_exit.o `test -f '../common/tuklib_exit.c' || echo '$(srcdir)/'`../common/tuklib_exit.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-tuklib_exit.Tpo $(DEPDIR)/xz-tuklib_exit.Po
+#	$(AM_V_CC)source='../common/tuklib_exit.c' object='xz-tuklib_exit.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-tuklib_exit.o `test -f '../common/tuklib_exit.c' || echo '$(srcdir)/'`../common/tuklib_exit.c
 
 xz-tuklib_exit.obj: ../common/tuklib_exit.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-tuklib_exit.obj -MD -MP -MF $(DEPDIR)/xz-tuklib_exit.Tpo -c -o xz-tuklib_exit.obj `if test -f '../common/tuklib_exit.c'; then $(CYGPATH_W) '../common/tuklib_exit.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_exit.c'; fi`
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-tuklib_exit.Tpo $(DEPDIR)/xz-tuklib_exit.Po
-#	$(AM_V_CC)source='../common/tuklib_exit.c' object='xz-tuklib_exit.obj' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-tuklib_exit.obj `if test -f '../common/tuklib_exit.c'; then $(CYGPATH_W) '../common/tuklib_exit.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_exit.c'; fi`
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-tuklib_exit.obj -MD -MP -MF $(DEPDIR)/xz-tuklib_exit.Tpo -c -o xz-tuklib_exit.obj `if test -f '../common/tuklib_exit.c'; then $(CYGPATH_W) '../common/tuklib_exit.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_exit.c'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-tuklib_exit.Tpo $(DEPDIR)/xz-tuklib_exit.Po
+#	$(AM_V_CC)source='../common/tuklib_exit.c' object='xz-tuklib_exit.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-tuklib_exit.obj `if test -f '../common/tuklib_exit.c'; then $(CYGPATH_W) '../common/tuklib_exit.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_exit.c'; fi`
 
 xz-tuklib_mbstr_width.o: ../common/tuklib_mbstr_width.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-tuklib_mbstr_width.o -MD -MP -MF $(DEPDIR)/xz-tuklib_mbstr_width.Tpo -c -o xz-tuklib_mbstr_width.o `test -f '../common/tuklib_mbstr_width.c' || echo '$(srcdir)/'`../common/tuklib_mbstr_width.c
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-tuklib_mbstr_width.Tpo $(DEPDIR)/xz-tuklib_mbstr_width.Po
-#	$(AM_V_CC)source='../common/tuklib_mbstr_width.c' object='xz-tuklib_mbstr_width.o' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-tuklib_mbstr_width.o `test -f '../common/tuklib_mbstr_width.c' || echo '$(srcdir)/'`../common/tuklib_mbstr_width.c
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-tuklib_mbstr_width.o -MD -MP -MF $(DEPDIR)/xz-tuklib_mbstr_width.Tpo -c -o xz-tuklib_mbstr_width.o `test -f '../common/tuklib_mbstr_width.c' || echo '$(srcdir)/'`../common/tuklib_mbstr_width.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-tuklib_mbstr_width.Tpo $(DEPDIR)/xz-tuklib_mbstr_width.Po
+#	$(AM_V_CC)source='../common/tuklib_mbstr_width.c' object='xz-tuklib_mbstr_width.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-tuklib_mbstr_width.o `test -f '../common/tuklib_mbstr_width.c' || echo '$(srcdir)/'`../common/tuklib_mbstr_width.c
 
 xz-tuklib_mbstr_width.obj: ../common/tuklib_mbstr_width.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-tuklib_mbstr_width.obj -MD -MP -MF $(DEPDIR)/xz-tuklib_mbstr_width.Tpo -c -o xz-tuklib_mbstr_width.obj `if test -f '../common/tuklib_mbstr_width.c'; then $(CYGPATH_W) '../common/tuklib_mbstr_width.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_mbstr_width.c'; fi`
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-tuklib_mbstr_width.Tpo $(DEPDIR)/xz-tuklib_mbstr_width.Po
-#	$(AM_V_CC)source='../common/tuklib_mbstr_width.c' object='xz-tuklib_mbstr_width.obj' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-tuklib_mbstr_width.obj `if test -f '../common/tuklib_mbstr_width.c'; then $(CYGPATH_W) '../common/tuklib_mbstr_width.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_mbstr_width.c'; fi`
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-tuklib_mbstr_width.obj -MD -MP -MF $(DEPDIR)/xz-tuklib_mbstr_width.Tpo -c -o xz-tuklib_mbstr_width.obj `if test -f '../common/tuklib_mbstr_width.c'; then $(CYGPATH_W) '../common/tuklib_mbstr_width.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_mbstr_width.c'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-tuklib_mbstr_width.Tpo $(DEPDIR)/xz-tuklib_mbstr_width.Po
+#	$(AM_V_CC)source='../common/tuklib_mbstr_width.c' object='xz-tuklib_mbstr_width.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-tuklib_mbstr_width.obj `if test -f '../common/tuklib_mbstr_width.c'; then $(CYGPATH_W) '../common/tuklib_mbstr_width.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_mbstr_width.c'; fi`
 
 xz-tuklib_mbstr_fw.o: ../common/tuklib_mbstr_fw.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-tuklib_mbstr_fw.o -MD -MP -MF $(DEPDIR)/xz-tuklib_mbstr_fw.Tpo -c -o xz-tuklib_mbstr_fw.o `test -f '../common/tuklib_mbstr_fw.c' || echo '$(srcdir)/'`../common/tuklib_mbstr_fw.c
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-tuklib_mbstr_fw.Tpo $(DEPDIR)/xz-tuklib_mbstr_fw.Po
-#	$(AM_V_CC)source='../common/tuklib_mbstr_fw.c' object='xz-tuklib_mbstr_fw.o' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-tuklib_mbstr_fw.o `test -f '../common/tuklib_mbstr_fw.c' || echo '$(srcdir)/'`../common/tuklib_mbstr_fw.c
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-tuklib_mbstr_fw.o -MD -MP -MF $(DEPDIR)/xz-tuklib_mbstr_fw.Tpo -c -o xz-tuklib_mbstr_fw.o `test -f '../common/tuklib_mbstr_fw.c' || echo '$(srcdir)/'`../common/tuklib_mbstr_fw.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-tuklib_mbstr_fw.Tpo $(DEPDIR)/xz-tuklib_mbstr_fw.Po
+#	$(AM_V_CC)source='../common/tuklib_mbstr_fw.c' object='xz-tuklib_mbstr_fw.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-tuklib_mbstr_fw.o `test -f '../common/tuklib_mbstr_fw.c' || echo '$(srcdir)/'`../common/tuklib_mbstr_fw.c
 
 xz-tuklib_mbstr_fw.obj: ../common/tuklib_mbstr_fw.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-tuklib_mbstr_fw.obj -MD -MP -MF $(DEPDIR)/xz-tuklib_mbstr_fw.Tpo -c -o xz-tuklib_mbstr_fw.obj `if test -f '../common/tuklib_mbstr_fw.c'; then $(CYGPATH_W) '../common/tuklib_mbstr_fw.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_mbstr_fw.c'; fi`
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-tuklib_mbstr_fw.Tpo $(DEPDIR)/xz-tuklib_mbstr_fw.Po
-#	$(AM_V_CC)source='../common/tuklib_mbstr_fw.c' object='xz-tuklib_mbstr_fw.obj' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-tuklib_mbstr_fw.obj `if test -f '../common/tuklib_mbstr_fw.c'; then $(CYGPATH_W) '../common/tuklib_mbstr_fw.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_mbstr_fw.c'; fi`
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-tuklib_mbstr_fw.obj -MD -MP -MF $(DEPDIR)/xz-tuklib_mbstr_fw.Tpo -c -o xz-tuklib_mbstr_fw.obj `if test -f '../common/tuklib_mbstr_fw.c'; then $(CYGPATH_W) '../common/tuklib_mbstr_fw.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_mbstr_fw.c'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-tuklib_mbstr_fw.Tpo $(DEPDIR)/xz-tuklib_mbstr_fw.Po
+#	$(AM_V_CC)source='../common/tuklib_mbstr_fw.c' object='xz-tuklib_mbstr_fw.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-tuklib_mbstr_fw.obj `if test -f '../common/tuklib_mbstr_fw.c'; then $(CYGPATH_W) '../common/tuklib_mbstr_fw.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_mbstr_fw.c'; fi`
 
 xz-list.o: list.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-list.o -MD -MP -MF $(DEPDIR)/xz-list.Tpo -c -o xz-list.o `test -f 'list.c' || echo '$(srcdir)/'`list.c
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-list.Tpo $(DEPDIR)/xz-list.Po
-#	$(AM_V_CC)source='list.c' object='xz-list.o' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-list.o `test -f 'list.c' || echo '$(srcdir)/'`list.c
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-list.o -MD -MP -MF $(DEPDIR)/xz-list.Tpo -c -o xz-list.o `test -f 'list.c' || echo '$(srcdir)/'`list.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-list.Tpo $(DEPDIR)/xz-list.Po
+#	$(AM_V_CC)source='list.c' object='xz-list.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-list.o `test -f 'list.c' || echo '$(srcdir)/'`list.c
 
 xz-list.obj: list.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-list.obj -MD -MP -MF $(DEPDIR)/xz-list.Tpo -c -o xz-list.obj `if test -f 'list.c'; then $(CYGPATH_W) 'list.c'; else $(CYGPATH_W) '$(srcdir)/list.c'; fi`
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-list.Tpo $(DEPDIR)/xz-list.Po
-#	$(AM_V_CC)source='list.c' object='xz-list.obj' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-list.obj `if test -f 'list.c'; then $(CYGPATH_W) 'list.c'; else $(CYGPATH_W) '$(srcdir)/list.c'; fi`
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xz-list.obj -MD -MP -MF $(DEPDIR)/xz-list.Tpo -c -o xz-list.obj `if test -f 'list.c'; then $(CYGPATH_W) 'list.c'; else $(CYGPATH_W) '$(srcdir)/list.c'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/xz-list.Tpo $(DEPDIR)/xz-list.Po
+#	$(AM_V_CC)source='list.c' object='xz-list.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xz-list.obj `if test -f 'list.c'; then $(CYGPATH_W) 'list.c'; else $(CYGPATH_W) '$(srcdir)/list.c'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo
