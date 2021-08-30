@@ -74,13 +74,13 @@
 /* #undef HAVE_DECODER_ARM */
 
 /* Define to 1 if armthumb decoder is enabled. */
-/* #undef HAVE_DECODER_ARMTHUMB */
+#define HAVE_DECODER_ARMTHUMB 1
 
 /* Define to 1 if delta decoder is enabled. */
 /* #undef HAVE_DECODER_DELTA */
 
 /* Define to 1 if ia64 decoder is enabled. */
-#define HAVE_DECODER_IA64 1
+/* #undef HAVE_DECODER_IA64 */
 
 /* Define to 1 if lzma1 decoder is enabled. */
 #define HAVE_DECODER_LZMA1 1
@@ -104,13 +104,13 @@
 #define HAVE_ENCODERS 1
 
 /* Define to 1 if arm encoder is enabled. */
-/* #undef HAVE_ENCODER_ARM */
+#define HAVE_ENCODER_ARM 1
 
 /* Define to 1 if armthumb encoder is enabled. */
-/* #undef HAVE_ENCODER_ARMTHUMB */
+#define HAVE_ENCODER_ARMTHUMB 1
 
 /* Define to 1 if delta encoder is enabled. */
-/* #undef HAVE_ENCODER_DELTA */
+#define HAVE_ENCODER_DELTA 1
 
 /* Define to 1 if ia64 encoder is enabled. */
 #define HAVE_ENCODER_IA64 1
@@ -119,16 +119,16 @@
 #define HAVE_ENCODER_LZMA1 1
 
 /* Define to 1 if lzma2 encoder is enabled. */
-/* #undef HAVE_ENCODER_LZMA2 */
+#define HAVE_ENCODER_LZMA2 1
 
 /* Define to 1 if powerpc encoder is enabled. */
-/* #undef HAVE_ENCODER_POWERPC */
+#define HAVE_ENCODER_POWERPC 1
 
 /* Define to 1 if sparc encoder is enabled. */
-/* #undef HAVE_ENCODER_SPARC */
+#define HAVE_ENCODER_SPARC 1
 
 /* Define to 1 if x86 encoder is enabled. */
-/* #undef HAVE_ENCODER_X86 */
+#define HAVE_ENCODER_X86 1
 
 /* Define to 1 if you have the <fcntl.h> header file. */
 #define HAVE_FCNTL_H 1
@@ -179,7 +179,7 @@
 /* #undef HAVE_MF_BT4 */
 
 /* Define to 1 to enable hc3 match finder. */
-#define HAVE_MF_HC3 1
+/* #undef HAVE_MF_HC3 */
 
 /* Define to 1 to enable hc4 match finder. */
 #define HAVE_MF_HC4 1
@@ -215,7 +215,7 @@
 /* #undef HAVE_SHA2_H */
 
 /* Define to 1 if optimizing for size. */
-/* #undef HAVE_SMALL */
+#define HAVE_SMALL 1
 
 /* Define to 1 if stdbool.h conforms to C99. */
 #define HAVE_STDBOOL_H 1
