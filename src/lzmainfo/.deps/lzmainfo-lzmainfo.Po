@@ -58,7 +58,7 @@ lzmainfo-lzmainfo.o: lzmainfo.c /usr/include/stdc-predef.h \
  /usr/include/bits/getopt_core.h /usr/include/bits/getopt_ext.h \
  ../../src/common/tuklib_gettext.h ../../src/common/tuklib_common.h \
  ../../src/common/tuklib_config.h ../../src/common/sysdefs.h \
- /usr/include/locale.h /usr/include/bits/locale.h /usr/include/libintl.h \
+ /usr/include/locale.h /usr/include/bits/locale.h \
  ../../src/common/tuklib_progname.h ../../src/common/tuklib_exit.h
 /usr/include/stdc-predef.h:
 ../../src/common/sysdefs.h:
@@ -168,6 +168,5 @@ lzmainfo-lzmainfo.o: lzmainfo.c /usr/include/stdc-predef.h \
 ../../src/common/sysdefs.h:
 /usr/include/locale.h:
 /usr/include/bits/locale.h:
-/usr/include/libintl.h:
 ../../src/common/tuklib_progname.h:
 ../../src/common/tuklib_exit.h:
