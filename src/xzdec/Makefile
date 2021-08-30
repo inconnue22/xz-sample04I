@@ -93,14 +93,14 @@ host_triplet = x86_64-pc-linux-gnu
 #am__append_3 = lzmadec_w32res.rc
 bin_PROGRAMS = $(am__EXEEXT_1) $(am__EXEEXT_2)
 am__append_4 = xzdec
-am__append_5 = lzmadec
+#am__append_5 = lzmadec
 
 # Create the symlink lzmadec.1->xzdec.1 only if xzdec.1 was installed.
 # This is better than creating a dangling symlink. The correct solution
 # would be to install xzdec.1 as lzmadec.1 but this code is already too
 # complicated so I won't do it. Installing only lzmadec is a bit unusual
 # situation anyway so it's not that important.
-am__append_6 = lzmadec
+#am__append_6 = lzmadec
 subdir = src/xzdec
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/ax_check_capsicum.m4 \
@@ -128,7 +128,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__EXEEXT_1 = xzdec$(EXEEXT)
-am__EXEEXT_2 = lzmadec$(EXEEXT)
+#am__EXEEXT_2 = lzmadec$(EXEEXT)
 am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)"
 PROGRAMS = $(bin_PROGRAMS)
 am__lzmadec_SOURCES_DIST = xzdec.c ../common/tuklib_progname.c \
@@ -258,8 +258,8 @@ am__DIST_COMMON = $(dist_man_MANS) $(srcdir)/Makefile.in \
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = ${SHELL} /github/xz/build-aux/missing aclocal-1.16
 AMTAR = $${TAR-tar}
-AM_CFLAGS =  -pthread -fvisibility=hidden -Wall -Wextra -Wvla -Wformat=2 -Winit-self -Wmissing-include-dirs -Wstrict-aliasing -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wlogical-op -Waggregate-return -Wstrict-prototypes -Wold-style-definition -Wmissing-prototypes -Wmissing-declarations -Wmissing-noreturn -Wredundant-decls
-AM_DEFAULT_VERBOSITY = 0
+AM_CFLAGS =  -fvisibility=hidden -Wall -Wextra -Wvla -Wformat=2 -Winit-self -Wmissing-include-dirs -Wstrict-aliasing -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wlogical-op -Waggregate-return -Wstrict-prototypes -Wold-style-definition -Wmissing-prototypes -Wmissing-declarations -Wmissing-noreturn -Wredundant-decls
+AM_DEFAULT_VERBOSITY = 1
 AR = ar
 AS = as
 AUTOCONF = ${SHELL} /github/xz/build-aux/missing autoconf
@@ -306,7 +306,7 @@ LDFLAGS =
 LIBICONV = -liconv
 LIBINTL = 
 LIBOBJS = 
-LIBS =  -lpthread
+LIBS = 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_EXEEXT = $(EXEEXT)
@@ -336,18 +336,18 @@ PACKAGE_URL = https://tukaani.org/xz/
 PACKAGE_VERSION = 5.3.1alpha
 PATH_SEPARATOR = :
 POSIX_SHELL = /bin/sh
-POSUB = 
+POSUB = po
 PREFERABLY_POSIX_SHELL = /bin/sh
-PTHREAD_CC = gcc
-PTHREAD_CFLAGS = -pthread
-PTHREAD_LIBS = -lpthread
+PTHREAD_CC = 
+PTHREAD_CFLAGS = 
+PTHREAD_LIBS = 
 RANLIB = ranlib
 RC = 
 SED = /usr/bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = strip
-USE_NLS = no
+USE_NLS = yes
 VERSION = 5.3.1alpha
 XGETTEXT = /usr/bin/xgettext
 XGETTEXT_015 = /usr/bin/xgettext
