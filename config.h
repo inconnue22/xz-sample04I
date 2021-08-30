@@ -50,7 +50,7 @@
 #define HAVE_CHECK_SHA256 1
 
 /* Define to 1 if you have the `clock_gettime' function. */
-#define HAVE_CLOCK_GETTIME 1
+/* #undef HAVE_CLOCK_GETTIME */
 
 /* Define to 1 if you have the <CommonCrypto/CommonDigest.h> header file. */
 /* #undef HAVE_COMMONCRYPTO_COMMONDIGEST_H */
@@ -61,7 +61,7 @@
 
 /* Define to 1 if you have the declaration of `CLOCK_MONOTONIC', and to 0 if
    you don't. */
-#define HAVE_DECL_CLOCK_MONOTONIC 1
+/* #undef HAVE_DECL_CLOCK_MONOTONIC */
 
 /* Define to 1 if you have the declaration of `program_invocation_name', and
    to 0 if you don't. */
@@ -89,7 +89,7 @@
 /* #undef HAVE_DECODER_LZMA2 */
 
 /* Define to 1 if powerpc decoder is enabled. */
-/* #undef HAVE_DECODER_POWERPC */
+#define HAVE_DECODER_POWERPC 1
 
 /* Define to 1 if sparc decoder is enabled. */
 /* #undef HAVE_DECODER_SPARC */
@@ -107,10 +107,10 @@
 /* #undef HAVE_ENCODER_ARM */
 
 /* Define to 1 if armthumb encoder is enabled. */
-/* #undef HAVE_ENCODER_ARMTHUMB */
+#define HAVE_ENCODER_ARMTHUMB 1
 
 /* Define to 1 if delta encoder is enabled. */
-#define HAVE_ENCODER_DELTA 1
+/* #undef HAVE_ENCODER_DELTA */
 
 /* Define to 1 if ia64 encoder is enabled. */
 /* #undef HAVE_ENCODER_IA64 */
@@ -179,10 +179,10 @@
 /* #undef HAVE_MF_BT4 */
 
 /* Define to 1 to enable hc3 match finder. */
-/* #undef HAVE_MF_HC3 */
+#define HAVE_MF_HC3 1
 
 /* Define to 1 to enable hc4 match finder. */
-/* #undef HAVE_MF_HC4 */
+#define HAVE_MF_HC4 1
 
 /* Define to 1 if getopt.h declares extern int optreset. */
 /* #undef HAVE_OPTRESET */
@@ -191,10 +191,10 @@
 #define HAVE_POSIX_FADVISE 1
 
 /* Define to 1 if you have the `pthread_condattr_setclock' function. */
-#define HAVE_PTHREAD_CONDATTR_SETCLOCK 1
+/* #undef HAVE_PTHREAD_CONDATTR_SETCLOCK */
 
 /* Have PTHREAD_PRIO_INHERIT. */
-#define HAVE_PTHREAD_PRIO_INHERIT 1
+/* #undef HAVE_PTHREAD_PRIO_INHERIT */
 
 /* Define to 1 if you have the `SHA256Init' function. */
 /* #undef HAVE_SHA256INIT */
@@ -308,7 +308,7 @@
 #define LT_OBJDIR ".libs/"
 
 /* Define to 1 when using POSIX threads (pthreads). */
-#define MYTHREAD_POSIX 1
+/* #undef MYTHREAD_POSIX */
 
 /* Define to 1 when using Windows Vista compatible threads. This uses features
    that are not available on Windows XP. */
