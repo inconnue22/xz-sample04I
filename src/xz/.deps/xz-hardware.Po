@@ -82,10 +82,9 @@ xz-hardware.o: hardware.c /usr/include/stdc-predef.h private.h \
  /usr/include/bits/getopt_posix.h /usr/include/bits/getopt_core.h \
  /usr/include/bits/unistd_ext.h ../../src/common/tuklib_gettext.h \
  ../../src/common/tuklib_common.h ../../src/common/tuklib_config.h \
- /usr/include/libintl.h ../../src/common/tuklib_progname.h \
- ../../src/common/tuklib_exit.h ../../src/common/tuklib_mbstr.h main.h \
- mytime.h coder.h message.h args.h hardware.h file_io.h options.h \
- signals.h suffix.h util.h list.h
+ ../../src/common/tuklib_progname.h ../../src/common/tuklib_exit.h \
+ ../../src/common/tuklib_mbstr.h main.h mytime.h coder.h message.h args.h \
+ hardware.h file_io.h options.h signals.h suffix.h util.h list.h
 /usr/include/stdc-predef.h:
 private.h:
 ../../src/common/sysdefs.h:
@@ -239,7 +238,6 @@ private.h:
 ../../src/common/tuklib_gettext.h:
 ../../src/common/tuklib_common.h:
 ../../src/common/tuklib_config.h:
-/usr/include/libintl.h:
 ../../src/common/tuklib_progname.h:
 ../../src/common/tuklib_exit.h:
 ../../src/common/tuklib_mbstr.h:
