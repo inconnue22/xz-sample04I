@@ -86,10 +86,10 @@
 #define HAVE_DECODER_LZMA1 1
 
 /* Define to 1 if lzma2 decoder is enabled. */
-/* #undef HAVE_DECODER_LZMA2 */
+#define HAVE_DECODER_LZMA2 1
 
 /* Define to 1 if powerpc decoder is enabled. */
-#define HAVE_DECODER_POWERPC 1
+/* #undef HAVE_DECODER_POWERPC */
 
 /* Define to 1 if sparc decoder is enabled. */
 /* #undef HAVE_DECODER_SPARC */
@@ -104,7 +104,7 @@
 #define HAVE_ENCODERS 1
 
 /* Define to 1 if arm encoder is enabled. */
-/* #undef HAVE_ENCODER_ARM */
+#define HAVE_ENCODER_ARM 1
 
 /* Define to 1 if armthumb encoder is enabled. */
 /* #undef HAVE_ENCODER_ARMTHUMB */
@@ -128,7 +128,7 @@
 /* #undef HAVE_ENCODER_SPARC */
 
 /* Define to 1 if x86 encoder is enabled. */
-#define HAVE_ENCODER_X86 1
+/* #undef HAVE_ENCODER_X86 */
 
 /* Define to 1 if you have the <fcntl.h> header file. */
 #define HAVE_FCNTL_H 1
@@ -179,7 +179,7 @@
 #define HAVE_MF_BT4 1
 
 /* Define to 1 to enable hc3 match finder. */
-#define HAVE_MF_HC3 1
+/* #undef HAVE_MF_HC3 */
 
 /* Define to 1 to enable hc4 match finder. */
 /* #undef HAVE_MF_HC4 */
@@ -319,7 +319,7 @@
 /* #undef MYTHREAD_WIN95 */
 
 /* Define to 1 to disable debugging code. */
-/* #undef NDEBUG */
+#define NDEBUG 1
 
 /* Name of package */
 #define PACKAGE "xz"
