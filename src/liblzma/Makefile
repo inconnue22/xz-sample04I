@@ -145,23 +145,23 @@ am__append_6 = \
 	common/stream_flags_decoder.c \
 	common/vli_decoder.c
 
-#am__append_7 = check/crc32_small.c
-am__append_8 = \
-	check/crc32_table.c \
-	check/crc32_table_le.h \
-	check/crc32_table_be.h
+am__append_7 = check/crc32_small.c
+#am__append_8 = \
+#	check/crc32_table.c \
+#	check/crc32_table_le.h \
+#	check/crc32_table_be.h
 
-#am__append_9 = check/crc32_x86.S
-am__append_10 = check/crc32_fast.c
-##am__append_11 = check/crc64_small.c
-#am__append_12 = \
-#	check/crc64_table.c \
-#	check/crc64_table_le.h \
-#	check/crc64_table_be.h
+##am__append_9 = check/crc32_x86.S
+#am__append_10 = check/crc32_fast.c
+#am__append_11 = check/crc64_small.c
+##am__append_12 = \
+##	check/crc64_table.c \
+##	check/crc64_table_le.h \
+##	check/crc64_table_be.h
 
-##am__append_13 = check/crc64_x86.S
-#am__append_14 = check/crc64_fast.c
-am__append_15 = check/sha256.c
+###am__append_13 = check/crc64_x86.S
+##am__append_14 = check/crc64_fast.c
+#am__append_15 = check/sha256.c
 am__append_16 = \
 	lz/lz_encoder.c \
 	lz/lz_encoder.h \
@@ -185,14 +185,14 @@ am__append_20 = \
 	lzma/lzma_encoder_optimum_fast.c \
 	lzma/lzma_encoder_optimum_normal.c
 
-am__append_21 = lzma/fastpos_table.c
+#am__append_21 = lzma/fastpos_table.c
 am__append_22 = \
 	lzma/lzma_decoder.c \
 	lzma/lzma_decoder.h
 
-#am__append_23 = \
-#	lzma/lzma2_encoder.c \
-#	lzma/lzma2_encoder.h
+am__append_23 = \
+	lzma/lzma2_encoder.c \
+	lzma/lzma2_encoder.h
 
 #am__append_24 = \
 #	lzma/lzma2_decoder.c \
@@ -205,38 +205,38 @@ am__append_26 = \
 	rangecoder/price_table.c
 
 am__append_27 = rangecoder/range_decoder.h
-am__append_28 = \
-	delta/delta_common.c \
-	delta/delta_common.h \
-	delta/delta_private.h
+#am__append_28 = \
+#	delta/delta_common.c \
+#	delta/delta_common.h \
+#	delta/delta_private.h
 
-am__append_29 = \
-	delta/delta_encoder.c \
-	delta/delta_encoder.h
+##am__append_29 = \
+##	delta/delta_encoder.c \
+##	delta/delta_encoder.h
 
-#am__append_30 = \
-#	delta/delta_decoder.c \
-#	delta/delta_decoder.h
+##am__append_30 = \
+##	delta/delta_decoder.c \
+##	delta/delta_decoder.h
 
-#am__append_31 = \
-#	simple/simple_coder.c \
-#	simple/simple_coder.h \
-#	simple/simple_private.h
+am__append_31 = \
+	simple/simple_coder.c \
+	simple/simple_coder.h \
+	simple/simple_private.h
 
-##am__append_32 = \
-##	simple/simple_encoder.c \
-##	simple/simple_encoder.h
+#am__append_32 = \
+#	simple/simple_encoder.c \
+#	simple/simple_encoder.h
 
-##am__append_33 = \
-##	simple/simple_decoder.c \
-##	simple/simple_decoder.h
+am__append_33 = \
+	simple/simple_decoder.c \
+	simple/simple_decoder.h
 
-##am__append_34 = simple/x86.c
-##am__append_35 = simple/powerpc.c
-##am__append_36 = simple/ia64.c
-##am__append_37 = simple/arm.c
-##am__append_38 = simple/armthumb.c
-##am__append_39 = simple/sparc.c
+#am__append_34 = simple/x86.c
+#am__append_35 = simple/powerpc.c
+am__append_36 = simple/ia64.c
+#am__append_37 = simple/arm.c
+#am__append_38 = simple/armthumb.c
+#am__append_39 = simple/sparc.c
 #am__append_40 = liblzma.def liblzma.def.in empty.c
 #am__append_41 = liblzma_w32res.rc
 #am__append_42 = -Xlinker --output-def -Xlinker liblzma.def.in
@@ -391,15 +391,15 @@ am__objects_5 = liblzma_la-alone_decoder.lo \
 	liblzma_la-stream_decoder.lo \
 	liblzma_la-stream_flags_decoder.lo \
 	liblzma_la-vli_decoder.lo
-#am__objects_6 = liblzma_la-crc32_small.lo
-am__objects_7 = liblzma_la-crc32_table.lo
-#am__objects_8 = liblzma_la-crc32_x86.lo
-am__objects_9 = liblzma_la-crc32_fast.lo
-##am__objects_10 = liblzma_la-crc64_small.lo
-#am__objects_11 = liblzma_la-crc64_table.lo
-##am__objects_12 = liblzma_la-crc64_x86.lo
-#am__objects_13 = liblzma_la-crc64_fast.lo
-am__objects_14 = liblzma_la-sha256.lo
+am__objects_6 = liblzma_la-crc32_small.lo
+#am__objects_7 = liblzma_la-crc32_table.lo
+##am__objects_8 = liblzma_la-crc32_x86.lo
+#am__objects_9 = liblzma_la-crc32_fast.lo
+#am__objects_10 = liblzma_la-crc64_small.lo
+##am__objects_11 = liblzma_la-crc64_table.lo
+###am__objects_12 = liblzma_la-crc64_x86.lo
+##am__objects_13 = liblzma_la-crc64_fast.lo
+#am__objects_14 = liblzma_la-sha256.lo
 am__objects_15 = liblzma_la-lz_encoder.lo \
 	liblzma_la-lz_encoder_mf.lo
 am__objects_16 = liblzma_la-lz_decoder.lo
@@ -408,24 +408,24 @@ am__objects_17 =  \
 am__objects_18 = liblzma_la-lzma_encoder.lo \
 	liblzma_la-lzma_encoder_optimum_fast.lo \
 	liblzma_la-lzma_encoder_optimum_normal.lo
-am__objects_19 = liblzma_la-fastpos_table.lo
+#am__objects_19 = liblzma_la-fastpos_table.lo
 am__objects_20 = liblzma_la-lzma_decoder.lo
-#am__objects_21 = liblzma_la-lzma2_encoder.lo
+am__objects_21 = liblzma_la-lzma2_encoder.lo
 #am__objects_22 = liblzma_la-lzma2_decoder.lo
 am__objects_23 =
 am__objects_24 = liblzma_la-price_table.lo
-am__objects_25 = liblzma_la-delta_common.lo
-am__objects_26 = liblzma_la-delta_encoder.lo
-#am__objects_27 = liblzma_la-delta_decoder.lo
-#am__objects_28 = liblzma_la-simple_coder.lo
-##am__objects_29 = liblzma_la-simple_encoder.lo
-##am__objects_30 = liblzma_la-simple_decoder.lo
-##am__objects_31 = liblzma_la-x86.lo
-##am__objects_32 = liblzma_la-powerpc.lo
-##am__objects_33 = liblzma_la-ia64.lo
-##am__objects_34 = liblzma_la-arm.lo
-##am__objects_35 = liblzma_la-armthumb.lo
-##am__objects_36 = liblzma_la-sparc.lo
+#am__objects_25 = liblzma_la-delta_common.lo
+##am__objects_26 = liblzma_la-delta_encoder.lo
+##am__objects_27 = liblzma_la-delta_decoder.lo
+am__objects_28 = liblzma_la-simple_coder.lo
+#am__objects_29 = liblzma_la-simple_encoder.lo
+am__objects_30 = liblzma_la-simple_decoder.lo
+#am__objects_31 = liblzma_la-x86.lo
+#am__objects_32 = liblzma_la-powerpc.lo
+am__objects_33 = liblzma_la-ia64.lo
+#am__objects_34 = liblzma_la-arm.lo
+#am__objects_35 = liblzma_la-armthumb.lo
+#am__objects_36 = liblzma_la-sparc.lo
 #am__objects_37 = liblzma_w32res.lo
 am_liblzma_la_OBJECTS = liblzma_la-tuklib_physmem.lo $(am__objects_1) \
 	liblzma_la-common.lo liblzma_la-block_util.lo \
@@ -732,7 +732,7 @@ PACKAGE_URL = https://tukaani.org/xz/
 PACKAGE_VERSION = 5.3.1alpha
 PATH_SEPARATOR = :
 POSIX_SHELL = /bin/sh
-POSUB = po
+POSUB = 
 PREFERABLY_POSIX_SHELL = /bin/sh
 PTHREAD_CC = gcc
 PTHREAD_CFLAGS = -pthread
@@ -743,7 +743,7 @@ SED = /usr/bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = strip
-USE_NLS = yes
+USE_NLS = no
 VERSION = 5.3.1alpha
 XGETTEXT = /usr/bin/xgettext
 XGETTEXT_015 = /usr/bin/xgettext

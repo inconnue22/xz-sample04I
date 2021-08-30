@@ -7,15 +7,3 @@ message.c:384:2: note: ‘snprintf’ output between 3 and 337 bytes into a dest
       |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   385 |    speed > 9.9 ? 0 : 1, speed, unit[unit_index]);
       |    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-................................................. done.
-cs.1po: 118 translated messages.
-...................................... done.
-de.1po: 141 translated messages.
-........................................ done.
-fr.1po: 130 translated messages.
-....................................... done.
-it.1po: 140 translated messages.
-........................................ done.
-pl.1po: 140 translated messages.
-....................................... done.
-vi.1po: 140 translated messages.
