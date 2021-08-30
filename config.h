@@ -9,7 +9,7 @@
 
 /* Define to 1 if translation of program messages to the user's native
    language is requested. */
-#define ENABLE_NLS 1
+/* #undef ENABLE_NLS */
 
 /* Define to 1 if bswap_16 is available. */
 /* #undef HAVE_BSWAP_16 */
@@ -44,7 +44,7 @@
 #define HAVE_CHECK_CRC32 1
 
 /* Define to 1 if crc64 integrity check is enabled. */
-#define HAVE_CHECK_CRC64 1
+/* #undef HAVE_CHECK_CRC64 */
 
 /* Define to 1 if sha256 integrity check is enabled. */
 #define HAVE_CHECK_SHA256 1
@@ -57,7 +57,7 @@
 
 /* Define if the GNU dcgettext() function is already present or preinstalled.
    */
-#define HAVE_DCGETTEXT 1
+/* #undef HAVE_DCGETTEXT */
 
 /* Define to 1 if you have the declaration of `CLOCK_MONOTONIC', and to 0 if
    you don't. */
@@ -86,7 +86,7 @@
 #define HAVE_DECODER_LZMA1 1
 
 /* Define to 1 if lzma2 decoder is enabled. */
-/* #undef HAVE_DECODER_LZMA2 */
+#define HAVE_DECODER_LZMA2 1
 
 /* Define to 1 if powerpc decoder is enabled. */
 /* #undef HAVE_DECODER_POWERPC */
@@ -95,7 +95,7 @@
 /* #undef HAVE_DECODER_SPARC */
 
 /* Define to 1 if x86 decoder is enabled. */
-#define HAVE_DECODER_X86 1
+/* #undef HAVE_DECODER_X86 */
 
 /* Define to 1 if you have the <dlfcn.h> header file. */
 #define HAVE_DLFCN_H 1
@@ -104,7 +104,7 @@
 #define HAVE_ENCODERS 1
 
 /* Define to 1 if arm encoder is enabled. */
-/* #undef HAVE_ENCODER_ARM */
+#define HAVE_ENCODER_ARM 1
 
 /* Define to 1 if armthumb encoder is enabled. */
 /* #undef HAVE_ENCODER_ARMTHUMB */
@@ -149,7 +149,7 @@
 #define HAVE_GETOPT_LONG 1
 
 /* Define if the GNU gettext() function is already present or preinstalled. */
-#define HAVE_GETTEXT 1
+/* #undef HAVE_GETTEXT */
 
 /* Define if you have the iconv() function and it works. */
 /* #undef HAVE_ICONV */
@@ -176,13 +176,13 @@
 /* #undef HAVE_MF_BT3 */
 
 /* Define to 1 to enable bt4 match finder. */
-/* #undef HAVE_MF_BT4 */
+#define HAVE_MF_BT4 1
 
 /* Define to 1 to enable hc3 match finder. */
-#define HAVE_MF_HC3 1
+/* #undef HAVE_MF_HC3 */
 
 /* Define to 1 to enable hc4 match finder. */
-#define HAVE_MF_HC4 1
+/* #undef HAVE_MF_HC4 */
 
 /* Define to 1 if getopt.h declares extern int optreset. */
 /* #undef HAVE_OPTRESET */
@@ -215,7 +215,7 @@
 /* #undef HAVE_SHA2_H */
 
 /* Define to 1 if optimizing for size. */
-/* #undef HAVE_SMALL */
+#define HAVE_SMALL 1
 
 /* Define to 1 if stdbool.h conforms to C99. */
 #define HAVE_STDBOOL_H 1
@@ -319,7 +319,7 @@
 /* #undef MYTHREAD_WIN95 */
 
 /* Define to 1 to disable debugging code. */
-/* #undef NDEBUG */
+#define NDEBUG 1
 
 /* Name of package */
 #define PACKAGE "xz"
@@ -407,7 +407,7 @@
 /* Define to 1 to use unsafe type punning, e.g. char *x = ...; *(int *)x =
    123; which violates strict aliasing rules and thus is undefined behavior
    and might result in broken code. */
-#define TUKLIB_USE_UNSAFE_TYPE_PUNNING 1
+/* #undef TUKLIB_USE_UNSAFE_TYPE_PUNNING */
 
 /* Enable extensions on AIX 3, Interix.  */
 #ifndef _ALL_SOURCE
