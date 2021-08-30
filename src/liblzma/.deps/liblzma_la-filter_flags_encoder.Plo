@@ -37,6 +37,11 @@ liblzma_la-filter_flags_encoder.lo: common/filter_flags_encoder.c \
  /usr/lib/gcc/x86_64-redhat-linux/10/include/stdbool.h \
  /usr/include/string.h /usr/include/strings.h /usr/include/memory.h \
  ../../src/common/mythread.h ../../src/common/sysdefs.h \
+ /usr/include/sys/time.h /usr/include/pthread.h /usr/include/sched.h \
+ /usr/include/bits/sched.h /usr/include/bits/types/struct_sched_param.h \
+ /usr/include/bits/cpu-set.h /usr/include/time.h /usr/include/bits/time.h \
+ /usr/include/bits/timex.h /usr/include/bits/types/struct_tm.h \
+ /usr/include/bits/types/struct_itimerspec.h /usr/include/bits/setjmp.h \
  /usr/include/signal.h /usr/include/bits/signum-generic.h \
  /usr/include/bits/signum-arch.h /usr/include/bits/types/sig_atomic_t.h \
  /usr/include/bits/types/siginfo_t.h /usr/include/bits/types/__sigval_t.h \
@@ -48,12 +53,16 @@ liblzma_la-filter_flags_encoder.lo: common/filter_flags_encoder.c \
  /usr/include/sys/ucontext.h /usr/include/bits/sigstack.h \
  /usr/include/bits/ss_flags.h /usr/include/bits/types/struct_sigstack.h \
  /usr/include/bits/sigthread.h /usr/include/bits/signal_ext.h \
- ../../src/common/tuklib_integer.h ../../src/common/tuklib_common.h \
- ../../src/common/tuklib_config.h ../../src/liblzma/api/lzma.h \
- ../../src/liblzma/api/lzma/version.h ../../src/liblzma/api/lzma/base.h \
- ../../src/liblzma/api/lzma/vli.h ../../src/liblzma/api/lzma/check.h \
- ../../src/liblzma/api/lzma/filter.h ../../src/liblzma/api/lzma/bcj.h \
- ../../src/liblzma/api/lzma/delta.h ../../src/liblzma/api/lzma/lzma12.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/bits/types/error_t.h ../../src/common/tuklib_integer.h \
+ ../../src/common/tuklib_common.h ../../src/common/tuklib_config.h \
+ ../../src/liblzma/api/lzma.h ../../src/liblzma/api/lzma/version.h \
+ ../../src/liblzma/api/lzma/base.h ../../src/liblzma/api/lzma/vli.h \
+ ../../src/liblzma/api/lzma/check.h ../../src/liblzma/api/lzma/filter.h \
+ ../../src/liblzma/api/lzma/bcj.h ../../src/liblzma/api/lzma/delta.h \
+ ../../src/liblzma/api/lzma/lzma12.h \
  ../../src/liblzma/api/lzma/container.h \
  ../../src/liblzma/api/lzma/stream_flags.h \
  ../../src/liblzma/api/lzma/block.h ../../src/liblzma/api/lzma/index.h \
@@ -129,6 +138,18 @@ common/common.h:
 /usr/include/memory.h:
 ../../src/common/mythread.h:
 ../../src/common/sysdefs.h:
+/usr/include/sys/time.h:
+/usr/include/pthread.h:
+/usr/include/sched.h:
+/usr/include/bits/sched.h:
+/usr/include/bits/types/struct_sched_param.h:
+/usr/include/bits/cpu-set.h:
+/usr/include/time.h:
+/usr/include/bits/time.h:
+/usr/include/bits/timex.h:
+/usr/include/bits/types/struct_tm.h:
+/usr/include/bits/types/struct_itimerspec.h:
+/usr/include/bits/setjmp.h:
 /usr/include/signal.h:
 /usr/include/bits/signum-generic.h:
 /usr/include/bits/signum-arch.h:
@@ -150,6 +171,13 @@ common/common.h:
 /usr/include/bits/types/struct_sigstack.h:
 /usr/include/bits/sigthread.h:
 /usr/include/bits/signal_ext.h:
+/usr/include/errno.h:
+/usr/include/bits/errno.h:
+/usr/include/linux/errno.h:
+/usr/include/asm/errno.h:
+/usr/include/asm-generic/errno.h:
+/usr/include/asm-generic/errno-base.h:
+/usr/include/bits/types/error_t.h:
 ../../src/common/tuklib_integer.h:
 ../../src/common/tuklib_common.h:
 ../../src/common/tuklib_config.h:
