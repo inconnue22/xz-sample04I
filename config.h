@@ -47,7 +47,7 @@
 /* #undef HAVE_CHECK_CRC64 */
 
 /* Define to 1 if sha256 integrity check is enabled. */
-#define HAVE_CHECK_SHA256 1
+/* #undef HAVE_CHECK_SHA256 */
 
 /* Define to 1 if you have the `clock_gettime' function. */
 #define HAVE_CLOCK_GETTIME 1
@@ -80,7 +80,7 @@
 /* #undef HAVE_DECODER_DELTA */
 
 /* Define to 1 if ia64 decoder is enabled. */
-/* #undef HAVE_DECODER_IA64 */
+#define HAVE_DECODER_IA64 1
 
 /* Define to 1 if lzma1 decoder is enabled. */
 #define HAVE_DECODER_LZMA1 1
@@ -89,7 +89,7 @@
 /* #undef HAVE_DECODER_LZMA2 */
 
 /* Define to 1 if powerpc decoder is enabled. */
-#define HAVE_DECODER_POWERPC 1
+/* #undef HAVE_DECODER_POWERPC */
 
 /* Define to 1 if sparc decoder is enabled. */
 /* #undef HAVE_DECODER_SPARC */
@@ -119,7 +119,7 @@
 #define HAVE_ENCODER_LZMA1 1
 
 /* Define to 1 if lzma2 encoder is enabled. */
-/* #undef HAVE_ENCODER_LZMA2 */
+#define HAVE_ENCODER_LZMA2 1
 
 /* Define to 1 if powerpc encoder is enabled. */
 /* #undef HAVE_ENCODER_POWERPC */
@@ -128,7 +128,7 @@
 /* #undef HAVE_ENCODER_SPARC */
 
 /* Define to 1 if x86 encoder is enabled. */
-#define HAVE_ENCODER_X86 1
+/* #undef HAVE_ENCODER_X86 */
 
 /* Define to 1 if you have the <fcntl.h> header file. */
 #define HAVE_FCNTL_H 1
@@ -170,19 +170,19 @@
 #define HAVE_MEMORY_H 1
 
 /* Define to 1 to enable bt2 match finder. */
-#define HAVE_MF_BT2 1
+/* #undef HAVE_MF_BT2 */
 
 /* Define to 1 to enable bt3 match finder. */
 /* #undef HAVE_MF_BT3 */
 
 /* Define to 1 to enable bt4 match finder. */
-#define HAVE_MF_BT4 1
+/* #undef HAVE_MF_BT4 */
 
 /* Define to 1 to enable hc3 match finder. */
 #define HAVE_MF_HC3 1
 
 /* Define to 1 to enable hc4 match finder. */
-/* #undef HAVE_MF_HC4 */
+#define HAVE_MF_HC4 1
 
 /* Define to 1 if getopt.h declares extern int optreset. */
 /* #undef HAVE_OPTRESET */
@@ -407,7 +407,7 @@
 /* Define to 1 to use unsafe type punning, e.g. char *x = ...; *(int *)x =
    123; which violates strict aliasing rules and thus is undefined behavior
    and might result in broken code. */
-/* #undef TUKLIB_USE_UNSAFE_TYPE_PUNNING */
+#define TUKLIB_USE_UNSAFE_TYPE_PUNNING 1
 
 /* Enable extensions on AIX 3, Interix.  */
 #ifndef _ALL_SOURCE
