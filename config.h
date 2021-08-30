@@ -44,7 +44,7 @@
 #define HAVE_CHECK_CRC32 1
 
 /* Define to 1 if crc64 integrity check is enabled. */
-/* #undef HAVE_CHECK_CRC64 */
+#define HAVE_CHECK_CRC64 1
 
 /* Define to 1 if sha256 integrity check is enabled. */
 #define HAVE_CHECK_SHA256 1
@@ -176,7 +176,7 @@
 /* #undef HAVE_MF_BT3 */
 
 /* Define to 1 to enable bt4 match finder. */
-/* #undef HAVE_MF_BT4 */
+#define HAVE_MF_BT4 1
 
 /* Define to 1 to enable hc3 match finder. */
 /* #undef HAVE_MF_HC3 */
@@ -319,7 +319,7 @@
 /* #undef MYTHREAD_WIN95 */
 
 /* Define to 1 to disable debugging code. */
-/* #undef NDEBUG */
+#define NDEBUG 1
 
 /* Name of package */
 #define PACKAGE "xz"
@@ -407,7 +407,7 @@
 /* Define to 1 to use unsafe type punning, e.g. char *x = ...; *(int *)x =
    123; which violates strict aliasing rules and thus is undefined behavior
    and might result in broken code. */
-/* #undef TUKLIB_USE_UNSAFE_TYPE_PUNNING */
+#define TUKLIB_USE_UNSAFE_TYPE_PUNNING 1
 
 /* Enable extensions on AIX 3, Interix.  */
 #ifndef _ALL_SOURCE

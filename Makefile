@@ -281,9 +281,9 @@ AWK = gawk
 CAPSICUM_LIB = 
 CC = gcc
 CCAS = gcc
-CCASDEPMODE = depmode=none
+CCASDEPMODE = depmode=gcc3
 CCASFLAGS = -g -O2
-CCDEPMODE = depmode=none
+CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
 CFLAG_VISIBILITY = -fvisibility=hidden
 CPP = gcc -E
