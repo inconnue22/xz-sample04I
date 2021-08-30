@@ -1,9 +1,12 @@
-message.c: In function ‘progress_speed.part.0’:
-message.c:384:35: warning: ‘%s’ directive output may be truncated writing up to 23 bytes into a region of size between 0 and 14 [-Wformat-truncation=]
-  384 |  snprintf(buf, sizeof(buf), "%.*f %s",
-      |                                   ^~
-message.c:384:2: note: ‘snprintf’ output between 3 and 337 bytes into a destination of size 16
-  384 |  snprintf(buf, sizeof(buf), "%.*f %s",
-      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  385 |    speed > 9.9 ? 0 : 1, speed, unit[unit_index]);
-      |    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-check.o): in function `lzma_check_update':
+/github/xz/src/liblzma/check/check.c:129: undefined reference to `lzma_crc64'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_decoder.o): in function `lzma_properties_decode':
+/github/xz/src/liblzma/common/filter_decoder.c:179: undefined reference to `lzma_delta_props_decode'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_decoder.o):(.rodata+0x28): undefined reference to `lzma_delta_decoder_init'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_decoder.o):(.rodata+0x30): undefined reference to `lzma_delta_coder_memusage'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_decoder.o):(.rodata+0x38): undefined reference to `lzma_delta_props_decode'
+collect2: error: ld returned 1 exit status
+make[3]: *** [Makefile:516: xzdec] Error 1
+make[2]: *** [Makefile:422: all-recursive] Error 1
+make[1]: *** [Makefile:616: all-recursive] Error 1
+make: *** [Makefile:483: all] Error 2
