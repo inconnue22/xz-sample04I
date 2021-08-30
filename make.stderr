@@ -1,9 +1,30 @@
-message.c: In function ‘progress_speed.part.0’:
-message.c:384:35: warning: ‘%s’ directive output may be truncated writing up to 23 bytes into a region of size between 0 and 14 [-Wformat-truncation=]
-  384 |  snprintf(buf, sizeof(buf), "%.*f %s",
-      |                                   ^~
-message.c:384:2: note: ‘snprintf’ output between 3 and 337 bytes into a destination of size 16
-  384 |  snprintf(buf, sizeof(buf), "%.*f %s",
-      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  385 |    speed > 9.9 ? 0 : 1, speed, unit[unit_index]);
-      |    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0x40): undefined reference to `lzma_lzma2_encoder_init'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0x48): undefined reference to `lzma_lzma2_encoder_memusage'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0x50): undefined reference to `lzma_lzma2_block_size'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0x68): undefined reference to `lzma_lzma2_props_encode'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0x78): undefined reference to `lzma_simple_x86_encoder_init'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0x90): undefined reference to `lzma_simple_props_size'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0xa0): undefined reference to `lzma_simple_props_encode'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0xb0): undefined reference to `lzma_simple_powerpc_encoder_init'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0xc8): undefined reference to `lzma_simple_props_size'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0xd8): undefined reference to `lzma_simple_props_encode'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0xe8): undefined reference to `lzma_simple_ia64_encoder_init'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0x100): undefined reference to `lzma_simple_props_size'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0x110): undefined reference to `lzma_simple_props_encode'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0x120): undefined reference to `lzma_simple_arm_encoder_init'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0x138): undefined reference to `lzma_simple_props_size'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0x148): undefined reference to `lzma_simple_props_encode'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0x158): undefined reference to `lzma_simple_armthumb_encoder_init'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0x170): undefined reference to `lzma_simple_props_size'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0x180): undefined reference to `lzma_simple_props_encode'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0x1a8): undefined reference to `lzma_simple_props_size'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0x1b8): undefined reference to `lzma_simple_props_encode'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-check.o): in function `lzma_check_update':
+/github/xz/src/liblzma/check/check.c:129: undefined reference to `lzma_crc64'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-lz_encoder.o): in function `lzma_lz_encoder_init':
+/github/xz/src/liblzma/lz/lz_encoder.c:548: undefined reference to `lzma_crc32_init'
+collect2: error: ld returned 1 exit status
+make[3]: *** [Makefile:509: xz] Error 1
+make[2]: *** [Makefile:422: all-recursive] Error 1
+make[1]: *** [Makefile:616: all-recursive] Error 1
+make: *** [Makefile:483: all] Error 2
