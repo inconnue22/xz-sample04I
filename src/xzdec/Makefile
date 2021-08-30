@@ -93,14 +93,14 @@ host_triplet = x86_64-pc-linux-gnu
 #am__append_3 = lzmadec_w32res.rc
 bin_PROGRAMS = $(am__EXEEXT_1) $(am__EXEEXT_2)
 #am__append_4 = xzdec
-#am__append_5 = lzmadec
+am__append_5 = lzmadec
 
 # Create the symlink lzmadec.1->xzdec.1 only if xzdec.1 was installed.
 # This is better than creating a dangling symlink. The correct solution
 # would be to install xzdec.1 as lzmadec.1 but this code is already too
 # complicated so I won't do it. Installing only lzmadec is a bit unusual
 # situation anyway so it's not that important.
-##am__append_6 = lzmadec
+#am__append_6 = lzmadec
 subdir = src/xzdec
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/ax_check_capsicum.m4 \
@@ -128,7 +128,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 #am__EXEEXT_1 = xzdec$(EXEEXT)
-#am__EXEEXT_2 = lzmadec$(EXEEXT)
+am__EXEEXT_2 = lzmadec$(EXEEXT)
 am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)"
 PROGRAMS = $(bin_PROGRAMS)
 am__lzmadec_SOURCES_DIST = xzdec.c ../common/tuklib_progname.c \
@@ -259,7 +259,7 @@ DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = ${SHELL} /github/xz/build-aux/missing aclocal-1.16
 AMTAR = $${TAR-tar}
 AM_CFLAGS =  -pthread -fvisibility=hidden -Wall -Wextra -Wvla -Wformat=2 -Winit-self -Wmissing-include-dirs -Wstrict-aliasing -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wlogical-op -Waggregate-return -Wstrict-prototypes -Wold-style-definition -Wmissing-prototypes -Wmissing-declarations -Wmissing-noreturn -Wredundant-decls
-AM_DEFAULT_VERBOSITY = 1
+AM_DEFAULT_VERBOSITY = 0
 AR = ar
 AS = as
 AUTOCONF = ${SHELL} /github/xz/build-aux/missing autoconf
@@ -269,9 +269,9 @@ AWK = gawk
 CAPSICUM_LIB = 
 CC = gcc
 CCAS = gcc
-CCASDEPMODE = depmode=gcc3
+CCASDEPMODE = depmode=none
 CCASFLAGS = -g -O2
-CCDEPMODE = depmode=gcc3
+CCDEPMODE = depmode=none
 CFLAGS = -g -O2
 CFLAG_VISIBILITY = -fvisibility=hidden
 CPP = gcc -E
@@ -521,12 +521,12 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-include ./$(DEPDIR)/lzmadec-tuklib_exit.Po # am--include-marker
-include ./$(DEPDIR)/lzmadec-tuklib_progname.Po # am--include-marker
-include ./$(DEPDIR)/lzmadec-xzdec.Po # am--include-marker
-include ./$(DEPDIR)/xzdec-tuklib_exit.Po # am--include-marker
-include ./$(DEPDIR)/xzdec-tuklib_progname.Po # am--include-marker
-include ./$(DEPDIR)/xzdec-xzdec.Po # am--include-marker
+#include ./$(DEPDIR)/lzmadec-tuklib_exit.Po # am--include-marker
+#include ./$(DEPDIR)/lzmadec-tuklib_progname.Po # am--include-marker
+#include ./$(DEPDIR)/lzmadec-xzdec.Po # am--include-marker
+#include ./$(DEPDIR)/xzdec-tuklib_exit.Po # am--include-marker
+#include ./$(DEPDIR)/xzdec-tuklib_progname.Po # am--include-marker
+#include ./$(DEPDIR)/xzdec-xzdec.Po # am--include-marker
 
 $(am__depfiles_remade):
 	@$(MKDIR_P) $(@D)
@@ -535,109 +535,109 @@ $(am__depfiles_remade):
 am--depfiles: $(am__depfiles_remade)
 
 .c.o:
-	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
-#	$(AM_V_CC)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(COMPILE) -c -o $@ $<
+#	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+#	$(AM_V_CC)source='$<' object='$@' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(COMPILE) -c -o $@ $<
 
 .c.obj:
-	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
-#	$(AM_V_CC)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+#	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+#	$(AM_V_CC)source='$<' object='$@' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
 .c.lo:
-	$(AM_V_CC)$(LTCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
-#	$(AM_V_CC)source='$<' object='$@' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LTCOMPILE) -c -o $@ $<
+#	$(AM_V_CC)$(LTCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
+#	$(AM_V_CC)source='$<' object='$@' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LTCOMPILE) -c -o $@ $<
 
 lzmadec-xzdec.o: xzdec.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmadec-xzdec.o -MD -MP -MF $(DEPDIR)/lzmadec-xzdec.Tpo -c -o lzmadec-xzdec.o `test -f 'xzdec.c' || echo '$(srcdir)/'`xzdec.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmadec-xzdec.Tpo $(DEPDIR)/lzmadec-xzdec.Po
-#	$(AM_V_CC)source='xzdec.c' object='lzmadec-xzdec.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmadec-xzdec.o `test -f 'xzdec.c' || echo '$(srcdir)/'`xzdec.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmadec-xzdec.o -MD -MP -MF $(DEPDIR)/lzmadec-xzdec.Tpo -c -o lzmadec-xzdec.o `test -f 'xzdec.c' || echo '$(srcdir)/'`xzdec.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmadec-xzdec.Tpo $(DEPDIR)/lzmadec-xzdec.Po
+#	$(AM_V_CC)source='xzdec.c' object='lzmadec-xzdec.o' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmadec-xzdec.o `test -f 'xzdec.c' || echo '$(srcdir)/'`xzdec.c
 
 lzmadec-xzdec.obj: xzdec.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmadec-xzdec.obj -MD -MP -MF $(DEPDIR)/lzmadec-xzdec.Tpo -c -o lzmadec-xzdec.obj `if test -f 'xzdec.c'; then $(CYGPATH_W) 'xzdec.c'; else $(CYGPATH_W) '$(srcdir)/xzdec.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmadec-xzdec.Tpo $(DEPDIR)/lzmadec-xzdec.Po
-#	$(AM_V_CC)source='xzdec.c' object='lzmadec-xzdec.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmadec-xzdec.obj `if test -f 'xzdec.c'; then $(CYGPATH_W) 'xzdec.c'; else $(CYGPATH_W) '$(srcdir)/xzdec.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmadec-xzdec.obj -MD -MP -MF $(DEPDIR)/lzmadec-xzdec.Tpo -c -o lzmadec-xzdec.obj `if test -f 'xzdec.c'; then $(CYGPATH_W) 'xzdec.c'; else $(CYGPATH_W) '$(srcdir)/xzdec.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmadec-xzdec.Tpo $(DEPDIR)/lzmadec-xzdec.Po
+#	$(AM_V_CC)source='xzdec.c' object='lzmadec-xzdec.obj' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmadec-xzdec.obj `if test -f 'xzdec.c'; then $(CYGPATH_W) 'xzdec.c'; else $(CYGPATH_W) '$(srcdir)/xzdec.c'; fi`
 
 lzmadec-tuklib_progname.o: ../common/tuklib_progname.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmadec-tuklib_progname.o -MD -MP -MF $(DEPDIR)/lzmadec-tuklib_progname.Tpo -c -o lzmadec-tuklib_progname.o `test -f '../common/tuklib_progname.c' || echo '$(srcdir)/'`../common/tuklib_progname.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmadec-tuklib_progname.Tpo $(DEPDIR)/lzmadec-tuklib_progname.Po
-#	$(AM_V_CC)source='../common/tuklib_progname.c' object='lzmadec-tuklib_progname.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmadec-tuklib_progname.o `test -f '../common/tuklib_progname.c' || echo '$(srcdir)/'`../common/tuklib_progname.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmadec-tuklib_progname.o -MD -MP -MF $(DEPDIR)/lzmadec-tuklib_progname.Tpo -c -o lzmadec-tuklib_progname.o `test -f '../common/tuklib_progname.c' || echo '$(srcdir)/'`../common/tuklib_progname.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmadec-tuklib_progname.Tpo $(DEPDIR)/lzmadec-tuklib_progname.Po
+#	$(AM_V_CC)source='../common/tuklib_progname.c' object='lzmadec-tuklib_progname.o' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmadec-tuklib_progname.o `test -f '../common/tuklib_progname.c' || echo '$(srcdir)/'`../common/tuklib_progname.c
 
 lzmadec-tuklib_progname.obj: ../common/tuklib_progname.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmadec-tuklib_progname.obj -MD -MP -MF $(DEPDIR)/lzmadec-tuklib_progname.Tpo -c -o lzmadec-tuklib_progname.obj `if test -f '../common/tuklib_progname.c'; then $(CYGPATH_W) '../common/tuklib_progname.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_progname.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmadec-tuklib_progname.Tpo $(DEPDIR)/lzmadec-tuklib_progname.Po
-#	$(AM_V_CC)source='../common/tuklib_progname.c' object='lzmadec-tuklib_progname.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmadec-tuklib_progname.obj `if test -f '../common/tuklib_progname.c'; then $(CYGPATH_W) '../common/tuklib_progname.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_progname.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmadec-tuklib_progname.obj -MD -MP -MF $(DEPDIR)/lzmadec-tuklib_progname.Tpo -c -o lzmadec-tuklib_progname.obj `if test -f '../common/tuklib_progname.c'; then $(CYGPATH_W) '../common/tuklib_progname.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_progname.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmadec-tuklib_progname.Tpo $(DEPDIR)/lzmadec-tuklib_progname.Po
+#	$(AM_V_CC)source='../common/tuklib_progname.c' object='lzmadec-tuklib_progname.obj' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmadec-tuklib_progname.obj `if test -f '../common/tuklib_progname.c'; then $(CYGPATH_W) '../common/tuklib_progname.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_progname.c'; fi`
 
 lzmadec-tuklib_exit.o: ../common/tuklib_exit.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmadec-tuklib_exit.o -MD -MP -MF $(DEPDIR)/lzmadec-tuklib_exit.Tpo -c -o lzmadec-tuklib_exit.o `test -f '../common/tuklib_exit.c' || echo '$(srcdir)/'`../common/tuklib_exit.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmadec-tuklib_exit.Tpo $(DEPDIR)/lzmadec-tuklib_exit.Po
-#	$(AM_V_CC)source='../common/tuklib_exit.c' object='lzmadec-tuklib_exit.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmadec-tuklib_exit.o `test -f '../common/tuklib_exit.c' || echo '$(srcdir)/'`../common/tuklib_exit.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmadec-tuklib_exit.o -MD -MP -MF $(DEPDIR)/lzmadec-tuklib_exit.Tpo -c -o lzmadec-tuklib_exit.o `test -f '../common/tuklib_exit.c' || echo '$(srcdir)/'`../common/tuklib_exit.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmadec-tuklib_exit.Tpo $(DEPDIR)/lzmadec-tuklib_exit.Po
+#	$(AM_V_CC)source='../common/tuklib_exit.c' object='lzmadec-tuklib_exit.o' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmadec-tuklib_exit.o `test -f '../common/tuklib_exit.c' || echo '$(srcdir)/'`../common/tuklib_exit.c
 
 lzmadec-tuklib_exit.obj: ../common/tuklib_exit.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmadec-tuklib_exit.obj -MD -MP -MF $(DEPDIR)/lzmadec-tuklib_exit.Tpo -c -o lzmadec-tuklib_exit.obj `if test -f '../common/tuklib_exit.c'; then $(CYGPATH_W) '../common/tuklib_exit.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_exit.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmadec-tuklib_exit.Tpo $(DEPDIR)/lzmadec-tuklib_exit.Po
-#	$(AM_V_CC)source='../common/tuklib_exit.c' object='lzmadec-tuklib_exit.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmadec-tuklib_exit.obj `if test -f '../common/tuklib_exit.c'; then $(CYGPATH_W) '../common/tuklib_exit.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_exit.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmadec-tuklib_exit.obj -MD -MP -MF $(DEPDIR)/lzmadec-tuklib_exit.Tpo -c -o lzmadec-tuklib_exit.obj `if test -f '../common/tuklib_exit.c'; then $(CYGPATH_W) '../common/tuklib_exit.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_exit.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmadec-tuklib_exit.Tpo $(DEPDIR)/lzmadec-tuklib_exit.Po
+#	$(AM_V_CC)source='../common/tuklib_exit.c' object='lzmadec-tuklib_exit.obj' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmadec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmadec-tuklib_exit.obj `if test -f '../common/tuklib_exit.c'; then $(CYGPATH_W) '../common/tuklib_exit.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_exit.c'; fi`
 
 xzdec-xzdec.o: xzdec.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xzdec-xzdec.o -MD -MP -MF $(DEPDIR)/xzdec-xzdec.Tpo -c -o xzdec-xzdec.o `test -f 'xzdec.c' || echo '$(srcdir)/'`xzdec.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/xzdec-xzdec.Tpo $(DEPDIR)/xzdec-xzdec.Po
-#	$(AM_V_CC)source='xzdec.c' object='xzdec-xzdec.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xzdec-xzdec.o `test -f 'xzdec.c' || echo '$(srcdir)/'`xzdec.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xzdec-xzdec.o -MD -MP -MF $(DEPDIR)/xzdec-xzdec.Tpo -c -o xzdec-xzdec.o `test -f 'xzdec.c' || echo '$(srcdir)/'`xzdec.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/xzdec-xzdec.Tpo $(DEPDIR)/xzdec-xzdec.Po
+#	$(AM_V_CC)source='xzdec.c' object='xzdec-xzdec.o' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xzdec-xzdec.o `test -f 'xzdec.c' || echo '$(srcdir)/'`xzdec.c
 
 xzdec-xzdec.obj: xzdec.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xzdec-xzdec.obj -MD -MP -MF $(DEPDIR)/xzdec-xzdec.Tpo -c -o xzdec-xzdec.obj `if test -f 'xzdec.c'; then $(CYGPATH_W) 'xzdec.c'; else $(CYGPATH_W) '$(srcdir)/xzdec.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/xzdec-xzdec.Tpo $(DEPDIR)/xzdec-xzdec.Po
-#	$(AM_V_CC)source='xzdec.c' object='xzdec-xzdec.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xzdec-xzdec.obj `if test -f 'xzdec.c'; then $(CYGPATH_W) 'xzdec.c'; else $(CYGPATH_W) '$(srcdir)/xzdec.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xzdec-xzdec.obj -MD -MP -MF $(DEPDIR)/xzdec-xzdec.Tpo -c -o xzdec-xzdec.obj `if test -f 'xzdec.c'; then $(CYGPATH_W) 'xzdec.c'; else $(CYGPATH_W) '$(srcdir)/xzdec.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/xzdec-xzdec.Tpo $(DEPDIR)/xzdec-xzdec.Po
+#	$(AM_V_CC)source='xzdec.c' object='xzdec-xzdec.obj' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xzdec-xzdec.obj `if test -f 'xzdec.c'; then $(CYGPATH_W) 'xzdec.c'; else $(CYGPATH_W) '$(srcdir)/xzdec.c'; fi`
 
 xzdec-tuklib_progname.o: ../common/tuklib_progname.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xzdec-tuklib_progname.o -MD -MP -MF $(DEPDIR)/xzdec-tuklib_progname.Tpo -c -o xzdec-tuklib_progname.o `test -f '../common/tuklib_progname.c' || echo '$(srcdir)/'`../common/tuklib_progname.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/xzdec-tuklib_progname.Tpo $(DEPDIR)/xzdec-tuklib_progname.Po
-#	$(AM_V_CC)source='../common/tuklib_progname.c' object='xzdec-tuklib_progname.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xzdec-tuklib_progname.o `test -f '../common/tuklib_progname.c' || echo '$(srcdir)/'`../common/tuklib_progname.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xzdec-tuklib_progname.o -MD -MP -MF $(DEPDIR)/xzdec-tuklib_progname.Tpo -c -o xzdec-tuklib_progname.o `test -f '../common/tuklib_progname.c' || echo '$(srcdir)/'`../common/tuklib_progname.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/xzdec-tuklib_progname.Tpo $(DEPDIR)/xzdec-tuklib_progname.Po
+#	$(AM_V_CC)source='../common/tuklib_progname.c' object='xzdec-tuklib_progname.o' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xzdec-tuklib_progname.o `test -f '../common/tuklib_progname.c' || echo '$(srcdir)/'`../common/tuklib_progname.c
 
 xzdec-tuklib_progname.obj: ../common/tuklib_progname.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xzdec-tuklib_progname.obj -MD -MP -MF $(DEPDIR)/xzdec-tuklib_progname.Tpo -c -o xzdec-tuklib_progname.obj `if test -f '../common/tuklib_progname.c'; then $(CYGPATH_W) '../common/tuklib_progname.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_progname.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/xzdec-tuklib_progname.Tpo $(DEPDIR)/xzdec-tuklib_progname.Po
-#	$(AM_V_CC)source='../common/tuklib_progname.c' object='xzdec-tuklib_progname.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xzdec-tuklib_progname.obj `if test -f '../common/tuklib_progname.c'; then $(CYGPATH_W) '../common/tuklib_progname.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_progname.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xzdec-tuklib_progname.obj -MD -MP -MF $(DEPDIR)/xzdec-tuklib_progname.Tpo -c -o xzdec-tuklib_progname.obj `if test -f '../common/tuklib_progname.c'; then $(CYGPATH_W) '../common/tuklib_progname.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_progname.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/xzdec-tuklib_progname.Tpo $(DEPDIR)/xzdec-tuklib_progname.Po
+#	$(AM_V_CC)source='../common/tuklib_progname.c' object='xzdec-tuklib_progname.obj' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xzdec-tuklib_progname.obj `if test -f '../common/tuklib_progname.c'; then $(CYGPATH_W) '../common/tuklib_progname.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_progname.c'; fi`
 
 xzdec-tuklib_exit.o: ../common/tuklib_exit.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xzdec-tuklib_exit.o -MD -MP -MF $(DEPDIR)/xzdec-tuklib_exit.Tpo -c -o xzdec-tuklib_exit.o `test -f '../common/tuklib_exit.c' || echo '$(srcdir)/'`../common/tuklib_exit.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/xzdec-tuklib_exit.Tpo $(DEPDIR)/xzdec-tuklib_exit.Po
-#	$(AM_V_CC)source='../common/tuklib_exit.c' object='xzdec-tuklib_exit.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xzdec-tuklib_exit.o `test -f '../common/tuklib_exit.c' || echo '$(srcdir)/'`../common/tuklib_exit.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xzdec-tuklib_exit.o -MD -MP -MF $(DEPDIR)/xzdec-tuklib_exit.Tpo -c -o xzdec-tuklib_exit.o `test -f '../common/tuklib_exit.c' || echo '$(srcdir)/'`../common/tuklib_exit.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/xzdec-tuklib_exit.Tpo $(DEPDIR)/xzdec-tuklib_exit.Po
+#	$(AM_V_CC)source='../common/tuklib_exit.c' object='xzdec-tuklib_exit.o' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xzdec-tuklib_exit.o `test -f '../common/tuklib_exit.c' || echo '$(srcdir)/'`../common/tuklib_exit.c
 
 xzdec-tuklib_exit.obj: ../common/tuklib_exit.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xzdec-tuklib_exit.obj -MD -MP -MF $(DEPDIR)/xzdec-tuklib_exit.Tpo -c -o xzdec-tuklib_exit.obj `if test -f '../common/tuklib_exit.c'; then $(CYGPATH_W) '../common/tuklib_exit.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_exit.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/xzdec-tuklib_exit.Tpo $(DEPDIR)/xzdec-tuklib_exit.Po
-#	$(AM_V_CC)source='../common/tuklib_exit.c' object='xzdec-tuklib_exit.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xzdec-tuklib_exit.obj `if test -f '../common/tuklib_exit.c'; then $(CYGPATH_W) '../common/tuklib_exit.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_exit.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xzdec-tuklib_exit.obj -MD -MP -MF $(DEPDIR)/xzdec-tuklib_exit.Tpo -c -o xzdec-tuklib_exit.obj `if test -f '../common/tuklib_exit.c'; then $(CYGPATH_W) '../common/tuklib_exit.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_exit.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/xzdec-tuklib_exit.Tpo $(DEPDIR)/xzdec-tuklib_exit.Po
+#	$(AM_V_CC)source='../common/tuklib_exit.c' object='xzdec-tuklib_exit.obj' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xzdec_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xzdec-tuklib_exit.obj `if test -f '../common/tuklib_exit.c'; then $(CYGPATH_W) '../common/tuklib_exit.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_exit.c'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo
