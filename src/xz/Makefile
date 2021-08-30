@@ -95,7 +95,7 @@ am__append_1 = \
 
 #am__append_2 = xz_w32res.rc
 #am__append_3 = $(top_builddir)/lib/libgnu.a
-am__append_4 = lzma unlzma lzcat
+#am__append_4 = lzma unlzma lzcat
 subdir = src/xz
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/ax_check_capsicum.m4 \
