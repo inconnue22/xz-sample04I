@@ -88,8 +88,8 @@ POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
 host_triplet = x86_64-pc-linux-gnu
 am__append_1 = xz
-#am__append_2 = lzmainfo
-am__append_3 = scripts
+am__append_2 = lzmainfo
+#am__append_3 = scripts
 subdir = src
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/ax_check_capsicum.m4 \
@@ -211,9 +211,9 @@ AWK = gawk
 CAPSICUM_LIB = 
 CC = gcc
 CCAS = gcc
-CCASDEPMODE = depmode=none
+CCASDEPMODE = depmode=gcc3
 CCASFLAGS = -g -O2
-CCDEPMODE = depmode=none
+CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
 CFLAG_VISIBILITY = -fvisibility=hidden
 CPP = gcc -E
@@ -278,7 +278,7 @@ PACKAGE_URL = https://tukaani.org/xz/
 PACKAGE_VERSION = 5.3.1alpha
 PATH_SEPARATOR = :
 POSIX_SHELL = /bin/sh
-POSUB = po
+POSUB = 
 PREFERABLY_POSIX_SHELL = /bin/sh
 PTHREAD_CC = gcc
 PTHREAD_CFLAGS = -pthread
@@ -289,7 +289,7 @@ SED = /usr/bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = strip
-USE_NLS = yes
+USE_NLS = no
 VERSION = 5.3.1alpha
 XGETTEXT = /usr/bin/xgettext
 XGETTEXT_015 = /usr/bin/xgettext
