@@ -88,14 +88,14 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
 host_triplet = x86_64-pc-linux-gnu
-#am__append_1 = \
-#	xzdiff-lzdiff \
-#	xzdiff-lzcmp \
-#	xzgrep-lzgrep \
-#	xzgrep-lzegrep \
-#	xzgrep-lzfgrep \
-#	xzmore-lzmore \
-#	xzless-lzless
+am__append_1 = \
+	xzdiff-lzdiff \
+	xzdiff-lzcmp \
+	xzgrep-lzgrep \
+	xzgrep-lzegrep \
+	xzgrep-lzfgrep \
+	xzmore-lzmore \
+	xzless-lzless
 
 subdir = src/scripts
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -192,9 +192,9 @@ AWK = gawk
 CAPSICUM_LIB = 
 CC = gcc
 CCAS = gcc
-CCASDEPMODE = depmode=none
+CCASDEPMODE = depmode=gcc3
 CCASFLAGS = -g -O2
-CCDEPMODE = depmode=none
+CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
 CFLAG_VISIBILITY = -fvisibility=hidden
 CPP = gcc -E
@@ -259,7 +259,7 @@ PACKAGE_URL = https://tukaani.org/xz/
 PACKAGE_VERSION = 5.3.1alpha
 PATH_SEPARATOR = :
 POSIX_SHELL = /bin/sh
-POSUB = po
+POSUB = 
 PREFERABLY_POSIX_SHELL = /bin/sh
 PTHREAD_CC = 
 PTHREAD_CFLAGS = 
@@ -270,7 +270,7 @@ SED = /usr/bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = strip
-USE_NLS = yes
+USE_NLS = no
 VERSION = 5.3.1alpha
 XGETTEXT = /usr/bin/xgettext
 XGETTEXT_015 = /usr/bin/xgettext
