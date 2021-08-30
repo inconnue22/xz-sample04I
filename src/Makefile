@@ -89,7 +89,7 @@ build_triplet = x86_64-pc-linux-gnu
 host_triplet = x86_64-pc-linux-gnu
 am__append_1 = xz
 #am__append_2 = lzmainfo
-am__append_3 = scripts
+#am__append_3 = scripts
 subdir = src
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/ax_check_capsicum.m4 \
@@ -200,7 +200,7 @@ am__relativize = \
   reldir="$$dir2"
 ACLOCAL = ${SHELL} /github/xz/build-aux/missing aclocal-1.16
 AMTAR = $${TAR-tar}
-AM_CFLAGS =  -pthread -fvisibility=hidden -Wall -Wextra -Wvla -Wformat=2 -Winit-self -Wmissing-include-dirs -Wstrict-aliasing -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wlogical-op -Waggregate-return -Wstrict-prototypes -Wold-style-definition -Wmissing-prototypes -Wmissing-declarations -Wmissing-noreturn -Wredundant-decls
+AM_CFLAGS =  -fvisibility=hidden -Wall -Wextra -Wvla -Wformat=2 -Winit-self -Wmissing-include-dirs -Wstrict-aliasing -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wlogical-op -Waggregate-return -Wstrict-prototypes -Wold-style-definition -Wmissing-prototypes -Wmissing-declarations -Wmissing-noreturn -Wredundant-decls
 AM_DEFAULT_VERBOSITY = 1
 AR = ar
 AS = as
@@ -211,9 +211,9 @@ AWK = gawk
 CAPSICUM_LIB = 
 CC = gcc
 CCAS = gcc
-CCASDEPMODE = depmode=none
+CCASDEPMODE = depmode=gcc3
 CCASFLAGS = -g -O2
-CCDEPMODE = depmode=none
+CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
 CFLAG_VISIBILITY = -fvisibility=hidden
 CPP = gcc -E
@@ -248,7 +248,7 @@ LDFLAGS =
 LIBICONV = -liconv
 LIBINTL = 
 LIBOBJS = 
-LIBS =  -lpthread
+LIBS = 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_EXEEXT = $(EXEEXT)
@@ -280,9 +280,9 @@ PATH_SEPARATOR = :
 POSIX_SHELL = /bin/sh
 POSUB = 
 PREFERABLY_POSIX_SHELL = /bin/sh
-PTHREAD_CC = gcc
-PTHREAD_CFLAGS = -pthread
-PTHREAD_LIBS = -lpthread
+PTHREAD_CC = 
+PTHREAD_CFLAGS = 
+PTHREAD_LIBS = 
 RANLIB = ranlib
 RC = 
 SED = /usr/bin/sed
