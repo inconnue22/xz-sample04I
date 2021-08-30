@@ -9,7 +9,7 @@
 
 /* Define to 1 if translation of program messages to the user's native
    language is requested. */
-#define ENABLE_NLS 1
+/* #undef ENABLE_NLS */
 
 /* Define to 1 if bswap_16 is available. */
 /* #undef HAVE_BSWAP_16 */
@@ -44,24 +44,24 @@
 #define HAVE_CHECK_CRC32 1
 
 /* Define to 1 if crc64 integrity check is enabled. */
-#define HAVE_CHECK_CRC64 1
+/* #undef HAVE_CHECK_CRC64 */
 
 /* Define to 1 if sha256 integrity check is enabled. */
 /* #undef HAVE_CHECK_SHA256 */
 
 /* Define to 1 if you have the `clock_gettime' function. */
-/* #undef HAVE_CLOCK_GETTIME */
+#define HAVE_CLOCK_GETTIME 1
 
 /* Define to 1 if you have the <CommonCrypto/CommonDigest.h> header file. */
 /* #undef HAVE_COMMONCRYPTO_COMMONDIGEST_H */
 
 /* Define if the GNU dcgettext() function is already present or preinstalled.
    */
-#define HAVE_DCGETTEXT 1
+/* #undef HAVE_DCGETTEXT */
 
 /* Define to 1 if you have the declaration of `CLOCK_MONOTONIC', and to 0 if
    you don't. */
-/* #undef HAVE_DECL_CLOCK_MONOTONIC */
+#define HAVE_DECL_CLOCK_MONOTONIC 1
 
 /* Define to 1 if you have the declaration of `program_invocation_name', and
    to 0 if you don't. */
@@ -80,7 +80,7 @@
 /* #undef HAVE_DECODER_DELTA */
 
 /* Define to 1 if ia64 decoder is enabled. */
-/* #undef HAVE_DECODER_IA64 */
+#define HAVE_DECODER_IA64 1
 
 /* Define to 1 if lzma1 decoder is enabled. */
 #define HAVE_DECODER_LZMA1 1
@@ -92,7 +92,7 @@
 /* #undef HAVE_DECODER_POWERPC */
 
 /* Define to 1 if sparc decoder is enabled. */
-#define HAVE_DECODER_SPARC 1
+/* #undef HAVE_DECODER_SPARC */
 
 /* Define to 1 if x86 decoder is enabled. */
 /* #undef HAVE_DECODER_X86 */
@@ -104,16 +104,16 @@
 #define HAVE_ENCODERS 1
 
 /* Define to 1 if arm encoder is enabled. */
-#define HAVE_ENCODER_ARM 1
+/* #undef HAVE_ENCODER_ARM */
 
 /* Define to 1 if armthumb encoder is enabled. */
-#define HAVE_ENCODER_ARMTHUMB 1
+/* #undef HAVE_ENCODER_ARMTHUMB */
 
 /* Define to 1 if delta encoder is enabled. */
-#define HAVE_ENCODER_DELTA 1
+/* #undef HAVE_ENCODER_DELTA */
 
 /* Define to 1 if ia64 encoder is enabled. */
-#define HAVE_ENCODER_IA64 1
+/* #undef HAVE_ENCODER_IA64 */
 
 /* Define to 1 if lzma1 encoder is enabled. */
 #define HAVE_ENCODER_LZMA1 1
@@ -122,13 +122,13 @@
 #define HAVE_ENCODER_LZMA2 1
 
 /* Define to 1 if powerpc encoder is enabled. */
-#define HAVE_ENCODER_POWERPC 1
+/* #undef HAVE_ENCODER_POWERPC */
 
 /* Define to 1 if sparc encoder is enabled. */
-#define HAVE_ENCODER_SPARC 1
+/* #undef HAVE_ENCODER_SPARC */
 
 /* Define to 1 if x86 encoder is enabled. */
-#define HAVE_ENCODER_X86 1
+/* #undef HAVE_ENCODER_X86 */
 
 /* Define to 1 if you have the <fcntl.h> header file. */
 #define HAVE_FCNTL_H 1
@@ -149,7 +149,7 @@
 #define HAVE_GETOPT_LONG 1
 
 /* Define if the GNU gettext() function is already present or preinstalled. */
-#define HAVE_GETTEXT 1
+/* #undef HAVE_GETTEXT */
 
 /* Define if you have the iconv() function and it works. */
 /* #undef HAVE_ICONV */
@@ -170,10 +170,10 @@
 #define HAVE_MEMORY_H 1
 
 /* Define to 1 to enable bt2 match finder. */
-#define HAVE_MF_BT2 1
+/* #undef HAVE_MF_BT2 */
 
 /* Define to 1 to enable bt3 match finder. */
-#define HAVE_MF_BT3 1
+/* #undef HAVE_MF_BT3 */
 
 /* Define to 1 to enable bt4 match finder. */
 /* #undef HAVE_MF_BT4 */
@@ -182,7 +182,7 @@
 #define HAVE_MF_HC3 1
 
 /* Define to 1 to enable hc4 match finder. */
-/* #undef HAVE_MF_HC4 */
+#define HAVE_MF_HC4 1
 
 /* Define to 1 if getopt.h declares extern int optreset. */
 /* #undef HAVE_OPTRESET */
@@ -191,10 +191,10 @@
 #define HAVE_POSIX_FADVISE 1
 
 /* Define to 1 if you have the `pthread_condattr_setclock' function. */
-/* #undef HAVE_PTHREAD_CONDATTR_SETCLOCK */
+#define HAVE_PTHREAD_CONDATTR_SETCLOCK 1
 
 /* Have PTHREAD_PRIO_INHERIT. */
-/* #undef HAVE_PTHREAD_PRIO_INHERIT */
+#define HAVE_PTHREAD_PRIO_INHERIT 1
 
 /* Define to 1 if you have the `SHA256Init' function. */
 /* #undef HAVE_SHA256INIT */
@@ -215,7 +215,7 @@
 /* #undef HAVE_SHA2_H */
 
 /* Define to 1 if optimizing for size. */
-/* #undef HAVE_SMALL */
+#define HAVE_SMALL 1
 
 /* Define to 1 if stdbool.h conforms to C99. */
 #define HAVE_STDBOOL_H 1
@@ -308,7 +308,7 @@
 #define LT_OBJDIR ".libs/"
 
 /* Define to 1 when using POSIX threads (pthreads). */
-/* #undef MYTHREAD_POSIX */
+#define MYTHREAD_POSIX 1
 
 /* Define to 1 when using Windows Vista compatible threads. This uses features
    that are not available on Windows XP. */
