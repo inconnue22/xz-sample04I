@@ -231,7 +231,7 @@ am__DIST_COMMON = $(dist_man_MANS) $(srcdir)/Makefile.in \
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = ${SHELL} /github/xz/build-aux/missing aclocal-1.16
 AMTAR = $${TAR-tar}
-AM_CFLAGS =  -fvisibility=hidden -Wall -Wextra -Wvla -Wformat=2 -Winit-self -Wmissing-include-dirs -Wstrict-aliasing -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wlogical-op -Waggregate-return -Wstrict-prototypes -Wold-style-definition -Wmissing-prototypes -Wmissing-declarations -Wmissing-noreturn -Wredundant-decls
+AM_CFLAGS =  -pthread -fvisibility=hidden -Wall -Wextra -Wvla -Wformat=2 -Winit-self -Wmissing-include-dirs -Wstrict-aliasing -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wlogical-op -Waggregate-return -Wstrict-prototypes -Wold-style-definition -Wmissing-prototypes -Wmissing-declarations -Wmissing-noreturn -Wredundant-decls
 AM_DEFAULT_VERBOSITY = 0
 AR = ar
 AS = as
@@ -242,9 +242,9 @@ AWK = gawk
 CAPSICUM_LIB = 
 CC = gcc
 CCAS = gcc
-CCASDEPMODE = depmode=gcc3
+CCASDEPMODE = depmode=none
 CCASFLAGS = -g -O2
-CCDEPMODE = depmode=gcc3
+CCDEPMODE = depmode=none
 CFLAGS = -g -O2
 CFLAG_VISIBILITY = -fvisibility=hidden
 CPP = gcc -E
@@ -279,7 +279,7 @@ LDFLAGS =
 LIBICONV = -liconv
 LIBINTL = 
 LIBOBJS = 
-LIBS = 
+LIBS =  -lpthread
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_EXEEXT = $(EXEEXT)
@@ -311,9 +311,9 @@ PATH_SEPARATOR = :
 POSIX_SHELL = /bin/sh
 POSUB = 
 PREFERABLY_POSIX_SHELL = /bin/sh
-PTHREAD_CC = 
-PTHREAD_CFLAGS = 
-PTHREAD_LIBS = 
+PTHREAD_CC = gcc
+PTHREAD_CFLAGS = -pthread
+PTHREAD_LIBS = -lpthread
 RANLIB = ranlib
 RC = 
 SED = /usr/bin/sed
@@ -484,9 +484,9 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-include ./$(DEPDIR)/lzmainfo-lzmainfo.Po # am--include-marker
-include ./$(DEPDIR)/lzmainfo-tuklib_exit.Po # am--include-marker
-include ./$(DEPDIR)/lzmainfo-tuklib_progname.Po # am--include-marker
+#include ./$(DEPDIR)/lzmainfo-lzmainfo.Po # am--include-marker
+#include ./$(DEPDIR)/lzmainfo-tuklib_exit.Po # am--include-marker
+#include ./$(DEPDIR)/lzmainfo-tuklib_progname.Po # am--include-marker
 
 $(am__depfiles_remade):
 	@$(MKDIR_P) $(@D)
@@ -495,67 +495,67 @@ $(am__depfiles_remade):
 am--depfiles: $(am__depfiles_remade)
 
 .c.o:
-	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
-#	$(AM_V_CC)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(COMPILE) -c -o $@ $<
+#	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+#	$(AM_V_CC)source='$<' object='$@' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(COMPILE) -c -o $@ $<
 
 .c.obj:
-	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
-#	$(AM_V_CC)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+#	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+#	$(AM_V_CC)source='$<' object='$@' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
 .c.lo:
-	$(AM_V_CC)$(LTCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
-#	$(AM_V_CC)source='$<' object='$@' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LTCOMPILE) -c -o $@ $<
+#	$(AM_V_CC)$(LTCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
+#	$(AM_V_CC)source='$<' object='$@' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LTCOMPILE) -c -o $@ $<
 
 lzmainfo-lzmainfo.o: lzmainfo.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmainfo-lzmainfo.o -MD -MP -MF $(DEPDIR)/lzmainfo-lzmainfo.Tpo -c -o lzmainfo-lzmainfo.o `test -f 'lzmainfo.c' || echo '$(srcdir)/'`lzmainfo.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmainfo-lzmainfo.Tpo $(DEPDIR)/lzmainfo-lzmainfo.Po
-#	$(AM_V_CC)source='lzmainfo.c' object='lzmainfo-lzmainfo.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmainfo-lzmainfo.o `test -f 'lzmainfo.c' || echo '$(srcdir)/'`lzmainfo.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmainfo-lzmainfo.o -MD -MP -MF $(DEPDIR)/lzmainfo-lzmainfo.Tpo -c -o lzmainfo-lzmainfo.o `test -f 'lzmainfo.c' || echo '$(srcdir)/'`lzmainfo.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmainfo-lzmainfo.Tpo $(DEPDIR)/lzmainfo-lzmainfo.Po
+#	$(AM_V_CC)source='lzmainfo.c' object='lzmainfo-lzmainfo.o' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmainfo-lzmainfo.o `test -f 'lzmainfo.c' || echo '$(srcdir)/'`lzmainfo.c
 
 lzmainfo-lzmainfo.obj: lzmainfo.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmainfo-lzmainfo.obj -MD -MP -MF $(DEPDIR)/lzmainfo-lzmainfo.Tpo -c -o lzmainfo-lzmainfo.obj `if test -f 'lzmainfo.c'; then $(CYGPATH_W) 'lzmainfo.c'; else $(CYGPATH_W) '$(srcdir)/lzmainfo.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmainfo-lzmainfo.Tpo $(DEPDIR)/lzmainfo-lzmainfo.Po
-#	$(AM_V_CC)source='lzmainfo.c' object='lzmainfo-lzmainfo.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmainfo-lzmainfo.obj `if test -f 'lzmainfo.c'; then $(CYGPATH_W) 'lzmainfo.c'; else $(CYGPATH_W) '$(srcdir)/lzmainfo.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmainfo-lzmainfo.obj -MD -MP -MF $(DEPDIR)/lzmainfo-lzmainfo.Tpo -c -o lzmainfo-lzmainfo.obj `if test -f 'lzmainfo.c'; then $(CYGPATH_W) 'lzmainfo.c'; else $(CYGPATH_W) '$(srcdir)/lzmainfo.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmainfo-lzmainfo.Tpo $(DEPDIR)/lzmainfo-lzmainfo.Po
+#	$(AM_V_CC)source='lzmainfo.c' object='lzmainfo-lzmainfo.obj' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmainfo-lzmainfo.obj `if test -f 'lzmainfo.c'; then $(CYGPATH_W) 'lzmainfo.c'; else $(CYGPATH_W) '$(srcdir)/lzmainfo.c'; fi`
 
 lzmainfo-tuklib_progname.o: ../common/tuklib_progname.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmainfo-tuklib_progname.o -MD -MP -MF $(DEPDIR)/lzmainfo-tuklib_progname.Tpo -c -o lzmainfo-tuklib_progname.o `test -f '../common/tuklib_progname.c' || echo '$(srcdir)/'`../common/tuklib_progname.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmainfo-tuklib_progname.Tpo $(DEPDIR)/lzmainfo-tuklib_progname.Po
-#	$(AM_V_CC)source='../common/tuklib_progname.c' object='lzmainfo-tuklib_progname.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmainfo-tuklib_progname.o `test -f '../common/tuklib_progname.c' || echo '$(srcdir)/'`../common/tuklib_progname.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmainfo-tuklib_progname.o -MD -MP -MF $(DEPDIR)/lzmainfo-tuklib_progname.Tpo -c -o lzmainfo-tuklib_progname.o `test -f '../common/tuklib_progname.c' || echo '$(srcdir)/'`../common/tuklib_progname.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmainfo-tuklib_progname.Tpo $(DEPDIR)/lzmainfo-tuklib_progname.Po
+#	$(AM_V_CC)source='../common/tuklib_progname.c' object='lzmainfo-tuklib_progname.o' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmainfo-tuklib_progname.o `test -f '../common/tuklib_progname.c' || echo '$(srcdir)/'`../common/tuklib_progname.c
 
 lzmainfo-tuklib_progname.obj: ../common/tuklib_progname.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmainfo-tuklib_progname.obj -MD -MP -MF $(DEPDIR)/lzmainfo-tuklib_progname.Tpo -c -o lzmainfo-tuklib_progname.obj `if test -f '../common/tuklib_progname.c'; then $(CYGPATH_W) '../common/tuklib_progname.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_progname.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmainfo-tuklib_progname.Tpo $(DEPDIR)/lzmainfo-tuklib_progname.Po
-#	$(AM_V_CC)source='../common/tuklib_progname.c' object='lzmainfo-tuklib_progname.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmainfo-tuklib_progname.obj `if test -f '../common/tuklib_progname.c'; then $(CYGPATH_W) '../common/tuklib_progname.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_progname.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmainfo-tuklib_progname.obj -MD -MP -MF $(DEPDIR)/lzmainfo-tuklib_progname.Tpo -c -o lzmainfo-tuklib_progname.obj `if test -f '../common/tuklib_progname.c'; then $(CYGPATH_W) '../common/tuklib_progname.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_progname.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmainfo-tuklib_progname.Tpo $(DEPDIR)/lzmainfo-tuklib_progname.Po
+#	$(AM_V_CC)source='../common/tuklib_progname.c' object='lzmainfo-tuklib_progname.obj' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmainfo-tuklib_progname.obj `if test -f '../common/tuklib_progname.c'; then $(CYGPATH_W) '../common/tuklib_progname.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_progname.c'; fi`
 
 lzmainfo-tuklib_exit.o: ../common/tuklib_exit.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmainfo-tuklib_exit.o -MD -MP -MF $(DEPDIR)/lzmainfo-tuklib_exit.Tpo -c -o lzmainfo-tuklib_exit.o `test -f '../common/tuklib_exit.c' || echo '$(srcdir)/'`../common/tuklib_exit.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmainfo-tuklib_exit.Tpo $(DEPDIR)/lzmainfo-tuklib_exit.Po
-#	$(AM_V_CC)source='../common/tuklib_exit.c' object='lzmainfo-tuklib_exit.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmainfo-tuklib_exit.o `test -f '../common/tuklib_exit.c' || echo '$(srcdir)/'`../common/tuklib_exit.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmainfo-tuklib_exit.o -MD -MP -MF $(DEPDIR)/lzmainfo-tuklib_exit.Tpo -c -o lzmainfo-tuklib_exit.o `test -f '../common/tuklib_exit.c' || echo '$(srcdir)/'`../common/tuklib_exit.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmainfo-tuklib_exit.Tpo $(DEPDIR)/lzmainfo-tuklib_exit.Po
+#	$(AM_V_CC)source='../common/tuklib_exit.c' object='lzmainfo-tuklib_exit.o' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmainfo-tuklib_exit.o `test -f '../common/tuklib_exit.c' || echo '$(srcdir)/'`../common/tuklib_exit.c
 
 lzmainfo-tuklib_exit.obj: ../common/tuklib_exit.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmainfo-tuklib_exit.obj -MD -MP -MF $(DEPDIR)/lzmainfo-tuklib_exit.Tpo -c -o lzmainfo-tuklib_exit.obj `if test -f '../common/tuklib_exit.c'; then $(CYGPATH_W) '../common/tuklib_exit.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_exit.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmainfo-tuklib_exit.Tpo $(DEPDIR)/lzmainfo-tuklib_exit.Po
-#	$(AM_V_CC)source='../common/tuklib_exit.c' object='lzmainfo-tuklib_exit.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmainfo-tuklib_exit.obj `if test -f '../common/tuklib_exit.c'; then $(CYGPATH_W) '../common/tuklib_exit.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_exit.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT lzmainfo-tuklib_exit.obj -MD -MP -MF $(DEPDIR)/lzmainfo-tuklib_exit.Tpo -c -o lzmainfo-tuklib_exit.obj `if test -f '../common/tuklib_exit.c'; then $(CYGPATH_W) '../common/tuklib_exit.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_exit.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/lzmainfo-tuklib_exit.Tpo $(DEPDIR)/lzmainfo-tuklib_exit.Po
+#	$(AM_V_CC)source='../common/tuklib_exit.c' object='lzmainfo-tuklib_exit.obj' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(lzmainfo_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o lzmainfo-tuklib_exit.obj `if test -f '../common/tuklib_exit.c'; then $(CYGPATH_W) '../common/tuklib_exit.c'; else $(CYGPATH_W) '$(srcdir)/../common/tuklib_exit.c'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo
