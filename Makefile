@@ -348,7 +348,7 @@ PACKAGE_URL = https://tukaani.org/xz/
 PACKAGE_VERSION = 5.3.1alpha
 PATH_SEPARATOR = :
 POSIX_SHELL = /bin/sh
-POSUB = po
+POSUB = 
 PREFERABLY_POSIX_SHELL = /bin/sh
 PTHREAD_CC = gcc
 PTHREAD_CFLAGS = -pthread
@@ -359,7 +359,7 @@ SED = /usr/bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = strip
-USE_NLS = yes
+USE_NLS = no
 VERSION = 5.3.1alpha
 XGETTEXT = /usr/bin/xgettext
 XGETTEXT_015 = /usr/bin/xgettext
@@ -424,32 +424,32 @@ xz = xz
 GZIP_ENV = -9n
 DIST_SUBDIRS = lib src po tests debug
 SUBDIRS = $(am__append_1) src po tests
-#dist_doc_DATA = \
-#	AUTHORS \
-#	COPYING \
-#	COPYING.GPLv2 \
-#	NEWS \
-#	README \
-#	THANKS \
-#	TODO \
-#	doc/faq.txt \
-#	doc/history.txt \
-#	doc/xz-file-format.txt \
-#	doc/lzma-file-format.txt
+dist_doc_DATA = \
+	AUTHORS \
+	COPYING \
+	COPYING.GPLv2 \
+	NEWS \
+	README \
+	THANKS \
+	TODO \
+	doc/faq.txt \
+	doc/history.txt \
+	doc/xz-file-format.txt \
+	doc/lzma-file-format.txt
 
-#examplesdir = $(docdir)/examples
-#dist_examples_DATA = \
-#	doc/examples/00_README.txt \
-#	doc/examples/01_compress_easy.c \
-#	doc/examples/02_decompress.c \
-#	doc/examples/03_compress_custom.c \
-#	doc/examples/04_compress_easy_mt.c \
-#	doc/examples/Makefile
+examplesdir = $(docdir)/examples
+dist_examples_DATA = \
+	doc/examples/00_README.txt \
+	doc/examples/01_compress_easy.c \
+	doc/examples/02_decompress.c \
+	doc/examples/03_compress_custom.c \
+	doc/examples/04_compress_easy_mt.c \
+	doc/examples/Makefile
 
-#examplesolddir = $(docdir)/examples_old
-#dist_examplesold_DATA = \
-#	doc/examples_old/xz_pipe_comp.c \
-#	doc/examples_old/xz_pipe_decomp.c
+examplesolddir = $(docdir)/examples_old
+dist_examplesold_DATA = \
+	doc/examples_old/xz_pipe_comp.c \
+	doc/examples_old/xz_pipe_decomp.c
 
 EXTRA_DIST = \
 	po4a \
