@@ -74,13 +74,13 @@
 /* #undef HAVE_DECODER_ARM */
 
 /* Define to 1 if armthumb decoder is enabled. */
-#define HAVE_DECODER_ARMTHUMB 1
+/* #undef HAVE_DECODER_ARMTHUMB */
 
 /* Define to 1 if delta decoder is enabled. */
 /* #undef HAVE_DECODER_DELTA */
 
 /* Define to 1 if ia64 decoder is enabled. */
-/* #undef HAVE_DECODER_IA64 */
+#define HAVE_DECODER_IA64 1
 
 /* Define to 1 if lzma1 decoder is enabled. */
 #define HAVE_DECODER_LZMA1 1
@@ -113,7 +113,7 @@
 /* #undef HAVE_ENCODER_DELTA */
 
 /* Define to 1 if ia64 encoder is enabled. */
-/* #undef HAVE_ENCODER_IA64 */
+#define HAVE_ENCODER_IA64 1
 
 /* Define to 1 if lzma1 encoder is enabled. */
 #define HAVE_ENCODER_LZMA1 1
@@ -128,7 +128,7 @@
 /* #undef HAVE_ENCODER_SPARC */
 
 /* Define to 1 if x86 encoder is enabled. */
-#define HAVE_ENCODER_X86 1
+/* #undef HAVE_ENCODER_X86 */
 
 /* Define to 1 if you have the <fcntl.h> header file. */
 #define HAVE_FCNTL_H 1
@@ -170,13 +170,13 @@
 #define HAVE_MEMORY_H 1
 
 /* Define to 1 to enable bt2 match finder. */
-#define HAVE_MF_BT2 1
+/* #undef HAVE_MF_BT2 */
 
 /* Define to 1 to enable bt3 match finder. */
-/* #undef HAVE_MF_BT3 */
+#define HAVE_MF_BT3 1
 
 /* Define to 1 to enable bt4 match finder. */
-#define HAVE_MF_BT4 1
+/* #undef HAVE_MF_BT4 */
 
 /* Define to 1 to enable hc3 match finder. */
 #define HAVE_MF_HC3 1
