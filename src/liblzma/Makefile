@@ -205,38 +205,38 @@ am__append_26 = \
 	rangecoder/price_table.c
 
 am__append_27 = rangecoder/range_decoder.h
-#am__append_28 = \
-#	delta/delta_common.c \
-#	delta/delta_common.h \
-#	delta/delta_private.h
+am__append_28 = \
+	delta/delta_common.c \
+	delta/delta_common.h \
+	delta/delta_private.h
 
-##am__append_29 = \
-##	delta/delta_encoder.c \
-##	delta/delta_encoder.h
+#am__append_29 = \
+#	delta/delta_encoder.c \
+#	delta/delta_encoder.h
 
-##am__append_30 = \
-##	delta/delta_decoder.c \
-##	delta/delta_decoder.h
+am__append_30 = \
+	delta/delta_decoder.c \
+	delta/delta_decoder.h
 
-am__append_31 = \
-	simple/simple_coder.c \
-	simple/simple_coder.h \
-	simple/simple_private.h
+#am__append_31 = \
+#	simple/simple_coder.c \
+#	simple/simple_coder.h \
+#	simple/simple_private.h
 
-#am__append_32 = \
-#	simple/simple_encoder.c \
-#	simple/simple_encoder.h
+##am__append_32 = \
+##	simple/simple_encoder.c \
+##	simple/simple_encoder.h
 
-am__append_33 = \
-	simple/simple_decoder.c \
-	simple/simple_decoder.h
+##am__append_33 = \
+##	simple/simple_decoder.c \
+##	simple/simple_decoder.h
 
-am__append_34 = simple/x86.c
-#am__append_35 = simple/powerpc.c
-#am__append_36 = simple/ia64.c
-#am__append_37 = simple/arm.c
-#am__append_38 = simple/armthumb.c
-#am__append_39 = simple/sparc.c
+##am__append_34 = simple/x86.c
+##am__append_35 = simple/powerpc.c
+##am__append_36 = simple/ia64.c
+##am__append_37 = simple/arm.c
+##am__append_38 = simple/armthumb.c
+##am__append_39 = simple/sparc.c
 #am__append_40 = liblzma.def liblzma.def.in empty.c
 #am__append_41 = liblzma_w32res.rc
 #am__append_42 = -Xlinker --output-def -Xlinker liblzma.def.in
@@ -414,18 +414,18 @@ am__objects_20 = liblzma_la-lzma_decoder.lo
 #am__objects_22 = liblzma_la-lzma2_decoder.lo
 am__objects_23 =
 am__objects_24 = liblzma_la-price_table.lo
-#am__objects_25 = liblzma_la-delta_common.lo
-##am__objects_26 = liblzma_la-delta_encoder.lo
-##am__objects_27 = liblzma_la-delta_decoder.lo
-am__objects_28 = liblzma_la-simple_coder.lo
-#am__objects_29 = liblzma_la-simple_encoder.lo
-am__objects_30 = liblzma_la-simple_decoder.lo
-am__objects_31 = liblzma_la-x86.lo
-#am__objects_32 = liblzma_la-powerpc.lo
-#am__objects_33 = liblzma_la-ia64.lo
-#am__objects_34 = liblzma_la-arm.lo
-#am__objects_35 = liblzma_la-armthumb.lo
-#am__objects_36 = liblzma_la-sparc.lo
+am__objects_25 = liblzma_la-delta_common.lo
+#am__objects_26 = liblzma_la-delta_encoder.lo
+am__objects_27 = liblzma_la-delta_decoder.lo
+#am__objects_28 = liblzma_la-simple_coder.lo
+##am__objects_29 = liblzma_la-simple_encoder.lo
+##am__objects_30 = liblzma_la-simple_decoder.lo
+##am__objects_31 = liblzma_la-x86.lo
+##am__objects_32 = liblzma_la-powerpc.lo
+##am__objects_33 = liblzma_la-ia64.lo
+##am__objects_34 = liblzma_la-arm.lo
+##am__objects_35 = liblzma_la-armthumb.lo
+##am__objects_36 = liblzma_la-sparc.lo
 #am__objects_37 = liblzma_w32res.lo
 am_liblzma_la_OBJECTS = liblzma_la-tuklib_physmem.lo $(am__objects_1) \
 	liblzma_la-common.lo liblzma_la-block_util.lo \
@@ -732,7 +732,7 @@ PACKAGE_URL = https://tukaani.org/xz/
 PACKAGE_VERSION = 5.3.1alpha
 PATH_SEPARATOR = :
 POSIX_SHELL = /bin/sh
-POSUB = po
+POSUB = 
 PREFERABLY_POSIX_SHELL = /bin/sh
 PTHREAD_CC = gcc
 PTHREAD_CFLAGS = -pthread
@@ -743,7 +743,7 @@ SED = /usr/bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = strip
-USE_NLS = yes
+USE_NLS = no
 VERSION = 5.3.1alpha
 XGETTEXT = /usr/bin/xgettext
 XGETTEXT_015 = /usr/bin/xgettext
