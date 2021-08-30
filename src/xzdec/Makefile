@@ -92,7 +92,7 @@ host_triplet = x86_64-pc-linux-gnu
 #am__append_2 = $(top_builddir)/lib/libgnu.a
 #am__append_3 = lzmadec_w32res.rc
 bin_PROGRAMS = $(am__EXEEXT_1) $(am__EXEEXT_2)
-#am__append_4 = xzdec
+am__append_4 = xzdec
 am__append_5 = lzmadec
 
 # Create the symlink lzmadec.1->xzdec.1 only if xzdec.1 was installed.
@@ -100,7 +100,7 @@ am__append_5 = lzmadec
 # would be to install xzdec.1 as lzmadec.1 but this code is already too
 # complicated so I won't do it. Installing only lzmadec is a bit unusual
 # situation anyway so it's not that important.
-#am__append_6 = lzmadec
+am__append_6 = lzmadec
 subdir = src/xzdec
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/ax_check_capsicum.m4 \
@@ -127,7 +127,7 @@ mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
-#am__EXEEXT_1 = xzdec$(EXEEXT)
+am__EXEEXT_1 = xzdec$(EXEEXT)
 am__EXEEXT_2 = lzmadec$(EXEEXT)
 am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)"
 PROGRAMS = $(bin_PROGRAMS)
@@ -259,7 +259,7 @@ DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = ${SHELL} /github/xz/build-aux/missing aclocal-1.16
 AMTAR = $${TAR-tar}
 AM_CFLAGS =  -fvisibility=hidden -Wall -Wextra -Wvla -Wformat=2 -Winit-self -Wmissing-include-dirs -Wstrict-aliasing -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wlogical-op -Waggregate-return -Wstrict-prototypes -Wold-style-definition -Wmissing-prototypes -Wmissing-declarations -Wmissing-noreturn -Wredundant-decls
-AM_DEFAULT_VERBOSITY = 1
+AM_DEFAULT_VERBOSITY = 0
 AR = ar
 AS = as
 AUTOCONF = ${SHELL} /github/xz/build-aux/missing autoconf
@@ -336,7 +336,7 @@ PACKAGE_URL = https://tukaani.org/xz/
 PACKAGE_VERSION = 5.3.1alpha
 PATH_SEPARATOR = :
 POSIX_SHELL = /bin/sh
-POSUB = po
+POSUB = 
 PREFERABLY_POSIX_SHELL = /bin/sh
 PTHREAD_CC = 
 PTHREAD_CFLAGS = 
@@ -347,7 +347,7 @@ SED = /usr/bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = strip
-USE_NLS = yes
+USE_NLS = no
 VERSION = 5.3.1alpha
 XGETTEXT = /usr/bin/xgettext
 XGETTEXT_015 = /usr/bin/xgettext
@@ -423,7 +423,7 @@ lzmadec_CPPFLAGS = $(xzdec_CPPFLAGS) -DLZMADEC
 lzmadec_LDFLAGS = $(xzdec_LDFLAGS)
 lzmadec_LDADD = $(xzdec_LDADD)
 lzmadecmanlink = $(am__append_6)
-#dist_man_MANS = xzdec.1
+dist_man_MANS = xzdec.1
 all: all-am
 
 .SUFFIXES:
@@ -810,8 +810,8 @@ distclean-generic:
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
 	@echo "it deletes files that may require special tools to rebuild."
-install-data-hook:
-uninstall-hook:
+#install-data-hook:
+#uninstall-hook:
 clean: clean-am
 
 clean-am: clean-binPROGRAMS clean-generic clean-libtool mostlyclean-am
@@ -926,40 +926,40 @@ uninstall-man: uninstall-man1
 # The installation of translated man pages abuses Automake internals
 # by calling "install-man" with redefined dist_man_MANS and man_MANS.
 # If this breaks some day, don't blame Automake developers.
-#install-data-hook:
-#	languages= ; \
-#	if test "$(USE_NLS)" = yes && test -d "$(top_srcdir)/po4a/man"; then \
-#		languages=`ls "$(top_srcdir)/po4a/man"`; \
-#	fi; \
-#	target=`echo xzdec | sed '$(transform)'` && \
-#	link=`echo lzmadec | sed '$(transform)'` && \
-#	for lang in . $$languages; do \
-#		man="$(top_srcdir)/po4a/man/$$lang/xzdec.1" ; \
-#		if test -f "$$man"; then \
-#			$(MAKE) dist_man_MANS="$$man" man_MANS= \
-#				mandir="$(mandir)/$$lang" install-man; \
-#		fi; \
-#		man1dir="$(DESTDIR)$(mandir)/$$lang/man1" && \
-#		if test -f "$$man1dir/$$target.1"; then \
-#			if test -n "$(lzmadecmanlink)"; then ( \
-#				cd "$$man1dir" && \
-#				rm -f "$$link.1" && \
-#				$(LN_S) "$$target.1" "$$link.1" \
-#			); fi; \
-#		fi; \
-#	done
+install-data-hook:
+	languages= ; \
+	if test "$(USE_NLS)" = yes && test -d "$(top_srcdir)/po4a/man"; then \
+		languages=`ls "$(top_srcdir)/po4a/man"`; \
+	fi; \
+	target=`echo xzdec | sed '$(transform)'` && \
+	link=`echo lzmadec | sed '$(transform)'` && \
+	for lang in . $$languages; do \
+		man="$(top_srcdir)/po4a/man/$$lang/xzdec.1" ; \
+		if test -f "$$man"; then \
+			$(MAKE) dist_man_MANS="$$man" man_MANS= \
+				mandir="$(mandir)/$$lang" install-man; \
+		fi; \
+		man1dir="$(DESTDIR)$(mandir)/$$lang/man1" && \
+		if test -f "$$man1dir/$$target.1"; then \
+			if test -n "$(lzmadecmanlink)"; then ( \
+				cd "$$man1dir" && \
+				rm -f "$$link.1" && \
+				$(LN_S) "$$target.1" "$$link.1" \
+			); fi; \
+		fi; \
+	done
 
-#uninstall-hook:
-#	languages= ; \
-#	if test "$(USE_NLS)" = yes && test -d "$(top_srcdir)/po4a/man"; then \
-#		languages=`ls "$(top_srcdir)/po4a/man"`; \
-#	fi; \
-#	for lang in . $$languages; do \
-#		for name in xzdec $(lzmadecmanlink); do \
-#			name=`echo $$name | sed '$(transform)'` && \
-#			rm -f "$(DESTDIR)$(mandir)/$$lang/man1/$$name.1"; \
-#		done; \
-#	done
+uninstall-hook:
+	languages= ; \
+	if test "$(USE_NLS)" = yes && test -d "$(top_srcdir)/po4a/man"; then \
+		languages=`ls "$(top_srcdir)/po4a/man"`; \
+	fi; \
+	for lang in . $$languages; do \
+		for name in xzdec $(lzmadecmanlink); do \
+			name=`echo $$name | sed '$(transform)'` && \
+			rm -f "$(DESTDIR)$(mandir)/$$lang/man1/$$name.1"; \
+		done; \
+	done
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
