@@ -1,21 +1,18 @@
-message.c: In function ‘progress_speed.part.0’:
-message.c:384:35: warning: ‘%s’ directive output may be truncated writing up to 23 bytes into a region of size between 0 and 14 [-Wformat-truncation=]
-  384 |  snprintf(buf, sizeof(buf), "%.*f %s",
-      |                                   ^~
-message.c:384:2: note: ‘snprintf’ output between 3 and 337 bytes into a destination of size 16
-  384 |  snprintf(buf, sizeof(buf), "%.*f %s",
-      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  385 |    speed > 9.9 ? 0 : 1, speed, unit[unit_index]);
-      |    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-................................................. done.
-cs.1po: 118 translated messages.
-...................................... done.
-de.1po: 141 translated messages.
-........................................ done.
-fr.1po: 130 translated messages.
-....................................... done.
-it.1po: 140 translated messages.
-........................................ done.
-pl.1po: 140 translated messages.
-....................................... done.
-vi.1po: 140 translated messages.
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o): in function `lzma_properties_encode':
+/github/xz/src/liblzma/common/filter_encoder.c:282: undefined reference to `lzma_delta_props_encode'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0x40): undefined reference to `lzma_delta_encoder_init'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0x48): undefined reference to `lzma_delta_coder_memusage'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-filter_encoder.o):(.rodata+0x68): undefined reference to `lzma_delta_props_encode'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-lzma_encoder.o): in function `get_dist_slot':
+/github/xz/src/liblzma/lzma/fastpos.h:119: undefined reference to `lzma_fastpos'
+/usr/bin/ld: /github/xz/src/liblzma/lzma/fastpos.h:114: undefined reference to `lzma_fastpos'
+/usr/bin/ld: /github/xz/src/liblzma/lzma/fastpos.h:117: undefined reference to `lzma_fastpos'
+/usr/bin/ld: /github/xz/src/liblzma/lzma/fastpos.h:119: undefined reference to `lzma_fastpos'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-lzma_encoder_optimum_normal.o): in function `get_dist_slot_2':
+/github/xz/src/liblzma/lzma/fastpos.h:135: undefined reference to `lzma_fastpos'
+/usr/bin/ld: ../../src/liblzma/.libs/liblzma.a(liblzma_la-lzma_encoder_optimum_normal.o):/github/xz/src/liblzma/lzma/fastpos.h:130: more undefined references to `lzma_fastpos' follow
+collect2: error: ld returned 1 exit status
+make[3]: *** [Makefile:509: xz] Error 1
+make[2]: *** [Makefile:422: all-recursive] Error 1
+make[1]: *** [Makefile:616: all-recursive] Error 1
+make: *** [Makefile:483: all] Error 2
