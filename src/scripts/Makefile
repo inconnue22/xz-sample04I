@@ -88,14 +88,14 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
 host_triplet = x86_64-pc-linux-gnu
-#am__append_1 = \
-#	xzdiff-lzdiff \
-#	xzdiff-lzcmp \
-#	xzgrep-lzgrep \
-#	xzgrep-lzegrep \
-#	xzgrep-lzfgrep \
-#	xzmore-lzmore \
-#	xzless-lzless
+am__append_1 = \
+	xzdiff-lzdiff \
+	xzdiff-lzcmp \
+	xzgrep-lzgrep \
+	xzgrep-lzegrep \
+	xzgrep-lzfgrep \
+	xzmore-lzmore \
+	xzless-lzless
 
 subdir = src/scripts
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -181,7 +181,7 @@ am__DIST_COMMON = $(dist_man_MANS) $(srcdir)/Makefile.in \
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = ${SHELL} /github/xz/build-aux/missing aclocal-1.16
 AMTAR = $${TAR-tar}
-AM_CFLAGS =  -fvisibility=hidden -Wall -Wextra -Wvla -Wformat=2 -Winit-self -Wmissing-include-dirs -Wstrict-aliasing -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wlogical-op -Waggregate-return -Wstrict-prototypes -Wold-style-definition -Wmissing-prototypes -Wmissing-declarations -Wmissing-noreturn -Wredundant-decls
+AM_CFLAGS =  -pthread -fvisibility=hidden -Wall -Wextra -Wvla -Wformat=2 -Winit-self -Wmissing-include-dirs -Wstrict-aliasing -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wlogical-op -Waggregate-return -Wstrict-prototypes -Wold-style-definition -Wmissing-prototypes -Wmissing-declarations -Wmissing-noreturn -Wredundant-decls
 AM_DEFAULT_VERBOSITY = 0
 AR = ar
 AS = as
@@ -229,7 +229,7 @@ LDFLAGS =
 LIBICONV = -liconv
 LIBINTL = 
 LIBOBJS = 
-LIBS = 
+LIBS =  -lpthread
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_EXEEXT = $(EXEEXT)
@@ -261,9 +261,9 @@ PATH_SEPARATOR = :
 POSIX_SHELL = /bin/sh
 POSUB = po
 PREFERABLY_POSIX_SHELL = /bin/sh
-PTHREAD_CC = 
-PTHREAD_CFLAGS = 
-PTHREAD_LIBS = 
+PTHREAD_CC = gcc
+PTHREAD_CFLAGS = -pthread
+PTHREAD_LIBS = -lpthread
 RANLIB = ranlib
 RC = 
 SED = /usr/bin/sed
