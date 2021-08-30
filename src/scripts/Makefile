@@ -88,14 +88,14 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
 host_triplet = x86_64-pc-linux-gnu
-am__append_1 = \
-	xzdiff-lzdiff \
-	xzdiff-lzcmp \
-	xzgrep-lzgrep \
-	xzgrep-lzegrep \
-	xzgrep-lzfgrep \
-	xzmore-lzmore \
-	xzless-lzless
+#am__append_1 = \
+#	xzdiff-lzdiff \
+#	xzdiff-lzcmp \
+#	xzgrep-lzgrep \
+#	xzgrep-lzegrep \
+#	xzgrep-lzfgrep \
+#	xzmore-lzmore \
+#	xzless-lzless
 
 subdir = src/scripts
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -192,9 +192,9 @@ AWK = gawk
 CAPSICUM_LIB = 
 CC = gcc
 CCAS = gcc
-CCASDEPMODE = depmode=gcc3
+CCASDEPMODE = depmode=none
 CCASFLAGS = -g -O2
-CCDEPMODE = depmode=gcc3
+CCDEPMODE = depmode=none
 CFLAGS = -g -O2
 CFLAG_VISIBILITY = -fvisibility=hidden
 CPP = gcc -E
