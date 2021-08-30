@@ -153,15 +153,15 @@ am__append_8 = \
 
 #am__append_9 = check/crc32_x86.S
 am__append_10 = check/crc32_fast.c
-##am__append_11 = check/crc64_small.c
-#am__append_12 = \
-#	check/crc64_table.c \
-#	check/crc64_table_le.h \
-#	check/crc64_table_be.h
+#am__append_11 = check/crc64_small.c
+am__append_12 = \
+	check/crc64_table.c \
+	check/crc64_table_le.h \
+	check/crc64_table_be.h
 
-##am__append_13 = check/crc64_x86.S
-#am__append_14 = check/crc64_fast.c
-am__append_15 = check/sha256.c
+#am__append_13 = check/crc64_x86.S
+am__append_14 = check/crc64_fast.c
+#am__append_15 = check/sha256.c
 am__append_16 = \
 	lz/lz_encoder.c \
 	lz/lz_encoder.h \
@@ -223,20 +223,20 @@ am__append_31 = \
 	simple/simple_coder.h \
 	simple/simple_private.h
 
-#am__append_32 = \
-#	simple/simple_encoder.c \
-#	simple/simple_encoder.h
+am__append_32 = \
+	simple/simple_encoder.c \
+	simple/simple_encoder.h
 
 am__append_33 = \
 	simple/simple_decoder.c \
 	simple/simple_decoder.h
 
-#am__append_34 = simple/x86.c
+am__append_34 = simple/x86.c
 #am__append_35 = simple/powerpc.c
-am__append_36 = simple/ia64.c
+#am__append_36 = simple/ia64.c
 #am__append_37 = simple/arm.c
 #am__append_38 = simple/armthumb.c
-#am__append_39 = simple/sparc.c
+am__append_39 = simple/sparc.c
 #am__append_40 = liblzma.def liblzma.def.in empty.c
 #am__append_41 = liblzma_w32res.rc
 #am__append_42 = -Xlinker --output-def -Xlinker liblzma.def.in
@@ -395,11 +395,11 @@ am__objects_5 = liblzma_la-alone_decoder.lo \
 am__objects_7 = liblzma_la-crc32_table.lo
 #am__objects_8 = liblzma_la-crc32_x86.lo
 am__objects_9 = liblzma_la-crc32_fast.lo
-##am__objects_10 = liblzma_la-crc64_small.lo
-#am__objects_11 = liblzma_la-crc64_table.lo
-##am__objects_12 = liblzma_la-crc64_x86.lo
-#am__objects_13 = liblzma_la-crc64_fast.lo
-am__objects_14 = liblzma_la-sha256.lo
+#am__objects_10 = liblzma_la-crc64_small.lo
+am__objects_11 = liblzma_la-crc64_table.lo
+#am__objects_12 = liblzma_la-crc64_x86.lo
+am__objects_13 = liblzma_la-crc64_fast.lo
+#am__objects_14 = liblzma_la-sha256.lo
 am__objects_15 = liblzma_la-lz_encoder.lo \
 	liblzma_la-lz_encoder_mf.lo
 am__objects_16 = liblzma_la-lz_decoder.lo
@@ -418,14 +418,14 @@ am__objects_24 = liblzma_la-price_table.lo
 ##am__objects_26 = liblzma_la-delta_encoder.lo
 ##am__objects_27 = liblzma_la-delta_decoder.lo
 am__objects_28 = liblzma_la-simple_coder.lo
-#am__objects_29 = liblzma_la-simple_encoder.lo
+am__objects_29 = liblzma_la-simple_encoder.lo
 am__objects_30 = liblzma_la-simple_decoder.lo
-#am__objects_31 = liblzma_la-x86.lo
+am__objects_31 = liblzma_la-x86.lo
 #am__objects_32 = liblzma_la-powerpc.lo
-am__objects_33 = liblzma_la-ia64.lo
+#am__objects_33 = liblzma_la-ia64.lo
 #am__objects_34 = liblzma_la-arm.lo
 #am__objects_35 = liblzma_la-armthumb.lo
-#am__objects_36 = liblzma_la-sparc.lo
+am__objects_36 = liblzma_la-sparc.lo
 #am__objects_37 = liblzma_w32res.lo
 am_liblzma_la_OBJECTS = liblzma_la-tuklib_physmem.lo $(am__objects_1) \
 	liblzma_la-common.lo liblzma_la-block_util.lo \
@@ -655,7 +655,7 @@ am__relativize = \
 ACLOCAL = ${SHELL} /github/xz/build-aux/missing aclocal-1.16
 AMTAR = $${TAR-tar}
 AM_CFLAGS =  -fvisibility=hidden -Wall -Wextra -Wvla -Wformat=2 -Winit-self -Wmissing-include-dirs -Wstrict-aliasing -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wlogical-op -Waggregate-return -Wstrict-prototypes -Wold-style-definition -Wmissing-prototypes -Wmissing-declarations -Wmissing-noreturn -Wredundant-decls
-AM_DEFAULT_VERBOSITY = 1
+AM_DEFAULT_VERBOSITY = 0
 AR = ar
 AS = as
 AUTOCONF = ${SHELL} /github/xz/build-aux/missing autoconf
