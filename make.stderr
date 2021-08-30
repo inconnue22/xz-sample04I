@@ -1,0 +1,9 @@
+message.c: In function ‘progress_speed.part.0’:
+message.c:384:35: warning: ‘%s’ directive output may be truncated writing up to 23 bytes into a region of size between 0 and 14 [-Wformat-truncation=]
+  384 |  snprintf(buf, sizeof(buf), "%.*f %s",
+      |                                   ^~
+message.c:384:2: note: ‘snprintf’ output between 3 and 337 bytes into a destination of size 16
+  384 |  snprintf(buf, sizeof(buf), "%.*f %s",
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  385 |    speed > 9.9 ? 0 : 1, speed, unit[unit_index]);
+      |    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
