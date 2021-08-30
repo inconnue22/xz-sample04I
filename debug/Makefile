@@ -230,7 +230,7 @@ am__DIST_COMMON = $(srcdir)/Makefile.in \
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = ${SHELL} /github/xz/build-aux/missing aclocal-1.16
 AMTAR = $${TAR-tar}
-AM_CFLAGS =  -pthread -fvisibility=hidden -Wall -Wextra -Wvla -Wformat=2 -Winit-self -Wmissing-include-dirs -Wstrict-aliasing -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wlogical-op -Waggregate-return -Wstrict-prototypes -Wold-style-definition -Wmissing-prototypes -Wmissing-declarations -Wmissing-noreturn -Wredundant-decls
+AM_CFLAGS =  -fvisibility=hidden -Wall -Wextra -Wvla -Wformat=2 -Winit-self -Wmissing-include-dirs -Wstrict-aliasing -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wlogical-op -Waggregate-return -Wstrict-prototypes -Wold-style-definition -Wmissing-prototypes -Wmissing-declarations -Wmissing-noreturn -Wredundant-decls
 AM_DEFAULT_VERBOSITY = 1
 AR = ar
 AS = as
@@ -241,9 +241,9 @@ AWK = gawk
 CAPSICUM_LIB = 
 CC = gcc
 CCAS = gcc
-CCASDEPMODE = depmode=gcc3
+CCASDEPMODE = depmode=none
 CCASFLAGS = -g -O2
-CCDEPMODE = depmode=gcc3
+CCDEPMODE = depmode=none
 CFLAGS = -g -O2
 CFLAG_VISIBILITY = -fvisibility=hidden
 CPP = gcc -E
@@ -278,7 +278,7 @@ LDFLAGS =
 LIBICONV = -liconv
 LIBINTL = 
 LIBOBJS = 
-LIBS =  -lpthread
+LIBS = 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_EXEEXT = $(EXEEXT)
@@ -310,9 +310,9 @@ PATH_SEPARATOR = :
 POSIX_SHELL = /bin/sh
 POSUB = po
 PREFERABLY_POSIX_SHELL = /bin/sh
-PTHREAD_CC = gcc
-PTHREAD_CFLAGS = -pthread
-PTHREAD_LIBS = -lpthread
+PTHREAD_CC = 
+PTHREAD_CFLAGS = 
+PTHREAD_LIBS = 
 RANLIB = ranlib
 RC = 
 SED = /usr/bin/sed
@@ -465,13 +465,13 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-include ./$(DEPDIR)/crc32.Po # am--include-marker
-include ./$(DEPDIR)/full_flush.Po # am--include-marker
-include ./$(DEPDIR)/hex2bin.Po # am--include-marker
-include ./$(DEPDIR)/known_sizes.Po # am--include-marker
-include ./$(DEPDIR)/memusage.Po # am--include-marker
-include ./$(DEPDIR)/repeat.Po # am--include-marker
-include ./$(DEPDIR)/sync_flush.Po # am--include-marker
+#include ./$(DEPDIR)/crc32.Po # am--include-marker
+#include ./$(DEPDIR)/full_flush.Po # am--include-marker
+#include ./$(DEPDIR)/hex2bin.Po # am--include-marker
+#include ./$(DEPDIR)/known_sizes.Po # am--include-marker
+#include ./$(DEPDIR)/memusage.Po # am--include-marker
+#include ./$(DEPDIR)/repeat.Po # am--include-marker
+#include ./$(DEPDIR)/sync_flush.Po # am--include-marker
 
 $(am__depfiles_remade):
 	@$(MKDIR_P) $(@D)
@@ -480,25 +480,25 @@ $(am__depfiles_remade):
 am--depfiles: $(am__depfiles_remade)
 
 .c.o:
-	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
-#	$(AM_V_CC)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(COMPILE) -c -o $@ $<
+#	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+#	$(AM_V_CC)source='$<' object='$@' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(COMPILE) -c -o $@ $<
 
 .c.obj:
-	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
-#	$(AM_V_CC)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+#	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+#	$(AM_V_CC)source='$<' object='$@' libtool=no 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
 .c.lo:
-	$(AM_V_CC)$(LTCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
-#	$(AM_V_CC)source='$<' object='$@' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LTCOMPILE) -c -o $@ $<
+#	$(AM_V_CC)$(LTCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
+#	$(AM_V_CC)source='$<' object='$@' libtool=yes 
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
+	$(AM_V_CC)$(LTCOMPILE) -c -o $@ $<
 
 mostlyclean-libtool:
 	-rm -f *.lo
