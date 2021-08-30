@@ -88,14 +88,14 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
 host_triplet = x86_64-pc-linux-gnu
-#am__append_1 = \
-#	xzdiff-lzdiff \
-#	xzdiff-lzcmp \
-#	xzgrep-lzgrep \
-#	xzgrep-lzegrep \
-#	xzgrep-lzfgrep \
-#	xzmore-lzmore \
-#	xzless-lzless
+am__append_1 = \
+	xzdiff-lzdiff \
+	xzdiff-lzcmp \
+	xzgrep-lzgrep \
+	xzgrep-lzegrep \
+	xzgrep-lzfgrep \
+	xzmore-lzmore \
+	xzless-lzless
 
 subdir = src/scripts
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4

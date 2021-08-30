@@ -44,10 +44,10 @@
 #define HAVE_CHECK_CRC32 1
 
 /* Define to 1 if crc64 integrity check is enabled. */
-/* #undef HAVE_CHECK_CRC64 */
+#define HAVE_CHECK_CRC64 1
 
 /* Define to 1 if sha256 integrity check is enabled. */
-/* #undef HAVE_CHECK_SHA256 */
+#define HAVE_CHECK_SHA256 1
 
 /* Define to 1 if you have the `clock_gettime' function. */
 #define HAVE_CLOCK_GETTIME 1
@@ -80,7 +80,7 @@
 /* #undef HAVE_DECODER_DELTA */
 
 /* Define to 1 if ia64 decoder is enabled. */
-#define HAVE_DECODER_IA64 1
+/* #undef HAVE_DECODER_IA64 */
 
 /* Define to 1 if lzma1 decoder is enabled. */
 #define HAVE_DECODER_LZMA1 1
@@ -104,16 +104,16 @@
 #define HAVE_ENCODERS 1
 
 /* Define to 1 if arm encoder is enabled. */
-/* #undef HAVE_ENCODER_ARM */
+#define HAVE_ENCODER_ARM 1
 
 /* Define to 1 if armthumb encoder is enabled. */
-/* #undef HAVE_ENCODER_ARMTHUMB */
+#define HAVE_ENCODER_ARMTHUMB 1
 
 /* Define to 1 if delta encoder is enabled. */
-/* #undef HAVE_ENCODER_DELTA */
+#define HAVE_ENCODER_DELTA 1
 
 /* Define to 1 if ia64 encoder is enabled. */
-/* #undef HAVE_ENCODER_IA64 */
+#define HAVE_ENCODER_IA64 1
 
 /* Define to 1 if lzma1 encoder is enabled. */
 #define HAVE_ENCODER_LZMA1 1
@@ -122,13 +122,13 @@
 #define HAVE_ENCODER_LZMA2 1
 
 /* Define to 1 if powerpc encoder is enabled. */
-/* #undef HAVE_ENCODER_POWERPC */
+#define HAVE_ENCODER_POWERPC 1
 
 /* Define to 1 if sparc encoder is enabled. */
-/* #undef HAVE_ENCODER_SPARC */
+#define HAVE_ENCODER_SPARC 1
 
 /* Define to 1 if x86 encoder is enabled. */
-/* #undef HAVE_ENCODER_X86 */
+#define HAVE_ENCODER_X86 1
 
 /* Define to 1 if you have the <fcntl.h> header file. */
 #define HAVE_FCNTL_H 1
@@ -170,10 +170,10 @@
 #define HAVE_MEMORY_H 1
 
 /* Define to 1 to enable bt2 match finder. */
-/* #undef HAVE_MF_BT2 */
+#define HAVE_MF_BT2 1
 
 /* Define to 1 to enable bt3 match finder. */
-/* #undef HAVE_MF_BT3 */
+#define HAVE_MF_BT3 1
 
 /* Define to 1 to enable bt4 match finder. */
 /* #undef HAVE_MF_BT4 */
@@ -407,7 +407,7 @@
 /* Define to 1 to use unsafe type punning, e.g. char *x = ...; *(int *)x =
    123; which violates strict aliasing rules and thus is undefined behavior
    and might result in broken code. */
-#define TUKLIB_USE_UNSAFE_TYPE_PUNNING 1
+/* #undef TUKLIB_USE_UNSAFE_TYPE_PUNNING */
 
 /* Enable extensions on AIX 3, Interix.  */
 #ifndef _ALL_SOURCE
