@@ -96,7 +96,7 @@ TESTS = test_check$(EXEEXT) test_stream_flags$(EXEEXT) \
 	test_filter_flags$(EXEEXT) test_block_header$(EXEEXT) \
 	test_index$(EXEEXT) test_bcj_exact_size$(EXEEXT) test_files.sh \
 	test_compress.sh $(am__append_2)
-am__append_2 = test_scripts.sh
+#am__append_2 = test_scripts.sh
 subdir = tests
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/ax_check_capsicum.m4 \
