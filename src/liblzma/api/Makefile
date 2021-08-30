@@ -187,7 +187,7 @@ DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = ${SHELL} /github/xz/build-aux/missing aclocal-1.16
 AMTAR = $${TAR-tar}
 AM_CFLAGS =  -pthread -fvisibility=hidden -Wall -Wextra -Wvla -Wformat=2 -Winit-self -Wmissing-include-dirs -Wstrict-aliasing -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wlogical-op -Waggregate-return -Wstrict-prototypes -Wold-style-definition -Wmissing-prototypes -Wmissing-declarations -Wmissing-noreturn -Wredundant-decls
-AM_DEFAULT_VERBOSITY = 1
+AM_DEFAULT_VERBOSITY = 0
 AR = ar
 AS = as
 AUTOCONF = ${SHELL} /github/xz/build-aux/missing autoconf
@@ -197,9 +197,9 @@ AWK = gawk
 CAPSICUM_LIB = 
 CC = gcc
 CCAS = gcc
-CCASDEPMODE = depmode=gcc3
+CCASDEPMODE = depmode=none
 CCASFLAGS = -g -O2
-CCDEPMODE = depmode=gcc3
+CCDEPMODE = depmode=none
 CFLAGS = -g -O2
 CFLAG_VISIBILITY = -fvisibility=hidden
 CPP = gcc -E
@@ -264,7 +264,7 @@ PACKAGE_URL = https://tukaani.org/xz/
 PACKAGE_VERSION = 5.3.1alpha
 PATH_SEPARATOR = :
 POSIX_SHELL = /bin/sh
-POSUB = po
+POSUB = 
 PREFERABLY_POSIX_SHELL = /bin/sh
 PTHREAD_CC = gcc
 PTHREAD_CFLAGS = -pthread
@@ -275,7 +275,7 @@ SED = /usr/bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = strip
-USE_NLS = yes
+USE_NLS = no
 VERSION = 5.3.1alpha
 XGETTEXT = /usr/bin/xgettext
 XGETTEXT_015 = /usr/bin/xgettext
