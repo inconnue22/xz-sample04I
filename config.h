@@ -44,7 +44,7 @@
 #define HAVE_CHECK_CRC32 1
 
 /* Define to 1 if crc64 integrity check is enabled. */
-#define HAVE_CHECK_CRC64 1
+/* #undef HAVE_CHECK_CRC64 */
 
 /* Define to 1 if sha256 integrity check is enabled. */
 #define HAVE_CHECK_SHA256 1
@@ -74,7 +74,7 @@
 /* #undef HAVE_DECODER_ARM */
 
 /* Define to 1 if armthumb decoder is enabled. */
-#define HAVE_DECODER_ARMTHUMB 1
+/* #undef HAVE_DECODER_ARMTHUMB */
 
 /* Define to 1 if delta decoder is enabled. */
 /* #undef HAVE_DECODER_DELTA */
@@ -110,7 +110,7 @@
 /* #undef HAVE_ENCODER_ARMTHUMB */
 
 /* Define to 1 if delta encoder is enabled. */
-/* #undef HAVE_ENCODER_DELTA */
+#define HAVE_ENCODER_DELTA 1
 
 /* Define to 1 if ia64 encoder is enabled. */
 /* #undef HAVE_ENCODER_IA64 */
@@ -128,7 +128,7 @@
 /* #undef HAVE_ENCODER_SPARC */
 
 /* Define to 1 if x86 encoder is enabled. */
-#define HAVE_ENCODER_X86 1
+/* #undef HAVE_ENCODER_X86 */
 
 /* Define to 1 if you have the <fcntl.h> header file. */
 #define HAVE_FCNTL_H 1
@@ -176,13 +176,13 @@
 /* #undef HAVE_MF_BT3 */
 
 /* Define to 1 to enable bt4 match finder. */
-#define HAVE_MF_BT4 1
+/* #undef HAVE_MF_BT4 */
 
 /* Define to 1 to enable hc3 match finder. */
-#define HAVE_MF_HC3 1
+/* #undef HAVE_MF_HC3 */
 
 /* Define to 1 to enable hc4 match finder. */
-#define HAVE_MF_HC4 1
+/* #undef HAVE_MF_HC4 */
 
 /* Define to 1 if getopt.h declares extern int optreset. */
 /* #undef HAVE_OPTRESET */
@@ -319,7 +319,7 @@
 /* #undef MYTHREAD_WIN95 */
 
 /* Define to 1 to disable debugging code. */
-/* #undef NDEBUG */
+#define NDEBUG 1
 
 /* Name of package */
 #define PACKAGE "xz"
@@ -407,7 +407,7 @@
 /* Define to 1 to use unsafe type punning, e.g. char *x = ...; *(int *)x =
    123; which violates strict aliasing rules and thus is undefined behavior
    and might result in broken code. */
-/* #undef TUKLIB_USE_UNSAFE_TYPE_PUNNING */
+#define TUKLIB_USE_UNSAFE_TYPE_PUNNING 1
 
 /* Enable extensions on AIX 3, Interix.  */
 #ifndef _ALL_SOURCE
